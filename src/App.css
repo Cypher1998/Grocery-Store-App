@@ -10,6 +10,11 @@
   padding: 0 1rem;
 }
 
+.iconStyle {
+  color: #fff;
+  cursor: pointer;
+}
+
 /* searchbox & nav style */
 
 .navbarSearch {
@@ -24,7 +29,8 @@
   display: none;
 }
 
-.navbarIcons .itemNumber {
+.navbarIcons .itemNumber,
+.itemNumber {
   width: 22px;
   height: 22px;
   text-align: center;
@@ -61,7 +67,7 @@
   outline: none;
 }
 
-button {
+.searchBox button {
   background: white;
   position: relative;
   border-radius: 5px;
@@ -69,6 +75,13 @@ button {
   right: 2%;
   border-color: transparent;
   color: #888;
+}
+
+.mainNavbar {
+  background: rgb(16, 185, 129);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 @media (min-width: 992px) {
