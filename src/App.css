@@ -1,38 +1,84 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* general container */
+.myContainer {
+  max-width: 1350px;
+  padding: 0 1rem;
+}
+
+/* searchbox & nav style */
+
+.navbarSearch {
+  background: rgb(16, 185, 129);
+  padding: 0.75rem 0;
+  position: fixed;
+  width: 100%;
+}
+
+.navbarLogo,
+.navbarIcons {
+  display: none;
+}
+
+.navbarIcons .itemNumber {
+  width: 22px;
+  height: 22px;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: absolute;
+  background: rgb(239 68 68);
   color: white;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  top: -10px;
+  right: -10px;
 }
 
-.App-link {
-  color: #61dafb;
+.navbarLogo img {
+  width: 100px;
+  height: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.searchBox {
+  /* padding-left: 0.5rem; */
+  display: flex;
+}
+
+.searchBox input {
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  width: 100%;
+  position: relative;
+  border-color: transparent;
+  color: #555;
+  position: relative;
+}
+
+.searchBox input:focus-visible {
+  outline: none;
+}
+
+button {
+  background: white;
+  position: relative;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  right: 2%;
+  border-color: transparent;
+  color: #888;
+}
+
+@media (min-width: 992px) {
+  .navbarLogo,
+  .navbarIcons {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .myContainer {
+    margin: auto;
+    padding: 0 2rem;
   }
 }
