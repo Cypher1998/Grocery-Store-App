@@ -22,6 +22,7 @@
   padding: 0.75rem 0;
   position: fixed;
   width: 100%;
+  z-index: 2;
 }
 
 .navbarLogo,
@@ -49,7 +50,6 @@
 }
 
 .searchBox {
-  /* padding-left: 0.5rem; */
   display: flex;
 }
 
@@ -77,11 +77,156 @@
   color: #888;
 }
 
+/* main nav bar */
 .mainNavbar {
   background: rgb(16, 185, 129);
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+/* background slider */
+.homeSlider {
+  padding-top: 5rem;
+  /* padding-bottom: 5rem; */
+  /* min-height: 500px; */
+}
+
+.homeSlider .swiper {
+  height: 220px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.swiper .swiperText {
+  color: rgb(2, 14, 11);
+  position: absolute;
+  font-weight: bold;
+  top: 25%;
+  left: 2%;
+  width: 65%;
+}
+
+.swiper h2 {
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+/* desktop organic show */
+.organicProduct {
+  background: rgb(255, 237, 213);
+  border-radius: 10px;
+}
+
+.organicProduct span:nth-of-type(1) {
+  color: rgb(5, 150, 105);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.organicProduct span:nth-of-type(2) {
+  font-size: 1.3rem;
+}
+
+.organicProduct a {
+  text-decoration: none;
+  color: rgb(5, 150, 105);
+}
+
+.organicProduct button {
+  background: rgb(16, 185, 129);
+  border-color: rgb(16, 185, 129);
+}
+
+/* coupon styling */
+.coupon {
+  border: 2px solid rgb(249 115 22);
+  border-radius: 5px;
+  background: rgb(249, 250, 251);
+}
+
+.coupon .couponText {
+  background: rgb(255, 237, 213);
+}
+
+.coupon:hover {
+  border-color: rgb(16 185 129);
+}
+
+.coupon .timer {
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.timer img {
+  width: 85%;
+  min-height: 70px;
+  border-radius: 10px;
+}
+
+.timer .timerText span:nth-of-type(1) {
+  font-size: 1.2rem;
+  color: rgb(249 115 22);
+  font-weight: bold;
+}
+
+.timer .timerText span:nth-of-type(2) {
+  padding: 0.35rem 1rem;
+  border-radius: 35%;
+  font-size: 0.85rem;
+  color: rgb(5 150 105);
+  background: rgb(209, 250, 229);
+}
+
+.timer .timerText p {
+  margin-top: 0.25rem;
+  font-weight: bold;
+}
+
+.timerNum {
+  font-weight: bolder;
+}
+
+.timerNum span {
+  font-weight: normal;
+  background: rgb(5 150 105);
+  color: white;
+  padding: 0.25rem;
+  border-radius: 3px;
+}
+
+.timer .timerDetails h6 {
+  border: 1px dashed rgb(5 150 105);
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-align: center;
+  color: rgb(5 150 105);
+  background: rgb(209, 250, 229);
+}
+
+.timerDetails p {
+  font-size: 0.8rem;
+}
+
+@media (min-width: 576px) {
+  .homeSlider .swiper {
+    height: 250px;
+  }
+}
+
+@media (min-width: 768px) {
+  .homeSlider .swiper {
+    height: 270px;
+  }
+
+  .swiper h2 {
+    font-size: 2rem;
+  }
+
+  .swiper p {
+    font-size: 1.2rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -92,6 +237,14 @@
 
   .myContainer {
     margin: auto;
-    padding: 0 2rem;
+    padding: 0 3rem;
+  }
+
+  .homeSlider {
+    padding-top: 7rem;
+  }
+
+  .homeSlider .swiper {
+    height: 300px;
   }
 }
