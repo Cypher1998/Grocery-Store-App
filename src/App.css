@@ -11,6 +11,10 @@
   border-radius: 5px;
 }
 
+/* ::-webkit-scrollbar{
+
+} */
+
 .iconStyle {
   color: #fff;
   cursor: pointer;
@@ -235,16 +239,20 @@
 
 .featuresDisplay .featureDisplay {
   background: white;
-  border: 0.13rem solid rgb(243 244 246);
+  border: 0.12rem solid rgb(243 244 246);
   border-radius: 2px;
   overflow-x: hidden;
   text-overflow: ellipsis;
   cursor: pointer;
   text-transform: capitalize;
   display: grid;
-  grid-gap: 0.75rem;
+  grid-gap: 1rem;
   grid-template-columns: repeat(6, 1fr);
   align-items: center;
+}
+
+.featureDisplay:hover {
+  box-shadow: 1px 7px 7px rgba(224, 222, 222, 0.95);
 }
 
 .featureDisplay .image {
@@ -261,7 +269,7 @@
 }
 
 .text p {
-  color: rgb(106, 108, 110);
+  color: rgb(122, 121, 121);
   font-size: 1rem;
   margin-bottom: 0.3rem;
   text-overflow: ellipsis;
@@ -276,18 +284,15 @@
   color: rgb(16, 185, 129);
 }
 
-.text ul {
-  padding-left: 1.2rem;
-}
-
 .text li {
   color: rgb(139, 140, 143);
   font-size: 0.82rem;
   list-style: circle;
+  list-style: none;
 }
 
 li:hover {
-  color: rgb(9, 148, 102);
+  color: rgb(5, 133, 90);
 }
 
 @media (min-width: 576px) {
@@ -298,10 +303,6 @@ li:hover {
   .features .featuresDisplay {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  /* .featuresDisplay {
-    grid-template-columns: repeat(3, 1fr);
-  } */
 }
 
 @media (min-width: 768px) {
