@@ -13,7 +13,7 @@ const Navbar = () => {
         </div>
         <div className="position-relative">
           <BsCart size={25} className="iconStyle" />
-          <span class="itemNumber">1</span>
+          <span className="itemNumber">1</span>
         </div>
         <div className="">
           <BsPerson size={25} className="iconStyle" />

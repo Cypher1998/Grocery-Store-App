@@ -6,7 +6,7 @@ const DesktopNavbar = () => {
       <BsBell size={23} style={iconStyle} />
       <div className="position-relative d-flex justify-content-between align-items-center">
         <BsCart size={24} style={iconStyle} />
-        <span class="itemNumber">1</span>
+        <span className="itemNumber">1</span>
       </div>
       <BsPerson size={24} style={iconStyle} />
     </div>
