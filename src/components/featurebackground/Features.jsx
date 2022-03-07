@@ -1,4 +1,6 @@
 const Features = ({ imgUrl, title, subtitle }) => {
+  const newSubtitle = subtitle.slice(0, 3);
+
   return (
     <div className="featureDisplay p-2">
       <div className="image">
@@ -7,7 +9,7 @@ const Features = ({ imgUrl, title, subtitle }) => {
       <div className="text">
         <p>{title}</p>
         <ul className="p-0 m-0">
-          {subtitle.map((listItem) => (
+          {newSubtitle.map((listItem) => (
             <li>
               <span>
                 <svg
