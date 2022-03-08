@@ -1,0 +1,90 @@
+{
+  "pita-bread": {
+    "id": 92,
+    "name": "pita-bread",
+    "stock": 199,
+    "price": 10,
+    "weight": "1pc",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FHxc5YkC7%2FPita-Bread-4-csc7se.jpg&w=256&q=75",
+    "maincategory": "breakfast",
+    "subcategory": "bread",
+    "details": ["breakfast", "pita-bread"]
+  },
+  "bread": {
+    "id": 93,
+    "name": "bread",
+    "stock": 78,
+    "price": 9,
+    "weight": "1pc",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2F8CnMgrxS%2FBread-7-mv0yhz.jpg&w=256&q=75",
+    "maincategory": "breakfast",
+    "subcategory": "bread",
+    "details": ["breakfast", "bread"]
+  },
+  "whole-bread": {
+    "id": 94,
+    "name": "wholemeal bread",
+    "stock": 71,
+    "price": 11,
+    "weight": "1pc",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2F02dS24hZ%2FEveryday-Essentials-Wholemeal-Bread.jpg&w=256&q=75",
+    "maincategory": "breakfast",
+    "subcategory": "nread",
+    "details": ["breakfast", "wholemeal-bread"]
+  },
+  "quaker-oats": {
+    "id": 95,
+    "name": "quaker oats jar",
+    "stock": 15,
+    "price": 11,
+    "weight": "500gm",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2Fyx57V7sW%2Fquaker-oats-jar-500-gm.webp&w=256&q=75",
+    "maincategory": "breakfast",
+    "subcategory": "cereal",
+    "details": ["breakfast", "quaker-oats"]
+  },
+  "honey-cereal": {
+    "id": 96,
+    "name": "honey breakfast cereal",
+    "stock": 25,
+    "price": 10,
+    "weight": "300gm",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FydLVbFGm%2Fkelloggs-corn-flakes-real-honey-breakfast-cereal-300gm.webp&w=256&q=75",
+    "maincategory": "breakfast",
+    "subcategory": "cereal",
+    "details": ["cereal", "honey-cereal"]
+  },
+  "chocolate-cereal": {
+    "id": 97,
+    "name": "chocolate breakfast cereal",
+    "stock": 74,
+    "price": 5,
+    "weight": "17gm",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FZnqqbfNs%2Fkelloggs-chocos-fills-chocolate-breakfast-cereal-17gm.webp&w=256&q=75",
+    "maincategory": "breakfast",
+    "subcategory": "cereal",
+    "details": ["breakfast", "chocolate-cereal"]
+  },
+  "cereal-pouch": {
+    "id": 98,
+    "name": "breakfast cereal pouch",
+    "stock": 0,
+    "price": 6,
+    "weight": "80gm",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2Fd0KtkQdy%2Fnestle-koko-krunch-breakfast-cereal-pouch-80-gm.webp&w=256&q=75",
+    "maincategory": "breakfast",
+    "subcategory": "cereal",
+    "details": ["breakfast", "cereal-pouch"]
+  },
+  "flakes-cereal": {
+    "id": 99,
+    "name": "flakes breakfast cereal",
+    "stock": 145,
+    "price": 7,
+    "weight": "275gm",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FpTWWC0sV%2Fnestle-gold-corn-flakes-breakfast-cereal-box-275-gm.webp&w=256&q=75",
+    "maincategory": "breakfast",
+    "subcategory": "cereal",
+    "details": ["breakfast", "flakes-breakfast-cereal"]
+  }
+}

@@ -1,0 +1,68 @@
+{  
+  "life-ketchup": {
+    "id": 130,
+    "name":"life tomato ketchup",
+    "weight": "330gm",
+    "stock": 251,
+    "price": 10,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FDfdJBnSP%2FLife-Tomato-Ketchup-330-Gm.jpg&w=256&q=75",
+    "maincategory": "sauces & pickles",
+    "subcategory": "sauces",
+    "details": ["ketchup", "tomato-sauce"]
+  },
+  "soya-sauce": {
+    "id": 131,
+    "name":"kikkoman soya sauce",
+    "weight": "150ml",
+    "stock": 12,
+    "price": 10,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2Fdts7fpdP%2FKikkoman-Soya-Sauce-150ml.jpg&w=256&q=75",
+    "maincategory": "sauces & pickles",
+    "subcategory": "sauces",
+    "details": ["kikkoman", "soya-sauce"]
+  },
+  "calypso-sauce": {
+    "id": 132,
+    "name":"calypso sauce",
+    "weight": "200ml",
+    "stock": 84,
+    "price": 12,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2F5y3X0qhR%2FCalypso-Pure-Salad-Style-Mustard-200ml-Jar.jpg&w=256&q=75",
+    "maincategory": "sauces & pickles",
+    "subcategory": "sauces",
+    "details": ["calypso", "sauce"]
+  },
+  "mango-pickle": {
+    "id": 133,
+    "name":"ahmed mango pickle",
+    "weight": "400g",
+    "stock": 62,
+    "price": 13,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2F4yzk6XsK%2FAhmed-Mango-Pickle-400g.jpg&w=256&q=75",
+    "maincategory": "sauces & pickles",
+    "subcategory": "pickles",
+    "details": ["ahmed-pickle", "mango"]
+  },
+  "apple-cider": {
+    "id": 134,
+    "name":"american apple cider vinegar",
+    "weight": "473g",
+    "stock": 75,
+    "price": 12,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FSxV41Q8C%2FAmerican-Garden-Apple-Cider-Vinegar-473g.jpg&w=256&q=75",
+    "maincategory": "sauces & pickles",
+    "subcategory": "pickles",
+    "details": ["american-cider", "vinegar"]
+  },
+  "heinz-cider": {
+    "id": 135,
+    "name":"heinz apple cider vinegar",
+    "weight": "473",
+    "stock": 0,
+    "price": 14,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FFFc45V39%2FHeinz-Apple-Cider-Vinegar-473ml-US.jpg&w=256&q=75",
+    "maincategory": "sauces & pickles",
+    "subcategory": "pickles",
+    "details": ["heinz-cider", "apple"]
+  }
+}

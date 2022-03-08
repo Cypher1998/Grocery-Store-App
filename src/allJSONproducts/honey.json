@@ -1,0 +1,37 @@
+{
+  "alshifa-honey": {
+    "id": 127,
+    "name":"alshifa natural honey",
+    "weight": "250g",
+    "stock": 107,
+    "price": 17,
+    "discount":6,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FBQKGXXww%2FAlshifa-Natural-Honey-250-Gm.jpg&w=256&q=75",
+    "maincategory": "honey",
+    "subcategory": "honey",
+    "details": ["natural", "alshifa"]
+  },
+  "aussie-honey": {
+    "id": 128,
+    "name":"aussiebee honey",
+    "weight": "400g",
+    "stock": 25,
+    "price": 19,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FmrbxXVZ0%2FAussiebee-Honey-400g-Bottle.jpg&w=256&q=75",
+    "maincategory": "honey",
+    "subcategory": "honey",
+    "details": ["aussie", "bee"]
+  },
+  "darbur-honey": {
+    "id": 129,
+    "name":"dabur honey oil free",
+    "weight": "400g",
+    "stock": 25,
+    "price": 20,
+    "discount":10,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FMGtChRvX%2FDabur-Honey-1-Kg-Vatika-Tin-Can-Oil-Free.jpg&w=256&q=75",
+    "maincategory": "honey",
+    "subcategory": "honey",
+    "details": ["dabur", "oil free"]
+  }
+}

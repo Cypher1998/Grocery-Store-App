@@ -1,0 +1,80 @@
+{
+  "foraging-pouch":{
+    "id":175,
+    "name":"foraging pouch bird toy",
+    "weight":"each",
+    "stock":154,
+    "price":13,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2F0jyFn4VQ%2FSuper-Bird-Creations-Foraging-Pouch-Bird-Toy-each.jpg&w=256&q=75",
+    "maincategory":"pet care",
+    "subcategory":"bird care",
+    "details":["bird-toy","forage"]
+  },
+  "bird-toy":{
+    "id":176,
+    "name":"bird toy",
+    "weight":"each",
+    "stock":148,
+    "price":12,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FQMLLD0d4%2FSuper-Bird-Creations-Making-Tracks-Bird-Toy-3-Length-each.jpg&w=256&q=75",
+    "maincategory":"pet care",
+    "subcategory":"bird care",
+    "details":["care","bird"]
+  },
+  "bird-food":{
+    "id":177,
+    "name":"kaytee bird food",
+    "weight":"8Ib",
+    "stock":100,
+    "price":7,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2Frp5Bwxd8%2FKaytee-Forti-Diet-Pro-Health-Bird-Food-For-Parrots-8lb.jpg&w=256&q=75",
+    "maincategory":"pet care",
+    "subcategory":"bird care",
+    "details":["bird-food","food"]
+  },
+  "leaps-cat":{
+    "id":178,
+    "name":"leaps bounds cat toy",
+    "weight":"each",
+    "stock":14,
+    "price":14,
+    "discount":12,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FzG2QDpXZ%2FLeaps-Bounds-Electronic-Shelf-Teaser-each.jpg&w=256&q=75",
+    "maincategory":"pet care",
+    "subcategory":"cat care",
+    "details":["cat","cat care"]
+  },
+  "cat-food":{
+    "id":179,
+    "name":"premium cat food",
+    "weight":"16Ib",
+    "stock":78,
+    "price":12,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FYCCVwT7z%2FIAMS-Proactive-Health-Oral-Care-Complete-Premium-Cat-Food-16-lb.jpg&w=256&q=75",
+    "maincategory":"pet care",
+    "subcategory":"cat care",
+    "details":["cat-food","care"]
+  },
+  "dog-diet":{
+    "id":180,
+    "name":"hill science dog diet",
+    "weight":"each",
+    "stock":147,
+    "price":11,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FQMTV04Fj%2FHill-s-Science-Diet-Dog-Treat-Jerky-with-Real-Beef-Mini-Strips-7-2-oz.jpg&w=256&q=75",
+    "maincategory":"pet care",
+    "subcategory":"dog care",
+    "details":["food","dog-food"]
+  },
+  "dog-collar":{
+    "id":181,
+    "name":"colorado dog collar",
+    "weight":"each",
+    "stock":48,
+    "price":13,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FZ50WyKZB%2FBuckle-Down-Pbkl-Large-Colorado-Dog-Collar-each.jpg&w=256&q=75",
+    "maincategory":"pet care",
+    "subcategory":"dog care",
+    "details":["dog-collar","collar"]
+  }
+}

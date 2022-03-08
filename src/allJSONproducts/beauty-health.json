@@ -1,0 +1,147 @@
+{
+  "sunscreen lotion":{
+    "id":182,
+    "name":"sunscreen lotion",
+    "weight":"each",
+    "stock":189,
+    "price":7,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F9YBpvCj%2Fultra-protect-sunscreen-lotion.jpg&w=256&q=75",
+    "maincategory":"beauty & health",
+    "subcategory":"body care",
+    "details":["body-care","lotion"]
+  },
+  "neem-soap":{
+    "id":183,
+    "name":"neew original soap",
+    "weight":"75g",
+    "stock":123,
+    "price":12,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FYfJTLV4%2FNeem-Original-Honey-Turmeric-Soap-75g.jpg&w=256&q=75",
+    "maincategory":"beauty & health",
+    "subcategory":"body care",
+    "details":["skin-soap","bath"]
+  },
+  "face-wash":{
+    "id":184,
+    "name":"erin face wash",
+    "weight":"each",
+    "stock":154,
+    "price":8,
+    "discount":8,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FFWP2RdG%2FEarthly-Remedies-by-Erin-Face-Wash-each.jpg&w=256&q=75",
+    "maincategory":"beauty & health",
+    "subcategory":"body care",
+    "details":["face wash","skin"]
+  },
+  "nivea-soap":{
+    "id":185,
+    "name":"nivea soap",
+    "weight":"75g",
+    "stock":14,
+    "price":11,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FLt144XM%2FNivea-Cr-me-Care-Soap-75g.jpg&w=256&q=75",
+    "maincategory":"beauty & health",
+    "subcategory":"body care",
+    "details":["soap","nivea"]
+  },
+  "gillette-vector":{
+    "id":186,
+    "name":"gillette vector refillable",
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FWknpN14%2FGillette-Vector-1-Refillable.jpg&w=256&q=75",
+    "stock":200,
+    "price":6,
+    "weight":"100ml",
+    "maincategory":"beauty & health",
+    "subcategory":"shaving needs",
+    "details":["after-shave","shave"]
+  },
+  "after-shave":{
+    "id":187,
+    "name":"denim after shave",
+    "weight":"100ml",
+    "stock":75,
+    "price":8,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fky4ngpd%2FDenim-Black-After-Shave-100-Ml.jpg&w=256&q=75",
+    "maincategory":"beauty & health",
+    "subcategory":"shaving needs",
+    "details":["shave","after-shave"]
+  },
+  "pep-brush":{
+    "id":188,
+    "name":"pepsodent toothbrush",
+    "weight":"1pcs",
+    "stock":148,
+    "price":5,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FsFgkd5X%2FPepsodent-Action-Toothbrush-Medium.jpg&w=256&q=75",
+    "maincategory":"beauty & health",
+    "subcategory":"oral care",
+    "details":["care","tooth"]
+  },
+  "col-wash":{
+    "id":189,
+    "name":"colgate mouthwash",
+    "weight":"250ml",
+    "stock":78,
+    "price":12,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F0ngPGNp%2FColgate-Plax-Complete-Care-Mouthwash-250ml.jpg&w=256&q=75",
+    "maincategory":"beauty & health",
+    "subcategory":"oral care",
+    "details":["colgate","mouth-wash"]
+  },
+  "pantene-care":{
+    "id":190,
+    "name":"pantene hair care",
+    "weight":"9fl-oz",
+    "stock":71,
+    "price":9,
+    "discount":16,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FtbkwJvS%2FPantene-Styling-Pantene-Pro-V-Power-Up-Daily-Treatment-16-9-fl-oz-Female-Hair-Care-16-9fl-oz.jpg&w=256&q=75",
+    "maincategory":"beauty & health",
+    "subcategory":"hair care",
+    "details":["conditioner","hair"]
+  },
+  "hair-shampoo":{
+    "id":191,
+    "name":"herbal hair shampoo",
+    "weight":"8fl-oz",
+    "stock":129,
+    "price":8,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F7Ky2DVF%2FHerbal-Essences-Bio-Renew-Dry-Shampoo-4-9-fl-oz.jpg&w=256&q=75",
+    "maincategory":"beauty & health",
+    "subcategory":"hair care",
+    "details":["herbal-care","hair-shampoo"]
+  },
+  "rev-lip":{
+    "id":192,
+    "name":"revlon lipstick",
+    "weight":"6",
+    "stock":78,
+    "price":6,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FK0SBD3v%2FRevlon-Lipstick-Creme-Temptress-680-0-15oz.jpg&w=256&q=75",
+    "maincategory":"beauty & health",
+    "subcategory":"cosmetics",
+    "details":["cosmetics","lipstick"]
+  },
+  "nail-polish":{
+    "id":193,
+    "name":"nail polish",
+    "weight":"5fl-oz",
+    "stock":129,
+    "price":8,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fj4B82qJ%2FZoya-N-E-Amanda-Nail-Polish-0-5fl-oz.jpg&w=256&q=75",
+    "maincategory":"beauty & health",
+    "subcategory":"cosmetics",
+    "details":["paint","nail-paint"]
+  },
+  "organic-gel":{
+    "id":194,
+    "name":"avalon organic gel",
+    "weight":"",
+    "stock":0,
+    "price":0,
+    "imgUrl":"",
+    "maincategory":"beauty & health",
+    "subcategory":"body care",
+    "details":["care","body"]
+  }
+}

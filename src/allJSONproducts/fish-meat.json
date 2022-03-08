@@ -1,0 +1,138 @@
+{
+  "__collections__": {
+    "products": {
+      "wild-king": {
+        "id": 1,
+        "name": "wild king salmon steak",
+        "weight": "1Ib",
+        "stock": 100,
+        "price": 12,
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/grocery-app-store-57f4d.appspot.com/o/productImgs%2FFresh-Wild-King-Salmon-Steak-1lb.jpg?alt=media&token=de8beef7-b2c5-4ac4-a29f-e406013d076a",
+        "maincategory": "fish & meat",
+        "subcategory": "fish",
+        "details": ["salmon", "fish"]
+      },
+      "canada-salmon": {
+        "id": 2,
+        "name": "canada salmon",
+        "weight": "5oz",
+        "stock": 100,
+        "price": 12,
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/grocery-app-store-57f4d.appspot.com/o/productImgs%2FFresh-Whole-Canada-Salmon-25-5-oz.jpg?alt=media&token=43b45125-3374-4979-ace2-1d18ac3609d9",
+        "maincategory": "fish & meat",
+        "subcategory": "fish",
+        "details": ["salmon", "fish"]
+      },
+      "atlantic-salmon": {
+        "id": 3,
+        "name": "atlantic salmon",
+        "weight": "1b",
+        "stock": 0,
+        "price": 9,
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/grocery-app-store-57f4d.appspot.com/o/productImgs%2FBlack-Pearls-Salmon-Filet-Portion-6-oz.jpg?alt=media&token=67fdedcd-dbec-44e9-af6a-687decd2fa1d",
+        "maincategory": "fish & meat",
+        "subcategory": "fish",
+        "details": ["salmon", "fish"]
+      },
+      "salmon-fillet": {
+        "id": 4,
+        "name": "salmon fillet portion",
+        "weight": "6oz",
+        "stock": 75,
+        "price": 12,
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/grocery-app-store-57f4d.appspot.com/o/productImgs%2Fsalmon%20fillet.jpg?alt=media&token=d681be9b-3db3-4036-b0c2-526218ffb99a",
+        "maincategory": "fish & meat",
+        "subcategory": "fish",
+        "details": ["salmon", "fish"]
+      },
+      "ling-cod": {
+        "id": 5,
+        "name": "ling cod steak",
+        "weight": "1Ib",
+        "stock": 80,
+        "price": 11,
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/grocery-app-store-57f4d.appspot.com/o/productImgs%2FLing-Cod-Steak-1lb.jpg?alt=media&token=de341e61-418f-4a24-a8c3-77c98e6fe079",
+        "maincategory": "fish & meat",
+        "subcategory": "fish",
+        "details": ["ling-cod", "fish"]
+      },
+      "peeled-shrimp": {
+        "id": 6,
+        "name": "peeled deveined shrimp",
+        "weight": "2Ib",
+        "stock": 85,
+        "price": 12,
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/grocery-app-store-57f4d.appspot.com/o/productImgs%2FCooked-Peeled-Deveined-Shrimp-2lb.jpg?alt=media&token=c7268de4-1132-4540-8b88-e885e503b431",
+        "maincategory": "fish & meat",
+        "subcategory": "fish",
+        "details": ["shrimp", "fish"]
+      },
+      "chilean-bass": {
+        "id": 7,
+        "name": "chilean sea bass",
+        "weight": "1Ib",
+        "stock": 60,
+        "price": 14,
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/grocery-app-store-57f4d.appspot.com/o/productImgs%2FAhi-Tuna-Steaks-per-lb.jpg?alt=media&token=88d9985e-c53d-422d-aca8-e8e96c894774",
+        "maincategory": "fish & meat",
+        "subcategory": "fish",
+        "details": ["sea-bass", "fish"]
+      },
+      "beef-stew": {
+        "id": 8,
+        "name": "beef stew",
+        "weight": "1Ib",
+        "stock": 65,
+        "price": 18,
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/grocery-app-store-57f4d.appspot.com/o/productImgs%2FNiman-Ranch-Angus-Beef-Stew-Meat-per-lb.jpg?alt=media&token=c78f13b7-33e4-4251-8f34-4601d82b469f",
+        "maincategory": "fish & meat",
+        "subcategory": "meat",
+        "details": ["beef", "meat"]
+      },
+      "ground-turkey": {
+        "id": 9,
+        "name": "ground turkey",
+        "weight": "1Ib",
+        "stock": 80,
+        "price": 19,
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/grocery-app-store-57f4d.appspot.com/o/productImgs%2FGround-Turkey-per-lb.jpg?alt=media&token=6b85096b-7352-46f5-8e6a-90f803d12526",
+        "maincategory": "fish & meat",
+        "subcategory": "meat",
+        "details": ["beef", "meat"]
+      },
+      "duck-meat": {
+        "id": 10,
+        "name": "duck meat",
+        "weight": "1Ib",
+        "stock": 20,
+        "price": 15,
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/grocery-app-store-57f4d.appspot.com/o/productImgs%2FDuck-Hash-Meat-Regular-Kg.jpg?alt=media&token=f5e41442-eee9-4782-9dc3-0e6473da0e48",
+        "maincategory": "fish & meat",
+        "subcategory": "meat",
+        "details": ["duck", "meat"]
+      },
+      "boneless-beef": {
+        "id": 11,
+        "name": "boneless beef",
+        "weight": "1Ib",
+        "stock": 70,
+        "price": 19,
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/grocery-app-store-57f4d.appspot.com/o/productImgs%2FBoneless-Beef-Chuck-Roast-per-lb.jpg?alt=media&token=3e42136d-a88f-4ca0-85cb-5b192562a4a3",
+        "maincategory": "fish & meat",
+        "subcategory": "meat",
+        "details": ["beef", "meat"]
+      },
+      "bone-chuck": {
+        "id": 12,
+        "name": "bone in chuck",
+        "weight": "1Ib",
+        "stock": 82,
+        "price": 18,
+        "imgUrl": "https://firebasestorage.googleapis.com/v0/b/grocery-app-store-57f4d.appspot.com/o/productImgs%2FBone-In-Chuck-Roast-each.jpg?alt=media&token=3f01fc7f-b7ac-4582-b5b0-bf8d19fc18ea",
+        "maincategory": "fish & meat",
+        "subcategory": "meat",
+        "details": ["beef", "meat"]
+      }
+    }
+  }
+}

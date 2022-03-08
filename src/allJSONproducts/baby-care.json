@@ -1,0 +1,58 @@
+{
+  "glory-diaper":{
+    "id":170,
+    "name":"glory diaper",
+    "weight":"8pcs",
+    "stock":59,
+    "price":16,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FfrhMsN7%2FGlory-Adult-Diaper-Large-8-Packet.jpg&w=256&q=75",
+    "maincategory":"baby care",
+    "subcategory":"baby accessories",
+    "details":["accessory","baby"]
+  },
+  "cerelac-food":{
+    "id":171,
+    "name":"cerelac cornflakes",
+    "weight":"400g",
+    "stock":215,
+    "price":15,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FyYsskBN%2FCerelac-Wheat-Apple-Cornflakes-400-Gm-BIB.jpg&w=256&q=75",
+    "maincategory":"baby care",
+    "subcategory":"baby food",
+    "details":["baby","foods"]
+  },
+  "biomil":{
+    "id":172,
+    "name":"biomil-1 food",
+    "weight":"200g",
+    "stock":82,
+    "price":16,
+    "discount":13,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FYddcNxc%2FBiomil-1-MINI-Tin-200-Gm.jpg&w=256&q=75",
+    "maincategory":"baby care",
+    "subcategory":"baby food",
+    "details":["biomil","baby-food"]
+  },
+  "huggies-diaper":{
+    "id":173,
+    "name":"huggies diaper",
+    "weight":"36pcs",
+    "stock":73,
+    "price":9,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F4Pfnj7x%2FHuggies-Diaper-Dry-S-Up-To-7-Kg-36-Pcs.jpg&w=256&q=75",
+    "maincategory":"baby care",
+    "subcategory":"baby accessories",
+    "details":["care","diaper"]
+  },
+  "cerelac-cherry":{
+    "id":174,
+    "name":"cerelac cherry",
+    "weight":"400g",
+    "stock":0,
+    "price":17,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FR9Pn8XN%2FCerelac-Wheat-Apple-Cherry-400-Gm-BIB.jpg&w=256&q=75",
+    "maincategory":"baby care",
+    "subcategory":"baby food",
+    "details":["foods","cerelac"]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "crab-seafood": {
+    "id": 64,
+    "name": "chicago sweet crab",
+    "stock": 32,
+    "weight": "200g",
+    "price": 9,
+    "imgUrl": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fst.depositphotos.com%2F1561509%2F2146%2Fi%2F950%2Fdepositphotos_21468383-stock-photo-cooked-crab.jpg&imgrefurl=https%3A%2F%2Fdepositphotos.com%2F21468383%2Fstock-photo-cooked-crab.html&tbnid=QAMVjrIXleNzeM&vet=12ahUKEwjGzq-h_rP2AhXSm1wKHR0lCfUQMygWegUIARCxAg..i&docid=G2H7FGObaYTraM&w=1023&h=682&q=cooked%20crab&hl=en&ved=2ahUKEwjGzq-h_rP2AhXSm1wKHR0lCfUQMygWegUIARCxAg",
+    "maincategory": "fresh seafood",
+    "subcategory": "fresh seafood",
+    "details": ["crab", "seafood"]
+  },
+  "lobster": {
+    "id": 65,
+    "name": "grilled lobster",
+    "stock": 74,
+    "price": 8,
+    "weight": "each",
+    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/grocery-app-store-57f4d.appspot.com/o/grilled-lobster.jpg?alt=media&token=7af94fe4-698e-4348-8f8d-9beb44c565ba",
+    "maincategory": "fresh seafood",
+    "subcategory": "fresh seafood",
+    "details": ["grilled", "lobster"]
+  },
+  "shrimp": {
+    "id": 66,
+    "name": "sweet cooked shrimp",
+    "stock": 41,
+    "price": 12,
+    "discount": 5,
+    "weight": "5oz",
+    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/grocery-app-store-57f4d.appspot.com/o/shrimp.jpg?alt=media&token=1ccafd26-263e-4f72-b5cb-72dc29d7fd84",
+    "maincategory": "fresh seafood",
+    "subcategory": "fresh seafood",
+    "details": ["shrimp", "cooked"]
+  },
+  "prawn": {
+    "id": 67,
+    "name": "haitian prawn",
+    "stock": 0,
+    "price": 13,
+    "weight": "25g",
+    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/grocery-app-store-57f4d.appspot.com/o/prawn.jpg?alt=media&token=889acd44-9e9e-4d32-b2c5-85c711df3c02",
+    "maincategory": "fresh seafood",
+    "subcategory": "fresh seafood",
+    "details": ["prawn", "seafood"]
+  },
+  "snail": {
+    "id": 68,
+    "name": "sweet cooked snail",
+    "stock": 45,
+    "price": 20,
+    "weight": "1Ib",
+    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/grocery-app-store-57f4d.appspot.com/o/snail.jpg?alt=media&token=e202c04d-7ab4-4259-9744-ab141a3554fa",
+    "maincategory": "fresh seafood",
+    "subcategory": "fresh seafood",
+    "details": ["cooked-snail", "seafood"]
+  },
+  "oyster": {
+    "id": 69,
+    "name": "char-grilled oyster",
+    "stock": 25,
+    "price": 18,
+    "weight": "50g",
+    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/grocery-app-store-57f4d.appspot.com/o/Parmesan_Crusted_Charbroiled_Oysters-scaled.jpg?alt=media&token=8d8594b4-4807-48cb-847d-9ed51d57fced",
+    "maincategory": "fresh seafood",
+    "subcategory": "fresh seafood",
+    "details": ["oyster", "parmesan romano"]
+  },
+  "cockles": {
+    "id": 70,
+    "name": "carribbean cooked cockles",
+    "stock": 17,
+    "price": 14,
+    "weight": "120g",
+    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/grocery-app-store-57f4d.appspot.com/o/cockles.jpg?alt=media&token=f821ba90-1924-408d-ac8d-62639aab0ef4",
+    "maincategory": "fresh seafood",
+    "subcategory": "fresh seafood",
+    "details": ["cockles", "seafood"]
+  },
+  "periwinkle": {
+    "id": 71,
+    "name": "fresh edible periwinkle",
+    "stock": 150,
+    "price": 8,
+    "weight": "7ct",
+    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/grocery-app-store-57f4d.appspot.com/o/periwinkle.jpg?alt=media&token=16d38535-46f3-4c93-a040-5101f8cacf11",
+    "maincategory": "fresh seafood",
+    "subcategory": "fresh seafood",
+    "details": ["periwinkle", "fresh"]
+  }
+}

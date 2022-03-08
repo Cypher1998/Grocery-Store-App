@@ -1,0 +1,113 @@
+{
+  "maggi-noodles": {
+    "id": 139,
+    "name":"maggi noodles",
+    "weight": "260g",
+    "stock": 205,
+    "price": 15,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FRVfjv2Nk%2FMaggi-Bangkok-Sweet-Chilli-Noodles-260g.jpg&w=256&q=75",
+    "maincategory": "snacks & instant",
+    "subcategory": "noodles",
+    "details": ["maggi", "noodles"]
+  },
+  "mama-noodles": {
+    "id": 140,
+    "name":"mama hot spicy noodles",
+    "weight": "496g",
+    "stock": 51,
+    "price": 17,
+    "imgUrl":"",
+    "maincategory": "snacks & instant",
+    "subcategory": "noodles",
+    "details": ["mama-foods", "hot"]
+  },
+  "mr-magic": {
+    "id": 141,
+    "name":"mr noodles magic masala",
+    "weight": "40g",
+    "stock": 252,
+    "price": 10,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FfRN1y5dJ%2FMr-Noodles-Cup-Noodles-Magic-Masala-40g.jpg&w=256&q=75",
+    "maincategory": "snacks & instant",
+    "subcategory": "noodles",
+    "details": ["masala", "mr-magic"]
+  },
+  "hibiscus-corn": {
+    "id": 142,
+    "name":"hibiscus baby corn",
+    "weight": "425g",
+    "stock": 170,
+    "price": 19,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FhPmDFzS0%2FHibiscus-Premium-Whole-Baby-Corn-425g.jpg&w=640&q=75",
+    "maincategory": "snacks & instant",
+    "subcategory": "canned food",
+    "details": ["hibiscus-corn", "can"]
+  },
+  "mushroom-US": {
+    "id": 143,
+    "name":"american mushroom",
+    "weight": "425g",
+    "stock": 25,
+    "price": 12,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FhjGDN2jJ%2FAmerican-Garden-Mushroom-Whole-Can-425g.jpg&w=640&q=75",
+    "maincategory": "snacks & instant",
+    "subcategory": "canned food",
+    "details": ["mushroom", "US"]
+  },
+  "borges-green": {
+    "id": 144,
+    "name":"borges green olives",
+    "weight": "330g",
+    "stock": 0,
+    "price": 13,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FpT1WvKhs%2FBorges-Black-Whole-Olives-330-Gm.jpg&w=256&q=75",
+    "maincategory": "snacks & instant",
+    "subcategory": "canned food",
+    "details": ["olives", "can"]
+  },
+  "kukure-crackers": {
+    "id": 145,
+    "name":"kurkure crackers",
+    "weight": "25g",
+    "stock": 145,
+    "price": 10,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FZKNdf52G%2FKurkure-Chilli-Chatka-Crackers.jpg&w=256&q=75",
+    "maincategory": "snacks & instant",
+    "subcategory": "chips & nuts",
+    "details": ["kurkure", "chips"]
+  },
+  "smoked-almond": {
+    "id": 146,
+    "name":"camel smoked almonds nuts",
+    "weight": "40g",
+    "stock": 124,
+    "price": 12,
+    "imgUrl":"",
+    "maincategory": "snacks & instant",
+    "subcategory": "chips & nuts",
+    "details": ["smoked-almomd", "nuts"]
+  },
+  "lotte-choco": {
+    "id": 147,
+    "name":"lotte almond chocoball",
+    "weight": "46g",
+    "stock": 78,
+    "price": 13,
+    "discount":12,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FY0rWn5GJ%2FLotte-Almond-Chocoball-46g.jpg&w=640&q=75",
+    "maincategory": "snacks & instant",
+    "subcategory": "chocolate",
+    "details": ["almond-taste", "chocoball"]
+  },
+  "mm-choco": {
+    "id": 148,
+    "name":"m&m's choolate",
+    "weight": "45g",
+    "stock": 98,
+    "price": 9,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FcLg8bMC4%2FM-M-Choco-Chocolate-45gm.jpg&w=256&q=75",
+    "maincategory": "snacks & instant",
+    "subcategory": "chocolate",
+    "details": ["m&m", "chocolate"]
+  }
+}

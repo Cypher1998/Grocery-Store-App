@@ -1,0 +1,168 @@
+{
+  "glade-spray":{
+    "id":155,
+    "name":"glade automatic spray",
+    "weight":"4oz",
+    "stock":78,
+    "price":6,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FdV4WHDcs%2FGlade-Clear-Springs-Sense-Spray-Motion-Sensor-Automatic-Spray-1ct.jpg&w=256&q=75",
+    "maincategory":"household tools",
+    "subcategory":"air freshener",
+    "details":["air freshener","spray"]
+  },
+  "alchemy-spray":{
+    "id":156,
+    "name":"natures alchemy rosewood",
+    "weight":"5oz",
+    "stock":126,
+    "price":7,
+    "imgUrl":"",
+    "maincategory":"household tools",
+    "subcategory":"air freshener",
+    "details":["air freshener","natures"]
+  },
+  "glade-scents":{
+    "id":157,
+    "name":"glade refills scented",
+    "weight":"",
+    "stock":143,
+    "price":9,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FZqnw1ZJr%2FGlade-Oil-Refills-Scented-White-Tea-Lily-0-71oz.jpg&w=640&q=75",
+    "maincategory":"household tools",
+    "subcategory":"air freshener",
+    "details":["air freshener","scents"]
+  },
+  "brita-filter":{
+    "id":158,
+    "name":"BRITA replacement water filter",
+    "weight":"3each",
+    "stock":85,
+    "price":14,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2F28pSHF4w%2FBRITA-Replacement-Water-Filters-3each.jpg&w=256&q=75",
+    "maincategory":"household tools",
+    "subcategory":"water filter",
+    "details":["brita","water-filter"]
+  },
+  "brita-dispenser":{
+    "id":159,
+    "name":"BRITA water filter dispenser",
+    "weight":"each",
+    "stock":52,
+    "price":11,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2Fx1nTQfpN%2FBRITA-Water-Filter-Dispenser-1-each.jpg&w=256&q=75",
+    "maincategory":"household tools",
+    "subcategory":"water filter",
+    "details":["dispenser","water"]
+  },
+  "bayer-killed":{
+    "id":160,
+    "name":"bayer insect control",
+    "weight":"75oz",
+    "stock":62,
+    "price":12,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FPrdCMQbw%2FBayer-Insect-Killer-All-Purpose-Continuous-Spray-15-75oz.jpg&w=256&q=75",
+    "maincategory":"household tools",
+    "subcategory":"pest control",
+    "details":["bayer-kill","insect"]
+  },
+  "rat-trap":{
+    "id":161,
+    "name":"d con trap rat",
+    "weight":"2ct",
+    "stock":751,
+    "price":12,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FHndkBTMg%2Fd-Con-Trap-Rat-and-Mouse-Glue-Professional-Strength-2ct.jpg&w=256&q=75",
+    "maincategory":"household tools",
+    "subcategory":"pest control",
+    "details":["trapper","rat-trap"]
+  },
+  "ant-killer":{
+    "id":162,
+    "name":"hot shot ant killer",
+    "weight":"17oz",
+    "stock":77,
+    "price":11,
+    "discount":15,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FfRLkGWrW%2FHot-Shot-Ant-Roach-Plus-Germ-Killer-2-Fresh-Floral-Scent-Value-Pack-17-oz.jpg&w=256&q=75",
+    "maincategory":"household tools",
+    "subcategory":"pest-control",
+    "details":["hot-shot","ant-kill"]
+  },
+  "hammer-detergent":{
+    "id":163,
+    "name":"arm hammer detergent",
+    "weight":"9oz",
+    "stock":125,
+    "price":12,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2F3wB6m9nw%2FArm-Hammer-Tropical-Paradise-Arm-Hammer-Clean-Scentsations-Tropical-Paradise-Laundry-Detergent.jpg&w=256&q=75",
+    "maincategory":"household tools",
+    "subcategory":"laundry",
+    "details":["detergent","hammer-arm"]
+  },
+  "fabreze-dirt":{
+    "id":164,
+    "name":"fabreze moonlit lavender",
+    "weight":"9oz",
+    "stock":26,
+    "price":13,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FgJtTBj9F%2FFebreze-Bedding-Refresher-Moonlit-Lavender-16-9oz.jpg&w=640&q=75",
+    "maincategory":"household tools",
+    "subcategory":"laundry",
+    "details":["detergent","fabreze"]
+  },
+  "pad-brush":{
+    "id":165,
+    "name":"scrubbing pad brush",
+    "weight":"1ct",
+    "stock":200,
+    "price":12,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FXvpNzZm4%2FChar-Bron-Dual-SS-Scubbing-Pad-Brush-1ct.jpg&w=256&q=75",
+    "maincategory":"household tools",
+    "subcategory":"cleaning tools",
+    "details":["scrubbing","brush"]
+  },
+  "casabella-brush":{
+    "id":166,
+    "name":"casabella sponge brush",
+    "weight":"each",
+    "stock":150,
+    "price":7,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2Fmgd2j3dm%2FCasabella-Sponge-Brush-Loop-1-each.jpg&w=256&q=75",
+    "maincategory":"household tools",
+    "subcategory":"cleaning tools",
+    "details":["scrubbing","brush"]
+  },
+  "clean-it":{
+    "id":167,
+    "name":"clean it cleaner",
+    "weight":"32oz",
+    "stock":74,
+    "price":8,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FcJ2BYN43%2FEveryday-Living-All-Purpose-Cleaner-with-Bleach-32-oz.jpg&w=256&q=75",
+    "maincategory":"household tools",
+    "subcategory":"cleaner",
+    "details":["clean-it","clean"]
+  },
+  "clean-wipes":{
+    "id":168,
+    "name":"good clean wipes",
+    "weight":"24ct",
+    "stock":136,
+    "price":9,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FncG2W508%2FGood-Clean-Fresh-Scented-Disinfectant-Wipes-24ct.jpg&w=256&q=75",
+    "maincategory":"household tools",
+    "subcategory":"cleaner",
+    "details":["wiper","clean"]
+  },
+  "chinese-clean":{
+    "id":169,
+    "name":"artik mandarine cleaner",
+    "weight":"8oz",
+    "stock":0,
+    "price":7,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FkGxsqhCb%2FArtik-Mandarine-Obsession-All-Purpose-Cleaner-8fl-oz.jpg&w=256&q=75",
+    "maincategory":"household tools",
+    "subcategory":"cleaner",
+    "details":["mandarine-clean","cleaner"]
+  }
+}

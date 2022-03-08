@@ -1,0 +1,35 @@
+{
+  "pran-jelly": {
+    "id": 136,
+    "name":"pran mango jelly",
+    "weight": "375g",
+    "stock": 215,
+    "price": 13,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2Fg0n0tY09%2FPran-Mango-Jam-375-Gm.jpg&w=640&q=75",
+    "maincategory": "jam & jelly",
+    "subcategory": "jam & jelly",
+    "details": ["pran-jam", "j&j"]
+  },
+  "foster-clark": {
+    "id": 137,
+    "name":"foster clark jelly",
+    "weight": "450g",
+    "stock": 25,
+    "price": 12,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FHLRkffJr%2FFoster-Clark-Jam-Raspberry-450gm.jpg&w=256&q=75",
+    "maincategory": "jam & jelly",
+    "subcategory": "jam & jelly",
+    "details": ["clark jam", "jam"]
+  },
+  "ahmed-jelly": {
+    "id": 138,
+    "name":"ahmed fruit jelly",
+    "weight": "500g",
+    "stock": 41,
+    "price": 13,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2F4x8d1Ksb%2FAhmed-Mixed-Fruit-Jelly-500g.jpg&w=256&q=75",
+    "maincategory": "jam & jelly",
+    "subcategory": "jam & jelly",
+    "details": ["ahmed-jelly", "fruit-jelly"]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "ultra-ghee": {
+    "id": 115,
+    "name": "ultra ghee",
+    "stock": 145,
+    "price": 10,
+    "weight": "200gm",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FZq06HG2W%2FUltra-Ghee-200g.jpg&w=256&q=75",
+    "maincategory": "milk & dairy",
+    "subcategory": "butter & ghee",
+    "details": ["ultra", "ghee"]
+  },
+  "aarong-ghee": {
+    "id": 116,
+    "name": "aarong ghee",
+    "stock": 74,
+    "price": 10,
+    "weight": "200gm",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FRVzQmb6Y%2FAarong-Ghee-200-Gm.jpg&w=256&q=75",
+    "maincategory": "milk & dairy",
+    "subcategory": "butter & ghee",
+    "details": ["aarong", "ghee"]
+  },
+  "assel-ghee": {
+    "id": 117,
+    "name": "aseel vegetable-ghee",
+    "stock": 215,
+    "price": 9,
+    "weight": "500gm",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FrwV1009C%2FAseel-Vegetable-Ghee-500gm.jpg&w=256&q=75",
+    "maincategory": "milk & dairy",
+    "subcategory": "butter & ghee",
+    "details": ["aseel-ghee", "ghee"]
+  },
+  "shurfine-yoghurt": {
+    "id": 118,
+    "name": "shurfine vanilla yoghurt",
+    "stock": 122,
+    "price": 11,
+    "weight": "60oz",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FXJJ1w1cL%2FShurfine-Vanilla-Nonfat-Yogurt-6oz.jpg&w=256&q=75",
+    "maincategory": "milk & dairy",
+    "subcategory": "dairy",
+    "details": ["yoghurt", "dairy"]
+  },
+  "mexico-yoghurt": {
+    "id": 119,
+    "name": "el mexicano yoghurt",
+    "stock": 0,
+    "price": 9,
+    "weight": "each",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FJ4Bg6gwd%2FEl-Mexicano-Em-Youstir-Peach-each.jpg&w=256&q=75",
+    "maincategory": "milk & dairy",
+    "subcategory": "dairy",
+    "details": ["el-mexicano", "yoghurt"]
+  },
+  "igloo cream": {
+    "id": 120,
+    "name": "igloo container vanilla",
+    "stock": 100,
+    "price": 9,
+    "weight": "900ml",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FnLQGp8k6%2FIgloo-Container-Vanilla-1000-Ml.jpg&w=256&q=75",
+    "maincategory": "milk & dairy",
+    "subcategory": "ice cream",
+    "details": ["igloo", "cream"]
+  },
+  "exotic-swiss": {
+    "id": 121,
+    "name": "igloo exotic swiss",
+    "stock": 75,
+    "price": 11,
+    "weight": "100ml",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2F85QBCyXs%2FIgloo-Exotic-Swiss-Choccolate-Ice-Cream-100ml.jpg&w=256&q=75",
+    "maincategory": "milk & dairy",
+    "subcategory": "ice cream",
+    "details": ["exotic-swiss", "igloo"]
+  },
+  "kheer-malai": {
+    "id": 122,
+    "name": "igloo kheer malia",
+    "stock": 47,
+    "price": 10,
+    "weight": "1ltr",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FcCdRRvSS%2FIgloo-Kheer-Malai-Box-1-Ltr.jpg&w=256&q=75",
+    "maincategory": "milk & dairy",
+    "subcategory": "ice cream",
+    "details": ["kheer", "cream"]
+  }
+}

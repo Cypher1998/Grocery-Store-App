@@ -1,0 +1,47 @@
+{
+  "guava-jelly": {
+    "id": 123,
+    "name":"sugar free guava jelly",
+    "weight": "375g",
+    "stock": 184,
+    "price": 11,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FhhRB7fmQ%2Fahmed-sugar-free-guava-jelly-375-gm.webp&w=256&q=75",
+    "maincategory": "organic food",
+    "subcategory": "organic food",
+    "details": ["organic", "guava-jelly"]
+  },
+  "orange-jelly": {
+    "id": 124,
+    "name":"sugar free orange jelly",
+    "weight": "375g",
+    "stock": 122,
+    "price": 12,
+    "discount":17,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2F2jbLvMvC%2Fahmed-sugar-free-orange-jelly-375-gm.webp&w=256&q=75",
+    "maincategory": "organic food",
+    "subcategory": "organic food",
+    "details": ["organic", "orange-jelly"]
+  },
+  "gerber-organic": {
+    "id": 125,
+    "name":"gerber organic",
+    "weight": "220ml",
+    "stock": 100,
+    "price": 12,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2Fj5W2HnDM%2FGerber-Organic.jpg&w=256&q=75",
+    "maincategory": "organic food",
+    "subcategory": "organic food",
+    "details": ["gerber", "organic"]
+  },
+  "pawapaw": {
+    "id": 126,
+    "name":"paka-pape pawpaw",
+    "weight": "1kg",
+    "stock": 100,
+    "price": 12,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FV636DsMm%2Fpaka-pape-50-gm-1-kg.webp&w=256&q=75",
+    "maincategory": "organic food",
+    "subcategory": "organic food",
+    "details": ["pawpaw", "paka"]
+  }
+}

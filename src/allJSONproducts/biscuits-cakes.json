@@ -1,0 +1,69 @@
+{
+  "dan-cake-layer":{
+    "id":149,
+    "name":"dan cake layer cake",
+    "weight":"1box",
+    "stock":475,
+    "price":8,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FWgXQg7Y%2FDan-Cake-Vanilla-Layer-Cake-25-5-Gm.jpg&w=256&q=75",
+    "maincategory":"biscuits & cakes",
+    "subcategory":"cakes",
+    "details":["dan-foods","layer-cake"]
+  },
+  "dan-pound":{
+    "id":150,
+    "name":"dan cake pound cake",
+    "weight":"1box",
+    "stock":741,
+    "price":9,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fw6Z4T7d%2FDan-Cake-Chocolate-Pound-Cake-300g.jpg&w=256&q=75",
+    "maincategory":"biscuits & cakes",
+    "subcategory":"cakes",
+    "details":["dan-foods","pound-cake"]
+  },
+  "dan-choco":{
+    "id":151,
+    "name":"dan cake chocolate muffin",
+    "weight":"1box",
+    "stock":152,
+    "price":10,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6Ygfpmr%2FDan-Cake-Chocolate-Muffin-25g-X-12-Pcs.jpg&w=256&q=75",
+    "maincategory":"biscuits & cakes",
+    "subcategory":"cakes",
+    "details":["dan-foods","chocolate"]
+  },
+  "milk-biscuit":{
+    "id":152,
+    "name":"fun milk water biscuit",
+    "weight":"1pac",
+    "stock":74,
+    "price":11,
+    "discount":15,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FHqVG7HV%2F2-Fun-Milk-Wafer-Biscuit-17gx12pack.jpg&w=256&q=75",
+    "maincategory":"biscuits & cakes",
+    "subcategory":"biscuits",
+    "details":["fun-foods","milk-biscuits"]
+  },
+  "bisk-club-food":{
+    "id":153,
+    "name":"bisk club cream biscuit",
+    "weight":"1pac",
+    "stock":0,
+    "price":11,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FSKmXDYZ%2FBisk-Club-Shero-Cream-Biscuit-85g.jpg&w=256&q=75",
+    "maincategory":"biscuits & cakes",
+    "subcategory":"biscuits",
+    "details":["biscuits","bisk-food"]
+  },
+  "dekko-cookie":{
+    "id":154,
+    "name":"dekko ovaltine-cookie biscuit",
+    "weight":"1box",
+    "stock":76,
+    "price":9,
+    "imgUrl":"https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FLkncfJj%2FDekko-Ovaltine-Cookies-Biscuits-330g.jpg&w=256&q=75",
+    "maincategory":"biscuits & cakes",
+    "subcategory":"biscuits",
+    "details":["ovaltine","dekko-foods"]
+  }
+}

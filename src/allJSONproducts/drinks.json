@@ -1,0 +1,170 @@
+{
+  "marley-coffee": {
+    "id": 100,
+    "name": "marley coffee",
+    "stock": 120,
+    "price": 6,
+    "weight": "8oz",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FDwWJ8cTk%2FMarley-Coffee-Coffee-Whole-Beans-Medium-Dark-Espresso-8-oz.jpg&w=256&q=75",
+    "maincategory": "breakfast",
+    "subcategory": "coffee",
+    "details": ["marley", "coffee"]
+  },
+  "kimbo-coffe": {
+    "id": 101,
+    "name": "caffe kimbo coffee",
+    "stock": 78,
+    "price": 7,
+    "weight": "8oz",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FZKsvbMXx%2FCaffe-Kimbo-Aroma-Espresso-8-8-oz.jpg&w=256&q=75",
+    "maincategory": "drinks",
+    "subcategory": "coffee",
+    "details": ["caffe-kimbo", "coffee"]
+  },
+  "just-coffee": {
+    "id": 102,
+    "name": "just coffe",
+    "stock": 85,
+    "price": 8,
+    "weight": "12oz",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2F9fZDBF0L%2FJust-Coffee-Coop-Organic-Honduran-Honey-Processed-Coffee-12oz.jpg&w=256&q=75",
+    "maincategory": "drinks",
+    "subcategory": "coffee",
+    "details": ["just", "coffe"]
+  },
+  "positive-drink": {
+    "id": 103,
+    "name": "positive energy drink",
+    "stock": 0,
+    "price": 9,
+    "weight": "12oz",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2F7YZXtjg3%2FPositive-Energy-Energy-Drink-Organic-Coconut-Water-12-oz.jpg&w=256&q=75",
+    "maincategory": "drinks",
+    "subcategory": "energy drinks",
+    "details": ["energy", "positive-drinks"]
+  },
+  "bing-drink": {
+    "id": 104,
+    "name": "BING energy drink",
+    "stock": 121,
+    "price": 13,
+    "weight": "12oz",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FrprfCW57%2FBING-Beverage-Made-with-Blackberry-Juice-12-fl-oz.jpg&w=256&q=75",
+    "maincategory": "drinks",
+    "subcategory": "energy drinks",
+    "details": ["bing", "drinks"]
+  },
+  "monster-drink": {
+    "id": 105,
+    "name": "monster energy drink",
+    "stock": 78,
+    "price": 8,
+    "discount": 13,
+    "weight": "15oz",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FRCRXRvnC%2FMonster-Energy-Rehab-Orangeade-15-5-fl-oz.jpg&w=256&q=75",
+    "maincategory": "drinks",
+    "subcategory": "energy drinks",
+    "details": ["monster", "energy"]
+  },
+  "lemonade": {
+    "id": 106,
+    "name": "robinsons pink lemonade",
+    "stock": 142,
+    "price": 11,
+    "weight": "10fl-oz",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FJ4R7f5nc%2FRobinsons-Pink-Lemonade-Juice-Drink-10-fl-oz.jpg&w=256&q=75",
+    "maincategory": "drinks",
+    "subcategory": "juice",
+    "details": ["robinsons", "juice"]
+  },
+  "cider-wine": {
+    "id": 107,
+    "name": "musselman sparkling cider",
+    "stock": 36,
+    "price": 10,
+    "weight": "750ml",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FgcVktTY2%2FMusselman-s-Sparkling-Cider-750ml.jpg&w=256&q=75",
+    "maincategory": "drinks",
+    "subcategory": "juice",
+    "details": ["musselman-juice", "drinks"]
+  },
+  "orabge-juice": {
+    "id": 108,
+    "name": "hood orange juice",
+    "stock": 78,
+    "price": 11,
+    "weight": "14fl-oz",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FWzwNDh9k%2FHood-Orange-Juice-14-fl-oz.jpg&w=256&q=75",
+    "maincategory": "drinks",
+    "subcategory": "juice",
+    "details": ["orange", "orange-juice"]
+  },
+  "calming-teat": {
+    "id": 109,
+    "name": "calminh herbal tea",
+    "stock": 0,
+    "price": 5,
+    "weight": "15ct",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2F13JnVvWJ%2FUrban-Frgr-Organic-Calming-Herbal-Tea-15-ct.jpg&w=256&q=75",
+    "maincategory": "drinks",
+    "subcategory": "tea",
+    "details": ["calming-tea", "herbal"]
+  },
+  "slimming-tea": {
+    "id": 110,
+    "name": "slimming slender tea",
+    "stock": 78,
+    "price": 7,
+    "weight": "24ct",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FbwzSv7RZ%2FNow-Slimming-Slender-Chai-Tea-24-ct.jpg&w=256&q=75",
+    "maincategory": "drinks",
+    "subcategory": "tea",
+    "details": ["slimming-tea", "tea"]
+  },
+  "organic-tea": {
+    "id": 111,
+    "name": "organic pitta tea",
+    "stock": 121,
+    "price": 8,
+    "discount": 25,
+    "weight": "16ct",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FkXPt066F%2FMaharishi-Ayurveda-Organic-Pitta-Tea-16-ct.jpg&w=256&q=75",
+    "maincategory": "drinks",
+    "subcategory": "tea",
+    "details": ["organic", "organic-tea"]
+  },
+  "club-water": {
+    "id": 112,
+    "name": "food club water",
+    "stock": 92,
+    "price": 8,
+    "weight": "1ltr",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FnrmZphW6%2FFood-Club-Original-Seltzer-Water-33.jpg&w=256&q=75",
+    "maincategory": "drinks",
+    "subcategory": "water",
+    "details": ["water", "club-water"]
+  },
+  "pure-water": {
+    "id": 113,
+    "name": "alhm=ambra purified water",
+    "stock": 124,
+    "price": 7,
+    "discount": 7,
+    "weight": "1ltr",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FP5QXCNqH%2FAlhambra-Purified-Water-1-Lt.jpg&w=256&q=75",
+    "maincategory": "drinks",
+    "subcategory": "water",
+    "details": ["alhambra-water", "water"]
+  },
+  "thyme-water": {
+    "id": 114,
+    "name": "fresh thyme water",
+    "stock": 122,
+    "price": 6,
+    "weight": "3ltr",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FDyqFNmLG%2FFresh-Thyme-High-Alkaline-Water-3-Lt.jpg&w=256&q=75",
+    "maincategory": "drinks",
+    "subcategory": "water",
+    "details": ["fresh-thyme", "water"]
+  }
+}

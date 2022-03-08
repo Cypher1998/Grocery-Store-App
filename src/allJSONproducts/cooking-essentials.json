@@ -1,0 +1,225 @@
+{
+  "aci-sugar": {
+    "id": 72,
+    "name": "ACI pure sugar",
+    "weight": "1kg",
+    "stock": 123,
+    "price": 12,
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fzmh08z4%2FACI-Pure-Sugar-1-Kg.jpg&w=256&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "spices & mixes",
+    "details": ["aci sugar", "spices & mixes"]
+  },
+  "aci-salt": {
+    "id": 73,
+    "name": "ACI pure salt",
+    "stock": 210,
+    "price": 10,
+    "weight": "750g",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F8sBDTg2%2FACI-Pure-Salt-Jar-750gm.jpg&w=256&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "spices & mixes",
+    "details": ["aci salt", "spices & mixes"]
+  },
+  "fresh-flour": {
+    "id": 74,
+    "name": "fresh flour",
+    "stock": 100,
+    "price": 10,
+    "weight": "2kg",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FBVHFnLG%2FFresh-Atta-2-Kg.jpg&w=256&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "flour",
+    "details": ["fresh flour", "flour"]
+  },
+  "aci-flour": {
+    "id": 75,
+    "name": "ACI pure flour",
+    "stock": 97,
+    "price": 9,
+    "weight": "1kg",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FthC1gzg%2FACI-Pure-Maida-1-Kg.jpg&w=640&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "flour",
+    "details": ["aci flour", "flour"]
+  },
+  "bg-aci-flour": {
+    "id": 76,
+    "name": "ACI pure flour (bg)",
+    "stock": 41,
+    "price": 16,
+    "discount": "9",
+    "weight": "2kg",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FZVRVFTv%2FACI-Pure-Atta-2kg.jpg&w=256&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "flour",
+    "details": ["aci flour", "flour"]
+  },
+  "aci-oats-flour": {
+    "id": 77,
+    "name": "ACI nutrilife oats flour",
+    "stock": 27,
+    "price": 10,
+    "weight": "1kg",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F7GmpLyR%2FACI-Nutrilife-Oats-Plus-Atta.jpg&w=256&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "flour",
+    "details": ["aci flour", "flour"]
+  },
+  "aci-nutrilife-flour": {
+    "id": 78,
+    "name": "ACI nutrilife flour",
+    "stock": 0,
+    "price": 12,
+    "weight": "1kg",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F7yJhZq5%2FACI-Nutrilife-Multi-Grain-Atta-1-Kg.jpg&w=256&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "flour",
+    "details": ["aci flour", "flour"]
+  },
+  "soya-oil": {
+    "id": 79,
+    "name": "fresh soyabean oil",
+    "stock": 55,
+    "price": 10,
+    "weight": "5ltr",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F0nzYNB8%2FFresh-Soyabean-Oil-5-Ltr.jpg&w=256&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "oil",
+    "details": ["fresh oil", "oil"]
+  },
+
+  "mustard-oil": {
+    "id": 80,
+    "name": "fresh mustard oil",
+    "stock": 74,
+    "price": 11,
+    "weight": "500ml",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FbWJ9d0b%2FFresh-Mustard-Oil-500ml.jpg&w=256&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "oil",
+    "details": ["fresh oil", "oil"]
+  },
+  "fortune-oil": {
+    "id": 81,
+    "name": "fortune oil",
+    "stock": 44,
+    "price": 8,
+    "weight": "5ltr",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FzXY4q7D%2FFortune-Rice-Bran-Oil-Pet-5ltr.jpg&w=256&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "oil",
+    "details": ["fortune oil", "oil"]
+  },
+  "aci-pure-oil": {
+    "id": 82,
+    "name": "ACI pure mustard oil",
+    "stock": 85,
+    "price": 9,
+    "weight": "200ml",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FTLRZKh5%2FACI-Pure-Mustard-Oil-200ml.jpg&w=256&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "oil",
+    "details": ["aci oil", "oil"]
+  },
+  "aci-aroma-oil": {
+    "id": 83,
+    "name": "ACI aroma mustard oil",
+    "stock": 23,
+    "price": 10,
+    "weight": "1ltr",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FmSyh6LB%2FACI-Aroma-Mustard-Oil-1-Ltr.jpg&w=256&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "oil",
+    "details": ["aci oil", "oil"]
+  },
+  "kalijira-rice": {
+    "id": 84,
+    "name": "kalijira premium rice",
+    "stock": 45,
+    "price": 12,
+    "weight": "5kg",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fj4DjzJb%2FKalijira-Premium-Rice-Loose-Kg-1-Kg.jpg&w=256&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "rice",
+    "details": ["kalijira rice", "rice"]
+  },
+  "chinigura-rice": {
+    "id": 85,
+    "name": "fresh chinigura rice",
+    "stock": 24,
+    "price": 14,
+    "weight": "5kg",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FWzWdTsx%2FFresh-Chinigura-Rice-1kg.jpg&w=256&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "rice",
+    "details": ["chinigura", "rice"]
+  },
+  "aarong-rice": {
+    "id": 86,
+    "name": "aarong nazirshail rice",
+    "stock": 81,
+    "price": 13,
+    "weight": "5kg",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FG5S8wCk%2FAarong-Nazirshail-Rice-5-Kg.jpg&w=256&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "rice",
+    "details": ["aarong rice", "rice"]
+  },
+  "kataribhog-rice": {
+    "id": 87,
+    "name": "aarong kataribhog",
+    "stock": 14,
+    "price": 10,
+    "weight": "5kg",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Frs9sz34%2FAarong-Kataribhog-Rice-5-Kg.jpg&w=256&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "rice",
+    "details": ["kataribhog rice", "rice"]
+  },
+  "onion-loose": {
+    "id": 88,
+    "name": "onion loose",
+    "stock": 25,
+    "price": 9,
+    "weight": "1kg",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FbQ70J0P%2FOnion-Local-Loose-Kg-1-Kg.jpg&w=256&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "dry vegetable",
+    "details": ["onion", "dry vegetable"]
+  },
+  "ginger": {
+    "id": 89,
+    "name": "ginger hybrid",
+    "stock": 0,
+    "price": 15,
+    "weight": "1kg",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FYL6gbnL%2FGinger-Ada-Local-Hybrid-1-Kg.jpg&w=256&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "dry vegetable",
+    "details": ["", "dry vegetable"]
+  },
+  "garlic": {
+    "id": 90,
+    "name": "garlic loose",
+    "stock": 24,
+    "price": 12,
+    "discount": 12,
+    "weight": "1kg",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FD5tBhsz%2FGarlic-Roshun-Deshi-Loose-P-1-Kg.jpg&w=256&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "dry vegetable",
+    "details": ["", "dry vegetable"]
+  },
+  "ginger-loose": {
+    "id": 91,
+    "name": "ginger imported loose",
+    "stock": 39,
+    "price": 13,
+    "weight": "1kg",
+    "imgUrl": "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FjWm6FLB%2FAda-Imported-Loose-1-Kg.jpg&w=256&q=75",
+    "maincategory": "cooking essentials",
+    "subcategory": "dry vegetable",
+    "details": ["garlic", "dry vegetable"]
+  }
+}
