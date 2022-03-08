@@ -3,10 +3,8 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
-console.log(process.env.REACT_APP_API_KEY);
-
 const firebaseConfig = {
-  apiKey: `${process.env.REACT_APP_API_KEY}`,
+  apiKey: `${process.env.REACT_APP_FIREBASE_TOKEN}`,
   authDomain: 'grocery-app-store-57f4d.firebaseapp.com',
   projectId: 'grocery-app-store-57f4d',
   storageBucket: 'grocery-app-store-57f4d.appspot.com',

@@ -9,13 +9,13 @@ const Features = ({ imgUrl, title, subtitle }) => {
       <div className="text">
         <p>{title}</p>
         <ul className="p-0 m-0">
-          {newSubtitle.map((listItem) => (
-            <li>
+          {newSubtitle.map((listItem,index) => (
+            <li key={index}>
               <span>
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
-                  stroke-width="0"
+                  strokeWidth="0"
                   viewBox="0 0 512 512"
                   height="1em"
                   width="1em"
@@ -23,9 +23,9 @@ const Features = ({ imgUrl, title, subtitle }) => {
                 >
                   <path
                     fill="none"
-                    stroke-linecap="square"
-                    stroke-miterlimit="10"
-                    stroke-width="48"
+                    strokeLinecap="square"
+                    strokeMiterlimit="10"
+                    strokeWidth="48"
                     d="M184 112l144 144-144 144"
                   ></path>
                 </svg>
