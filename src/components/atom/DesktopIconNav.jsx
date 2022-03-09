@@ -1,21 +1,16 @@
 import { BsBell, BsCart, BsPerson } from 'react-icons/bs';
 
-const DesktopNavbar = () => {
+const DesktopIconNav = () => {
   return (
     <div className="d-flex justify-content-between align-items-center">
-      <BsBell size={23} style={iconStyle} />
+      <BsBell size={23} className="iconStyle" />
       <div className="position-relative d-flex justify-content-between align-items-center">
-        <BsCart size={24} style={iconStyle} />
+        <BsCart size={24} className="iconStyle" />
         <span className="itemNumber">1</span>
       </div>
-      <BsPerson size={24} style={iconStyle} />
+      <BsPerson size={24} className="iconStyle" />
     </div>
   );
 };
 
-const iconStyle = {
-  color: '#fff',
-  cursor: 'pointer',
-};
-
-export default DesktopNavbar;
+export default DesktopIconNav;

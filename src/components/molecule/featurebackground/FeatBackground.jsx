@@ -1,8 +1,9 @@
-import UnknownChild from '../utilities/UnknownChild';
-import Features from './Features';
+import './featbackground.scss';
+import UnknownChild from '../../utilities/UnknownChild';
+import Features from '../../atom/features/Features';
 import { connect } from 'react-redux';
-import { fetchFeaturesData } from '../../redux/featuredcategory/featureActions';
-import spinner from '../../assets/spinner.gif';
+import { fetchFeaturesData } from '../../../redux/featuredcategory/featureActions';
+import spinner from '../../../assets/spinner.gif';
 import { useEffect } from 'react';
 
 const FeatBackground = ({
@@ -20,11 +21,14 @@ const FeatBackground = ({
   return (
     <div className="features mt-4 mt-lg-0">
       <div className="myContainer">
-        <div className="featuresText text-center pt-5 pb-4">
-          <h3>Featured Categories</h3>
-          <p>Choose your necessary products from this feature categories.</p>
-        </div>
-        <div className="pb-5 mb-5">
+        <UnknownChild>
+          <div className="randomText text-center pt-5 pb-4 col-lg-6 col-xl-5 mx-auto">
+            <h3>Featured Categories</h3>
+            <p>Choose your necessary products from this feature categories.</p>
+          </div>
+        </UnknownChild>
+
+        <div className="pb-5">
           {loading ? (
             <UnknownChild>
               <div className="text-center pb-5 spinner">

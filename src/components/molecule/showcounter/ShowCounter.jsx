@@ -1,5 +1,6 @@
-import couponImg from '../../assets/bg-image/bg3.webp';
-import couponImg2 from '../../assets/bg-image/bg4.jpg';
+import './showcounter.scss';
+import couponImg from '../../../assets/bg-image/bg3.webp';
+import couponImg2 from '../../../assets/bg-image/bg4.jpg';
 
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (

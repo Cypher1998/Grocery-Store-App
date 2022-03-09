@@ -1,0 +1,38 @@
+@import '../../utilities/variables';
+
+.featureDisplay {
+  .image {
+    grid-column: 1/2;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .text {
+    grid-column: 2/7;
+
+    p {
+      color: rgb(78, 78, 78);
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+      max-width: 150px;
+      @include clamp-text();
+    }
+
+    li {
+      color: rgb(139, 140, 143);
+      font-size: 0.82rem;
+      list-style: none;
+
+      &:hover {
+        color: $gen-color-a;
+      }
+    }
+  }
+
+  &:hover .text p {
+    color: $bg-color;
+  }
+}

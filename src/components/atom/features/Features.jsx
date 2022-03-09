@@ -1,3 +1,5 @@
+import './features.scss';
+
 const Features = ({ imgUrl, title, subtitle }) => {
   const newSubtitle = subtitle.slice(0, 3);
 
@@ -9,7 +11,7 @@ const Features = ({ imgUrl, title, subtitle }) => {
       <div className="text">
         <p>{title}</p>
         <ul className="p-0 m-0">
-          {newSubtitle.map((listItem,index) => (
+          {newSubtitle.map((listItem, index) => (
             <li key={index}>
               <span>
                 <svg

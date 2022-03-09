@@ -1,0 +1,8 @@
+@import '../../utilities/variables';
+
+.mainNavbar {
+  background: $bg-color;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

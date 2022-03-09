@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+@import '/src/components/utilities/variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+
+/* general container */
+.myContainer {
+  max-width: 1350px;
+  padding: 0 1rem;
+  border-radius: 5px;
+}
+
+.iconStyle {
+  color: #fff;
+  cursor: pointer;
+}
+
+.spinner img {
+  width: 130px;
+  height: 130px;
+}
+
+.randomText {
+  h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    font-family: $roboto-font;
+    margin-top: 0.75rem;
+  }
+}
+
+.itemNumber {
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  position: absolute;
+  background: rgb(239 68 68);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  top: -10px;
+  right: -10px;
+}
+
+@media (min-width: 992px) {
+  .myContainer {
+    margin: auto;
+    padding: 0 3rem;
+  }
+}

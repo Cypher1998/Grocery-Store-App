@@ -6,24 +6,26 @@ import bgFive from '../../assets/bg-image/bg5.jpg';
 export const backgroundText = [
   {
     url: bgFour,
-    bigText: 'the best quality products',
-    smallText: 'Dramatically facilitate effective total linkage...',
+    bigText: 'the best quality products guaranteed!',
+    smallText:
+      'Dramatically facilitate effective total linkage for go forward process',
     variant: 'success',
     onClick: () => console.log(222),
   },
   {
     url: bgFive,
-    bigText: 'best different type of grocery',
-    smallText: 'Quickly aggregate empowered networks...',
+    bigText: 'best different type of grocery store.',
+    smallText: 'Quickly aggregate empowered networks after emerging products',
     variant: 'dark',
     onClick: () => console.log(333),
   },
   {
     url: bgTwo,
-    bigText: 'quality freshness guaranteed',
-    smallText: 'Intrinsically fashion performance...',
+    bigText: 'quality freshness guaranteed!',
+    smallText:
+      'Intrinsically fashion performance based products rather than accurate benefits',
     variant: 'success',
-    transform: 'translateX(13rem)',
+    transform: 'translateX(10rem)',
     onClick: () => console.log(444),
   },
   {

@@ -1,0 +1,20 @@
+$roboto-font: 'Roboto', sans-serif;
+$bg-color: rgb(16, 185, 129);
+$input-padding: 0.6rem 1rem;
+$line-clamp: 1;
+$gen-color-a: rgb(5, 150, 105);
+$grid-repeat-num: 1;
+$gen-color-b: rgb(243, 244, 246);
+
+@mixin clamp-text() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line-clamp;
+  -webkit-box-orient: vertical;
+}
+
+@mixin display-grid($grid-repeat-num) {
+  display: grid;
+  grid-template-columns: repeat($grid-repeat-num, 1fr);
+}

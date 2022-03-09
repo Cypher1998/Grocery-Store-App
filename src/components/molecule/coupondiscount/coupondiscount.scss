@@ -1,0 +1,14 @@
+@import '../../utilities/variables';
+
+.coupon {
+  border: 2px solid rgb(249 115 22);
+  border-radius: 5px;
+  background: rgb(249, 250, 251);
+
+  &:hover {
+    border-color: $bg-color;
+  }
+  .couponText {
+    background: rgb(255, 237, 213);
+  }
+}

@@ -1,0 +1,86 @@
+@import '../../utilities/variables';
+
+.homeSlider {
+  padding-top: 5rem;
+
+  @media (min-width: 992px) {
+    padding-top: 7rem;
+  }
+
+  .swiper {
+    height: 220px;
+    border-radius: 10px;
+    position: relative;
+
+    @media (min-width: 576px) {
+      height: 270px;
+    }
+
+    @media (min-width: 768px) {
+      height: 300px;
+    }
+
+    @media (min-width: 992px) {
+      height: 320px;
+    }
+
+    .swiperText {
+      color: rgb(2, 14, 11);
+      position: absolute;
+      top: 20%;
+      left: 2%;
+      font-family: $roboto-font;
+
+      h2 {
+        text-transform: capitalize;
+        font-weight: 700;
+        width: 50%;
+        min-width: 150px;
+        @include clamp-text();
+      }
+
+      p {
+        font-size: 1.05rem;
+        font-weight: 500;
+        width: 65%;
+        @include clamp-text();
+      }
+
+      @media (min-width: 576px) {
+        h2 {
+          width: 65%;
+          font-size: 2rem;
+        }
+        p {
+          width: 65%;
+        }
+      }
+
+      @media (min-width: 768px) {
+        h2 {
+          width: 70%;
+          font-size: 1.8rem;
+        }
+
+        p {
+          width: 80%;
+          -webkit-line-clamp: $line-clamp * 2;
+        }
+      }
+
+      @media (min-width: 992px) {
+        h2 {
+          -webkit-line-clamp: $line-clamp * 3;
+          overflow: hidden;
+          width: 60%;
+        }
+
+        p {
+          -webkit-line-clamp: $line-clamp * 3;
+          overflow: hidden;
+          width: 60%;
+        }
+      }
+    }
+  }
+}

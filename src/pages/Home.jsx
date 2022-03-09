@@ -1,17 +1,15 @@
-import SearchNavbar from '../components/navbarsearch/molecule/SearchNavbar';
-import Navbar from '../components/navbar/Navbar';
-import HomeSlider from '../components/homebackground/HomeSlider';
-import OrganicShopping from '../components/homebackground/OrganicShopping';
-import FeatBackground from '../components/featurebackground/FeatBackground';
+import HomeSlider from '../components/molecule/homeslider/HomeSlider';
+import OrganicShopping from '../components/atom/orgshopping/OrganicShopping';
+import FeatBackground from '../components/molecule/featurebackground/FeatBackground';
+import PopularBg from '../components/molecule/popularproducts/PopularBg';
 
 const Home = () => {
   return (
     <>
-      <SearchNavbar />
       <HomeSlider />
       <OrganicShopping />
       <FeatBackground />
-      <Navbar />
+      <PopularBg />
     </>
   );
 };

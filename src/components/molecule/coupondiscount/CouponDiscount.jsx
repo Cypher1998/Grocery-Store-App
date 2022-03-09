@@ -1,6 +1,7 @@
-import { useCountdown } from '../customHooks/useCountdown';
-import ExpiredNotice from './ExpiredNotice';
-import ShowCounter from './ShowCounter';
+import './coupondiscount.scss';
+import { useCountdown } from '../../customHooks/useCountdown';
+import ExpiredNotice from '../../atom/ExpiredNotice';
+import ShowCounter from '../showcounter/ShowCounter';
 
 const CouponDiscount = () => {
   const countDownDate = new Date('Apr 15, 2022 00:00:00').getTime();

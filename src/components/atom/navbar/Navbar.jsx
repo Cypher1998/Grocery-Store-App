@@ -1,3 +1,4 @@
+import './navbar.scss';
 import { BsPerson, BsCart } from 'react-icons/bs';
 import { AiOutlineHome, AiOutlineAlignLeft } from 'react-icons/ai';
 

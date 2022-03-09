@@ -1,0 +1,39 @@
+@import '../../utilities/variables';
+
+.features {
+  background: $gen-color-b;
+
+  .featuresDisplay {
+    @include display-grid(2);
+    grid-auto-rows: minmax(120px, 140px);
+
+    @media (min-width: 576px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  .featureDisplay {
+    @include display-grid(6);
+    grid-gap: 1rem;
+    align-items: center;
+    background: white;
+    border: 0.12rem solid $gen-color-b;
+    border-radius: 2px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    text-transform: capitalize;
+
+    &:hover {
+      box-shadow: 1px 7px 7px rgba(224, 222, 222, 0.95);
+    }
+  }
+}

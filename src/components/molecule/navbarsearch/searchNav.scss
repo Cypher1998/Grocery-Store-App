@@ -1,0 +1,14 @@
+@import '../../utilities/variables';
+
+.navbarSearch {
+  background: $bg-color;
+  padding: 0.75rem 0;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+
+  img {
+    width: 100px;
+    height: 60px;
+  }
+}

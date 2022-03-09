@@ -1,0 +1,61 @@
+@import '../../utilities/variables';
+
+.timer {
+  border: 1px solid #eee;
+  border-radius: 5px;
+
+  img {
+    width: 85%;
+    min-height: 70px;
+    border-radius: 10px;
+  }
+
+  .timerText {
+    span:nth-of-type(1) {
+      font-size: 1.2rem;
+      color: rgb(249 115 22);
+      font-weight: bold;
+    }
+
+    span:nth-of-type(2) {
+      padding: 0.35rem 1rem;
+      border-radius: 35%;
+      font-size: 0.85rem;
+      color: $gen-color-a;
+      background: rgb(209, 250, 229);
+    }
+
+    p {
+      margin-top: 0.25rem;
+      font-weight: bold;
+    }
+  }
+
+  .timerNum {
+    font-weight: bolder;
+
+    span {
+      font-weight: normal;
+      background: $gen-color-a;
+      color: white;
+      padding: 0.25rem;
+      border-radius: 3px;
+    }
+  }
+
+  .timerDetails {
+    h6 {
+      border: 1px dashed $gen-color-a;
+      padding: 0.5rem 0;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      text-align: center;
+      color: $gen-color-a;
+      background: rgb(209, 250, 229);
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}

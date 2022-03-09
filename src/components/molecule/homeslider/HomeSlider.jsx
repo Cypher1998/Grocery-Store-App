@@ -1,11 +1,12 @@
+import './homeslider.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import CouponDiscount from './CouponDiscount';
-import { backgroundText } from '../utilities/HomeBg';
+import CouponDiscount from '../coupondiscount/CouponDiscount';
+import { backgroundText } from '../../utilities/HomeBg';
 import { Button } from 'react-bootstrap';
 
 const HomeSlider = () => {
