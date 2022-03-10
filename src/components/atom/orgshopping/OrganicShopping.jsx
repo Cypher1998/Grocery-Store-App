@@ -1,6 +1,7 @@
 import './orgshopping.scss';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import GenButton from '../GenButton';
 
 const OrganicShopping = () => {
   return (
@@ -14,9 +15,7 @@ const OrganicShopping = () => {
           </p>
         </div>
         <div>
-          <Button variant="success" className="rounded-pill px-4 py-2">
-            Shop Now
-          </Button>
+          <GenButton />
         </div>
       </div>
     </div>

@@ -32,13 +32,14 @@
   }
 
   .timerNum {
-    font-weight: bolder;
+    font-weight: bold;
 
     span {
       font-weight: normal;
+      font-size: 0.95rem;
       background: $gen-color-a;
       color: white;
-      padding: 0.25rem;
+      padding: 0.2rem 0.25rem;
       border-radius: 3px;
     }
   }
