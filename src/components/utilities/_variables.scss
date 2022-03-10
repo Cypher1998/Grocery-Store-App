@@ -1,10 +1,13 @@
 $roboto-font: 'Roboto', sans-serif;
-$bg-color: rgb(16, 185, 129);
+$inter-font: 'Inter', sans-serif;
+$open-sans-font: 'Open Sans', sans-serif;
 $input-padding: 0.6rem 1rem;
 $line-clamp: 1;
+$bg-color: rgb(16, 185, 129);
 $gen-color-a: rgb(5, 150, 105);
-$grid-repeat-num: 1;
 $gen-color-b: rgb(243, 244, 246);
+$gen-grey-color: rgb(156, 163, 175);
+$grid-repeat-num: 1;
 
 @mixin clamp-text() {
   text-overflow: ellipsis;
@@ -17,4 +20,12 @@ $gen-color-b: rgb(243, 244, 246);
 @mixin display-grid($grid-repeat-num) {
   display: grid;
   grid-template-columns: repeat($grid-repeat-num, 1fr);
+}
+
+%stock-discount {
+  position: absolute;
+  z-index: 1;
+  top: 1rem;
+  font-size: 0.77rem;
+  letter-spacing: 0.5px;
 }

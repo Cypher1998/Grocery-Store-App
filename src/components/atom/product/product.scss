@@ -1,0 +1,96 @@
+@import '../../utilities/variables';
+
+.productDisplay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  border-radius: 10px;
+  text-transform: capitalize;
+  font-family: $open-sans-font;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+
+  .productImg {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+
+    .stock {
+      @extend %stock-discount;
+      left: 0;
+      color: rgb(220, 38, 38);
+      background: rgb(254 226 226);
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .discount {
+      @extend %stock-discount;
+      right: 0;
+      color: white;
+      background: rgb(249, 115, 22);
+      border-radius: 5px;
+    }
+
+    img {
+      height: auto;
+      width: 150px;
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+
+  .productText {
+    div:nth-of-type(1) {
+      overflow: hidden;
+
+      span {
+        font-size: 0.8rem;
+        text-transform: none;
+        color: $gen-grey-color;
+      }
+
+      p {
+        font-size: 0.95rem;
+        margin-top: -0.15rem;
+      }
+    }
+
+    div:nth-of-type(2) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: $inter-font;
+      margin-top: 0.2rem;
+
+      span:nth-of-type(2) {
+        color: $gen-grey-color;
+        text-decoration: line-through;
+        margin-left: 0.2rem;
+        font-size: 0.95rem;
+      }
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        border: 1px solid $gen-color-b;
+        color: $bg-color;
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 5px;
+
+        &:hover {
+          background: $bg-color;
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -3,8 +3,9 @@ import UnknownChild from '../../utilities/UnknownChild';
 import Features from '../../atom/features/Features';
 import { connect } from 'react-redux';
 import { fetchFeaturesData } from '../../../redux/featuredcategory/featureActions';
-import spinner from '../../../assets/spinner.gif';
+import DisplaySpinner from '../../atom/DisplaySpinner';
 import { useEffect } from 'react';
+import ErrorText from '../../atom/ErrorText';
 
 const FeatBackground = ({
   fetchFeaturesData,
@@ -30,15 +31,9 @@ const FeatBackground = ({
 
         <div className="pb-5">
           {loading ? (
-            <UnknownChild>
-              <div className="text-center pb-5 spinner">
-                <img src={spinner} alt="spinner" />
-              </div>
-            </UnknownChild>
+            <DisplaySpinner />
           ) : error !== null ? (
-            <UnknownChild>
-              <h5 className="text-danger text-center">{error}</h5>
-            </UnknownChild>
+            <ErrorText error={error} />
           ) : (
             featuresData && (
               <div className="featuresDisplay">
