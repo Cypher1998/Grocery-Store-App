@@ -1,7 +1,8 @@
 import HomeSlider from '../components/molecule/homeslider/HomeSlider';
 import OrganicShopping from '../components/atom/orgshopping/OrganicShopping';
 import FeatBackground from '../components/molecule/featurebackground/FeatBackground';
-import PopularBg from '../components/molecule/popularproducts/PopularBg';
+import PopularBg from '../components/molecule/PopularBg';
+import QuickDiscount from '../components/molecule/quickdiscount/QuickDiscount';
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <OrganicShopping />
       <FeatBackground />
       <PopularBg />
+      <QuickDiscount />
     </>
   );
 };

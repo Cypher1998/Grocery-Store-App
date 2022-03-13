@@ -15,7 +15,7 @@ const OrganicShopping = () => {
           </p>
         </div>
         <div>
-          <GenButton />
+          <GenButton text="Shop Now" />
         </div>
       </div>
     </div>

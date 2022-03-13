@@ -1,10 +1,10 @@
 import { Button } from 'react-bootstrap';
 
-const GenButton = () => {
+const GenButton = ({ text }) => {
   return (
     <>
       <Button variant="success" className="button rounded-pill px-4 py-2">
-        Shop Now
+        {text}
       </Button>
     </>
   );

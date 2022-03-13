@@ -1,0 +1,50 @@
+@import '../../utilities/variables';
+
+.quickInfo {
+  background: $bg-color;
+  border-radius: 10px;
+
+  &Div {
+    background: white;
+    border-radius: 10px;
+    // font-family: $roboto-font;
+
+    .titleOne {
+      // font-weight: bold;
+      font-size: 1.15rem;
+    }
+
+    .titleTwo {
+      font-weight: bold;
+
+      span {
+        color: $bg-color;
+      }
+
+      .button {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      img {
+        height: 100px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      img {
+        height: 200px;
+      }
+
+      .titleOne {
+        font-weight: 500;
+        font-size: 1.2rem;
+      }
+
+      .titleTwo {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}

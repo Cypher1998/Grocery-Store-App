@@ -16,13 +16,13 @@ const Product = ({ imgUrl, price, discount, weight, name, stock }) => {
       </div>
       <div className="productText">
         <div>
-          <span>{weight}</span>
+          <span className="weight">{weight}</span>
           <p>{name}</p>
         </div>
         <div>
-          <p>
+          <div className="priceDiv">
             <span>${price}</span> {discount && <span>${newPrice}</span>}
-          </p>
+          </div>
           <button>
             <BsBagPlusFill size={19} />
           </button>
