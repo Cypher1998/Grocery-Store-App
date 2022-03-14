@@ -1,0 +1,35 @@
+@import '../../utilities/variables';
+
+.socialMediaBg {
+  background: $gen-color-c;
+  color: black;
+  border-radius: 10px;
+  font-family: $open-sans-font;
+  padding: 2.25rem 1.25rem;
+
+  p {
+    font-size: 1.05rem;
+  }
+
+  .socialMediaDiv {
+    a {
+      margin-right: 0.5rem;
+    }
+  }
+  h3 {
+    color: $bg-color;
+    font-weight: bold;
+  }
+
+  img {
+    max-width: 170px;
+    @media (min-width: 992px) {
+      max-width: 270px;
+    }
+  }
+}
+
+.footerColText {
+  color: $gen-color-a;
+  font-family: $open-sans-font;
+}

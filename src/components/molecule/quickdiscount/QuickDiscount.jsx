@@ -4,7 +4,7 @@ import DiscountProducts from '../DiscountProducts';
 
 const QuickDiscount = () => {
   return (
-    <div className="quickDiscount pb-3">
+    <div className="quickDiscount">
       <div className="myContainer">
         <QuickInfo />
         <DiscountProducts />

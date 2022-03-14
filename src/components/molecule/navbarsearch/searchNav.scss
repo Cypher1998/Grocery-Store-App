@@ -1,14 +1,43 @@
 @import '../../utilities/variables';
 
-.navbarSearch {
-  background: $bg-color;
-  padding: 0.75rem 0;
+.mainNavbarFixed {
   position: fixed;
   width: 100%;
-  z-index: 5;
+  z-index: 10;
 
-  img {
-    width: 100px;
-    height: 60px;
+  .navbarSearch {
+    background: $bg-color;
+    padding: 0.75rem 0;
+
+    img {
+      width: 100px;
+      height: 60px;
+    }
+  }
+
+  .navbarNav {
+    background: white;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 20px;
+      list-style: none;
+      text-transform: capitalize;
+      font-family: $open-sans-font;
+
+      li {
+        margin-right: 2rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+          color: $gen-color-a;
+        }
+      }
+    }
   }
 }

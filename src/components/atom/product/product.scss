@@ -10,6 +10,24 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: clip;
+  position: relative;
+
+  .stock {
+    @extend %stock-discount;
+    left: 1rem;
+    color: rgb(220, 38, 38);
+    background: rgb(254 226 226);
+    border-radius: 10px;
+    font-weight: bold;
+  }
+
+  .discount {
+    @extend %stock-discount;
+    right: 1rem;
+    color: white;
+    background: rgb(249, 115, 22);
+    border-radius: 5px;
+  }
 
   .productImg {
     position: relative;
@@ -22,23 +40,6 @@
 
     &:hover img {
       transform: scale(1.05);
-    }
-
-    .stock {
-      @extend %stock-discount;
-      left: -1rem;
-      color: rgb(220, 38, 38);
-      background: rgb(254 226 226);
-      border-radius: 10px;
-      font-weight: bold;
-    }
-
-    .discount {
-      @extend %stock-discount;
-      right: -1rem;
-      color: white;
-      background: rgb(249, 115, 22);
-      border-radius: 5px;
     }
 
     img {
@@ -68,14 +69,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-
+      margin-top: -0.5rem;
       font-family: $inter-font;
-      margin-top: 0.2rem;
       vertical-align: middle;
 
       .priceDiv {
         span:nth-of-type(1) {
           font-weight: bold;
+          font-family: $open-sans-font;
+          font-size: 1.1rem;
         }
 
         span:nth-of-type(2) {

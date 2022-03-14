@@ -1,0 +1,53 @@
+@import '../../utilities/variables';
+
+.footerDisplay {
+  @include display-grid(2);
+  gap: 1.5rem;
+
+  .footerText {
+    text-transform: capitalize;
+
+    .header {
+      font-family: $open-sans-font;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+
+      .link {
+        color: rgb(75 85 99);
+
+        &:hover {
+          color: $gen-color-a;
+        }
+      }
+    }
+  }
+
+  .addressLogo {
+    img {
+      width: 110px;
+    }
+
+    p {
+      margin-top: 1rem;
+      line-height: 2;
+    }
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

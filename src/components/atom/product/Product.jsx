@@ -7,11 +7,9 @@ const Product = ({ imgUrl, price, discount, weight, name, stock }) => {
 
   return (
     <div className="productDisplay px-3 pb-2">
+      {stock < 5 && <span className="stock py-1 px-2">stock out</span>}
+      {discount && <span className="discount py-1 px-2">{discount}% off</span>}
       <div className="productImg">
-        {discount && (
-          <span className="discount py-1 px-2">{discount}% off</span>
-        )}
-        {stock < 5 && <span className="stock py-1 px-2">stock out</span>}
         <img src={imgUrl} alt="product" />
       </div>
       <div className="productText">
@@ -19,7 +17,7 @@ const Product = ({ imgUrl, price, discount, weight, name, stock }) => {
           <span className="weight">{weight}</span>
           <p>{name}</p>
         </div>
-        <div>
+        <div className="priceButton">
           <div className="priceDiv">
             <span>${price}</span> {discount && <span>${newPrice}</span>}
           </div>

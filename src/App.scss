@@ -25,6 +25,10 @@
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+
 .randomText {
   h3 {
     font-weight: bold;
@@ -88,5 +92,9 @@
   .myContainer {
     margin: auto;
     padding: 0 3rem;
+  }
+
+  .home {
+    padding-top: 2rem;
   }
 }

@@ -4,15 +4,23 @@ $organic-font: 1.3rem;
 .organicProduct {
   background: rgb(255, 237, 213);
   border-radius: 10px;
+  font-family: $open-sans-font;
+  // font-family: $roboto-font;
 
   span:nth-of-type(1) {
     color: $gen-color-a;
     font-size: $organic-font;
+    font-family: $open-sans-font;
     font-weight: 600;
   }
 
-  span:nth-of-type(2) {
+  p {
+    font-size: 1.05rem;
+  }
+
+  .organic {
     font-size: $organic-font;
+    color: black;
   }
 
   a {

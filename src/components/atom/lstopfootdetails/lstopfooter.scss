@@ -1,0 +1,44 @@
+@import '../../utilities/variables';
+
+hr {
+  display: none;
+  width: 100%;
+
+  @media (min-width: 992px) {
+    display: block;
+  }
+}
+
+.lgInfos {
+  display: none;
+
+  @media (min-width: 992px) {
+    display: block;
+    @include display-grid(4);
+
+    .coverInfo {
+      border-right: 1px solid rgb(188, 190, 192);
+      display: flex;
+      justify-content: center;
+      height: 30px;
+
+      .lgInfo {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        justify-items: center;
+
+        .icon {
+          grid-column: 1/2;
+          color: $gen-color-a;
+          margin-top: 0.25rem;
+        }
+
+        p {
+          font-size: 0.95rem;
+          grid-column: 2/11;
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+}

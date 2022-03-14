@@ -16,7 +16,7 @@ const DiscountProducts = ({ fetchDiscountedProducts, productResult }) => {
   }, []);
 
   return (
-    <div className=".bgDisplayProducts py-5">
+    <div id="discount" className=".bgDisplayProducts py-5">
       <UnknownChild>
         <div className="randomText text-center px-4 col-lg-6 col-xl-5 mx-auto pb-3">
           <h3>Latest Discounted Products</h3>
