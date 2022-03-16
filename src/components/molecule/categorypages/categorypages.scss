@@ -13,16 +13,13 @@ $gray-color: rgb(212, 211, 211);
 }
 
 .addBackdrop {
-  display: block;
-}
-
-.removeBackdrop {
-  display: none;
+  opacity: 1;
 }
 
 .backdrop {
   height: 100%;
   width: 100%;
+  transition: opacity 0.2s ease-in-out;
   position: fixed;
   z-index: 15;
   background: rgba(0, 0, 0, 0.55);
@@ -33,6 +30,7 @@ $gray-color: rgb(212, 211, 211);
 .categoryDisplay {
   background: white;
   height: inherit;
+  height: 100%;
   width: 420px;
   z-index: 20;
   position: fixed;

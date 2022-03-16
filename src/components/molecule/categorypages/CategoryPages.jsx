@@ -15,11 +15,11 @@ const CategoryPages = ({ mobileModal }) => {
 
   return (
     <>
-      <div
-        className={`backdrop d-lg-none ${
-          mobileModal ? 'addBackdrop' : 'removeBackdrop'
-        }`}
-      ></div>
+      {mobileModal && (
+        <div
+          className={`backdrop d-lg-none ${mobileModal && 'addBackdrop'} `}
+        ></div>
+      )}
       <div
         className={`categoryDisplay d-lg-none ${
           mobileModal ? 'moveModalHere' : 'moveModalAway'
@@ -46,6 +46,7 @@ const CategoryPages = ({ mobileModal }) => {
     </>
   );
 };
+
 const mapStateToProps = (state) => {
   return {
     mobileModal: state.modal.mobileModal,
