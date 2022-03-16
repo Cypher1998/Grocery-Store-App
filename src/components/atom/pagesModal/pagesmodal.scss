@@ -1,0 +1,32 @@
+@import '../../utilities/variables';
+
+.textIconDiv {
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  font: {
+    size: 0.92rem;
+    weight: 500;
+  }
+
+  &:hover {
+    background: $gen-color-b;
+    color: $gen-color-a;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      color: $gen-color-a;
+    }
+
+    span {
+      margin-left: 0.75rem;
+    }
+  }
+}

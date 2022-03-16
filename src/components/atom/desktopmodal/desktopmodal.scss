@@ -1,0 +1,12 @@
+@import '../../utilities/variables';
+
+.categoryModal {
+  @extend %desktop-Modal;
+  height: 420px;
+}
+
+.pageModal {
+  @extend %desktop-Modal;
+  left: 420px;
+  height: 350px;
+}

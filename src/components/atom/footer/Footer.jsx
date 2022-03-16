@@ -9,18 +9,18 @@ const Footer = () => {
     <>
       <LgFooterDetails />
       <div className="footerDisplay myContainer py-5 pt-lg-4">
-        {footerTexts.map((footerText) => (
-          <div className="footerText">
+        {footerTexts.map((footerText, index) => (
+          <div className="footerText" key={index}>
             <p className="header">{footerText.header}</p>
-            {footerText.lists.map((list) => (
-              <ul>
-                <li>
+            <ul>
+              {footerText.lists.map((list, index) => (
+                <li key={index}>
                   <Link to={list.url} className="link">
                     {list.list}
                   </Link>
                 </li>
-              </ul>
-            ))}
+              ))}
+            </ul>
           </div>
         ))}
         <div className="addressLogo">

@@ -24,7 +24,7 @@ export const fetchDiscountedProducts = () => async (dispatch) => {
 
     // execute query
     const querySnap = await getDocs(q);
-    console.log(22);
+
     let discountProducts = [];
     if (querySnap._snapshot.docChanges.length === 0) {
       throw new Error();

@@ -6,7 +6,7 @@ import playStoreImg from '../../../assets/play-store.svg';
 
 const DownloadApp = () => {
   return (
-    <div className="downloadApp py-5">
+    <div id="download" className="downloadApp py-5">
       <div className="myContainer">
         <div className="row d-flex align-items-center">
           <section className="imageBig d-none d-md-block col-md-6 col-lg-4 col-xl-3">

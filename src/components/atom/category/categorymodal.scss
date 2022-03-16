@@ -1,0 +1,51 @@
+@import '../../utilities/variables';
+
+.categoryFeature {
+  text-transform: capitalize;
+  font-family: $open-sans-font;
+  font-size: 0.95rem;
+
+  .featureHeader {
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background: $gen-color-c;
+      color: $gen-color-a;
+    }
+  }
+
+  img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .toggler {
+    span {
+      margin-left: 0.75rem;
+    }
+  }
+
+  .arrowIconRotate {
+    transform: rotateZ(90deg);
+  }
+
+  ul {
+    list-style-type: none;
+    margin-left: -0.5rem;
+    // display: none;
+
+    li {
+      font-size: 0.85rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(90, 89, 89);
+
+    &:hover {
+      color: $gen-color-a;
+    }
+  }
+}

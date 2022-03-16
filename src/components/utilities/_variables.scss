@@ -24,6 +24,22 @@ $grid-repeat-num: 1;
   grid-template-columns: repeat($grid-repeat-num, 1fr);
 }
 
+%desktop-Modal {
+  position: fixed;
+  margin-top: 8.2rem;
+  z-index: 10;
+  background: white;
+  width: 320px;
+  border: 1px solid $gen-color-d;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 %stock-discount {
   position: absolute;
   z-index: 1;

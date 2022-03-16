@@ -1,0 +1,75 @@
+@import '../../utilities/variables';
+
+$gray-color: rgb(212, 211, 211);
+
+.moveModalHere {
+  transform: translateX(0);
+  transition: transform 0.25s ease-in-out;
+}
+
+.moveModalAway {
+  transform: translateX(-500px);
+  transition: transform 0.25s ease-in-out;
+}
+
+.addBackdrop {
+  display: block;
+}
+
+.removeBackdrop {
+  display: none;
+}
+
+.backdrop {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 15;
+  background: rgba(0, 0, 0, 0.55);
+  font-family: $open-sans-font;
+  overflow: hidden;
+}
+
+.categoryDisplay {
+  background: white;
+  height: inherit;
+  width: 420px;
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  scrollbar-width: 0;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  nav {
+    background: $bg-color;
+    position: fixed;
+    width: 420px;
+
+    .closeModal {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background: white;
+      color: red;
+      cursor: pointer;
+
+      &:hover {
+        background: rgb(255, 226, 226);
+      }
+    }
+  }
+
+  h6 {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 4rem;
+    border-bottom: 1px solid $gray-color;
+    letter-spacing: 1px;
+  }
+}

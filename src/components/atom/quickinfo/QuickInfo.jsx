@@ -18,7 +18,9 @@ const QuickInfo = () => {
               offer. See Our latest discounted products from here and get a
               special discount.
             </p>
-            <GenButton text="Download App" />
+            <a href="#download">
+              <GenButton text="Download App" />
+            </a>
           </div>
           <div className="delivery d-none d-md-block col-md-2 col-lg-5">
             <img src={deliveryImg} alt="delivery-boy" />
