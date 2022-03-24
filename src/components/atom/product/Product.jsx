@@ -12,21 +12,21 @@ const Product = ({ imgUrl, price, discount, weight, name, stock }) => {
       <div className="productImg">
         <img src={imgUrl} alt="product" />
       </div>
+      {/* <div > */}
       <div className="productText">
-        <div>
-          <span className="weight">{weight}</span>
-          <p>{name}</p>
+        <span className="weight">{weight}</span>
+        <p className="name">{name}</p>
+      </div>
+      <div className="priceBtn">
+        <div className="priceDiv">
+          <span>${price}</span> {discount && <span>${newPrice}</span>}
         </div>
-        <div className="priceButton">
-          <div className="priceDiv">
-            <span>${price}</span> {discount && <span>${newPrice}</span>}
-          </div>
-          <button>
-            <BsBagPlusFill size={19} />
-          </button>
-        </div>
+        <button>
+          <BsBagPlusFill size={19} />
+        </button>
       </div>
     </div>
+    // </div>
   );
 };
 

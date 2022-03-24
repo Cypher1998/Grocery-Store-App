@@ -37,7 +37,7 @@ const CategoryPages = ({ mobileModal }) => {
             </div>
           </div>
         </nav>
-        {/* <div className="px-4"> */}
+
         <h6 className="px-4 py-3">All Categories</h6>
 
         <CategoryModal />

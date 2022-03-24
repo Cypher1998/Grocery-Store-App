@@ -8,7 +8,7 @@ $gray-color: rgb(212, 211, 211);
 }
 
 .moveModalAway {
-  transform: translateX(-500px);
+  transform: translateX(-800px);
   transition: transform 0.25s ease-in-out;
 }
 
@@ -28,7 +28,7 @@ $gray-color: rgb(212, 211, 211);
   background: white;
   height: inherit;
   height: 100%;
-  width: 420px;
+  width: 100vw;
   z-index: 20;
   position: fixed;
   top: 0;
@@ -41,10 +41,14 @@ $gray-color: rgb(212, 211, 211);
     display: none;
   }
 
+  @media (min-width: 576px) {
+    width: 420px;
+  }
+
   nav {
     background: $bg-color;
     position: fixed;
-    width: 420px;
+    width: 100%;
 
     .closeModal {
       height: 30px;
@@ -52,6 +56,8 @@ $gray-color: rgb(212, 211, 211);
       border-radius: 50%;
       background: white;
       color: red;
+      position: absolute;
+      right: 25px;
       cursor: pointer;
 
       &:hover {

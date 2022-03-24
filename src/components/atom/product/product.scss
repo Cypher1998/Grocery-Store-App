@@ -7,8 +7,6 @@
   border-radius: 10px;
   text-transform: capitalize;
   font-family: $open-sans-font;
-  white-space: nowrap;
-  overflow: hidden;
   text-overflow: clip;
   position: relative;
 
@@ -32,7 +30,6 @@
   .productImg {
     position: relative;
     cursor: pointer;
-    text-align: center;
     min-height: 150px;
     display: flex;
     justify-self: center;
@@ -50,59 +47,58 @@
   }
 
   .productText {
-    div:nth-of-type(1) {
-      overflow: hidden;
+    white-space: nowrap;
+    overflow: hidden;
 
-      .weight {
-        font-size: 0.8rem;
-        text-transform: none;
-        color: $gen-grey-color;
+    .weight {
+      font-size: 0.8rem;
+      text-transform: none;
+      color: $gen-grey-color;
+    }
+
+    .name {
+      font-size: 0.95rem;
+      margin-top: -0.15rem;
+    }
+  }
+
+  .priceBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -0.5rem;
+    font-family: $inter-font;
+    vertical-align: middle;
+
+    .priceDiv {
+      span:nth-of-type(1) {
+        font-weight: bold;
+        font-family: $open-sans-font;
+        font-size: 1.1rem;
       }
 
-      p {
+      span:nth-of-type(2) {
+        color: $gen-grey-color;
+        text-decoration: line-through;
+        margin-left: 0.2rem;
         font-size: 0.95rem;
-        margin-top: -0.15rem;
       }
     }
 
-    div:nth-of-type(2) {
+    button {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      margin-top: -0.5rem;
-      font-family: $inter-font;
-      vertical-align: middle;
+      background: white;
+      border: 1px solid $gen-color-b;
+      color: $bg-color;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 5px;
 
-      .priceDiv {
-        span:nth-of-type(1) {
-          font-weight: bold;
-          font-family: $open-sans-font;
-          font-size: 1.1rem;
-        }
-
-        span:nth-of-type(2) {
-          color: $gen-grey-color;
-          text-decoration: line-through;
-          margin-left: 0.2rem;
-          font-size: 0.95rem;
-        }
-      }
-
-      button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: white;
-        border: 1px solid $gen-color-b;
-        color: $bg-color;
-        width: 2.25rem;
-        height: 2.25rem;
-        border-radius: 5px;
-
-        &:hover {
-          background: $bg-color;
-          color: white;
-        }
+      &:hover {
+        background: $bg-color;
+        color: white;
       }
     }
   }

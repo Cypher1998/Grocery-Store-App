@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import { getAuth } from 'firebase/auth';
 import { toast } from 'react-toastify';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
-// import ErrorText '../'
-import DisplaySpinner from '../components/atom/DisplaySpinner';
 import DashBoardLink from '../components/atom/DashBoardLink';
 import { BsPersonCheckFill, BsFillFileEarmarkPersonFill } from 'react-icons/bs';
 import { FaUnlockAlt } from 'react-icons/fa';
@@ -26,7 +24,7 @@ const DashBoard = ({ getAuthUser }) => {
   const { displayName, email, photoURL } = auth.currentUser;
 
   const newName = displayName.split(' ')[0];
-  const initials = newName.charAt(0) + displayName.split(' ')[1].charAt(0);
+  const initials = newName.charAt(0);
 
   const logOutUser = () => {
     auth.signOut();
@@ -87,13 +85,7 @@ const DashBoard = ({ getAuthUser }) => {
               </ul>
             </div>
             <div className="outletPage p-3 px-lg-4">
-              {/* {loading ? (
-                <DisplaySpinner />
-              ) : error !== null ? (
-                <ErrorText error={error} />
-              ) : ( */}
               <Outlet />
-              {/* )} */}
             </div>
           </div>
         </div>
