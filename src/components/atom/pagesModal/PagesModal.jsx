@@ -13,7 +13,7 @@ const PagesModal = () => {
   return (
     <div className="px-4 py-3">
       <div className="textIconDiv">
-        <Link to="/offer">
+        <Link to="/">
           <BsGift />
           <span>Offer</span>
         </Link>
@@ -43,7 +43,7 @@ const PagesModal = () => {
         </Link>
       </div>
       <div className="textIconDiv">
-        <Link to="/terms-condtions">
+        <Link to="/terms-conditions">
           <BsFileEarmarkText />
           <span>Terms & Conditions</span>
         </Link>

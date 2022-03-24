@@ -1,0 +1,54 @@
+@import '../../utilities/_variables.scss';
+
+.dashboard {
+  text-transform: capitalize;
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  .dashboardDiv {
+    display: grid;
+    gap: 1.5rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .orderSummaryDiv {
+      border: 1px solid rgb(229 231 235);
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: 65px 100px;
+      align-items: center;
+
+      .icon {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .text {
+        grid-column: 2/4;
+        font-family: $open-sans-font;
+        height: 70px;
+
+        p {
+          font-size: 1.05rem;
+        }
+
+        h3 {
+          margin-top: -0.5rem;
+          margin-left: 0.095rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .thankYou {
+    text-align: end;
+  }
+}

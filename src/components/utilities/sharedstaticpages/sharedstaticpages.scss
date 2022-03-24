@@ -1,0 +1,62 @@
+@import '../variables';
+
+.sharedPages {
+  background: $gen-color-d;
+  min-height: 100px;
+  padding-top: 3.5rem;
+
+  div {
+    img {
+      width: 150px;
+      height: 130px;
+
+      &:nth-of-type(2) {
+        transform: rotateY(180deg);
+      }
+    }
+
+    h3 {
+      font-weight: bold;
+      text-transform: capitalize;
+      text-align: center;
+    }
+
+    @media (min-width: 576px) {
+      img {
+        min-width: 200px;
+        height: 150px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      h3 {
+        font-size: 2rem;
+      }
+
+      img {
+        min-width: 270px;
+        height: 170px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      padding-top: 4.5rem;
+
+      h3 {
+        font-size: 2.5rem;
+      }
+
+      img {
+        min-width: 300px;
+        height: 185px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      img {
+        min-width: 320px;
+        height: 200px;
+      }
+    }
+  }
+}

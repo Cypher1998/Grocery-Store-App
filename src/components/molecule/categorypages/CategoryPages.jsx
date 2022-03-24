@@ -18,6 +18,7 @@ const CategoryPages = ({ mobileModal }) => {
       {mobileModal && (
         <div
           className={`backdrop d-lg-none ${mobileModal && 'addBackdrop'} `}
+          onClick={closeModal}
         ></div>
       )}
       <div

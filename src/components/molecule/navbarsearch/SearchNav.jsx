@@ -62,7 +62,7 @@ const SearchNav = ({
                   <Link to="/privacy-policy">privacy policy</Link>
                 </li>
                 <li>
-                  <Link to="/terms-condtions">terms & conditions</Link>
+                  <Link to="/terms-conditions">terms & conditions</Link>
                 </li>
               </ul>
             </div>

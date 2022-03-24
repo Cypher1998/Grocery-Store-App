@@ -17,11 +17,8 @@ $gray-color: rgb(212, 211, 211);
 }
 
 .backdrop {
-  height: 100%;
-  width: 100%;
+  @extend %backdrop;
   transition: opacity 0.2s ease-in-out;
-  position: fixed;
-  z-index: 15;
   background: rgba(0, 0, 0, 0.55);
   font-family: $open-sans-font;
   overflow: hidden;

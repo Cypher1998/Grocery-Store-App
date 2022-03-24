@@ -12,11 +12,11 @@ export const footerTexts = [
       },
       {
         list: 'careers',
-        url: '#',
+        url: '/',
       },
       {
         list: 'latest news',
-        url: '#',
+        url: '/',
       },
     ],
   },
@@ -50,15 +50,15 @@ export const footerTexts = [
       },
       {
         list: 'my orders',
-        url: '/dashboard',
+        url: '/dashboard/my-orders',
       },
       {
         list: 'recent orders',
-        url: '/dashboard',
+        url: '/dashboard/my-orders',
       },
       {
         list: 'updated profile',
-        url: '/dashboard',
+        url: '/dashboard/profile',
       },
     ],
   },

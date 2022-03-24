@@ -1,0 +1,366 @@
+@import '../components/utilities/variables';
+
+.aboutPage {
+  @media (min-width: 992px) {
+    @include display-grid(2);
+    align-items: center;
+    gap: 1.75rem;
+  }
+  .aboutText {
+    .aboutInfoDiv {
+      display: grid;
+      gap: 1.5rem;
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .aboutInfo {
+        background: $gen-color-d;
+        padding: 1rem;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .aboutImage {
+    width: 100%;
+
+    @media (min-width: 992px) {
+      // width: 50%;
+    }
+
+    img {
+      width: inherit;
+    }
+  }
+}
+
+.sharedText {
+  h3 {
+    font-weight: bold;
+    margin: 0.25rem 0 0.75rem;
+  }
+  p {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    font-family: $inter-font;
+  }
+
+  @media (min-width: 992px) {
+    h3 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.05rem;
+    }
+  }
+}
+
+div {
+  label {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: rgb(58, 57, 57);
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgb(230, 223, 223);
+    outline: none;
+    font-size: 0.95rem;
+  }
+
+  input:focus {
+    border-color: $bg-color;
+  }
+  textarea:focus {
+    border-color: $gen-grey-color;
+  }
+}
+
+.contact {
+  display: grid;
+  gap: 3rem;
+  margin: 3rem 0 2rem;
+
+  @media (min-width: 768px) {
+    margin: 4rem 0 2rem;
+  }
+
+  .addressDiv {
+    display: grid;
+    gap: 1.5rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .address {
+      padding: 1.75rem;
+      text-align: center;
+      border: 1px solid $gen-color-d;
+      border-radius: 10px;
+
+      h4 {
+        color: black;
+        font-weight: bold;
+        margin: 1rem 0;
+      }
+
+      P {
+        color: black;
+      }
+
+      a {
+        color: $bg-color;
+      }
+    }
+  }
+
+  .formImg {
+    display: grid;
+    gap: 4rem;
+
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .imageDiv {
+      align-self: center;
+      width: 100%;
+
+      img {
+        width: inherit;
+      }
+    }
+
+    .supportMsg {
+      form {
+        margin: 1.5rem 0;
+        display: grid;
+        gap: 0.75rem;
+
+        @media (min-width: 1200px) {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+
+          .name {
+            grid-column: 1/2;
+          }
+
+          .email {
+            grid-column: 2/3;
+          }
+
+          .message {
+            grid-row: 2;
+            grid-column: 1/3;
+          }
+        }
+
+        .submit {
+          button {
+            padding: 0.75rem 1rem;
+            font-size: 1.05rem;
+            letter-spacing: 1px;
+            font-weight: bold;
+            width: 100%;
+
+            @media (min-width: 576px) {
+              width: 250px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.privacyPolicy {
+  display: grid;
+  gap: 0.75rem;
+  margin: 2rem 0;
+
+  h4 {
+    font-weight: bold;
+    font-family: $inter-font;
+  }
+}
+
+.terms {
+  display: grid;
+  gap: 0.75rem;
+  margin: 2rem 0;
+
+  h4,
+  h5 {
+    font-weight: bold;
+    font-family: $inter-font;
+  }
+
+  a {
+    color: $bg-color;
+  }
+}
+
+.faQuestions {
+  display: grid;
+  gap: 3rem;
+  margin: 2rem 0;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .faqImg {
+    width: 100%;
+
+    img {
+      width: inherit;
+    }
+  }
+}
+
+.signPage {
+  padding: 0 2rem 2rem;
+  max-width: 576px;
+  margin: auto;
+
+  @media (min-width: 992px) {
+    max-width: 640px;
+    font-size: 1.05rem;
+
+    input {
+      padding: top 1rem;
+      padding-bottom: 0.75rem;
+    }
+  }
+
+  form {
+    display: grid;
+    gap: 1rem;
+
+    label {
+      color: $bg-color;
+      font-weight: 500;
+      margin-bottom: 0.35rem;
+    }
+
+    input {
+      padding-left: 2.25rem;
+    }
+
+    .email input {
+      background: url('../assets/mail.png') 7px 10px/22px 22px no-repeat;
+    }
+
+    .number input {
+      background: url('../assets/phone.png') 7px 10px/25px 25px no-repeat;
+    }
+
+    .password {
+      position: relative;
+      input {
+        background: url('../assets/lock.png') 7px 10px/22px 22px no-repeat;
+      }
+    }
+    .name input {
+      background: url('../assets/name.png') 10px 13px/15px 15px no-repeat;
+    }
+
+    .showPassword {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .forgetPassword {
+      justify-self: end;
+
+      p {
+        color: $bg-color;
+        font-family: $inter-font;
+        font-weight: 500;
+        cursor: pointer;
+
+        &:hover {
+          color: $gen-color-a;
+        }
+      }
+    }
+  }
+
+  .buttonStyle {
+    text-align: center;
+    button {
+      padding: 0.5rem 1rem;
+      width: 50%;
+    }
+
+    P {
+      font-weight: bold;
+    }
+  }
+
+  .register {
+    display: flex;
+    justify-content: center;
+    font-size: 1.02rem;
+
+    a {
+      color: $bg-color;
+      font-weight: 500;
+      font-family: $inter-font;
+    }
+  }
+}
+
+.profile {
+  padding-top: 4rem;
+}
+
+.myProfile {
+  h2 {
+    font-weight: bold;
+  }
+}
+
+.changePassword {
+  font-family: $open-sans-font;
+
+  h3 {
+    font-weight: bold;
+  }
+
+  label {
+    margin-bottom: 0.5rem;
+  }
+
+  span {
+    color: red;
+    font-size: 0.85rem;
+    display: none;
+  }
+
+  .changeBtnDiv {
+    button {
+      width: 100%;
+      padding: 0.75rem;
+
+      @media (min-width: 640px) {
+        width: 210px;
+      }
+    }
+
+    @media (min-width: 640px) {
+      text-align: end;
+    }
+  }
+}
