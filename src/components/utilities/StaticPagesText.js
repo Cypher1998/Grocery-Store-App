@@ -14,7 +14,7 @@ export const contactTextOne =
   contactTextFour =
     'Collaboratively promote client-focused convergence vis-a-vis customer directed alignments via plagiarize strategic users and standardized infrastructures.';
 export const privacyTextOne =
-    'At KachaBazar, accessible from kachabazar dot com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by KachaBazar and how we use it. If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.',
+    'At Cypher Store, accessible from cypher-grocery-store.vercel.app, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by KachaBazar and how we use it. If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.',
   privacyTextTwo =
     'We may ask for your contact information, including items such as name, company name, address, email address, and telephone number. This policy is not applicable to any information collected offline or via channels other than this website. Our Privacy Policy was created with the help of the Free Privacy Policy Generator.',
   privacyTextThree =
@@ -36,9 +36,9 @@ export const privacyTextOne =
   privacyTextNine =
     "Under the CCPA, among other rights, California consumers have the right to: Request that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers. Request that a business delete any personal data about the consumer that a business has collected.",
   privacyTextTen =
-    'Another part of our priority is adding protection for children while using the internet. KachaBazar does not knowingly collect any Personal Identifiable Information from children under the age of 13. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.';
+    'Another part of our priority is adding protection for children while using the internet. Cypher Store does not knowingly collect any Personal Identifiable Information from children under the age of 13. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.';
 export const termsTextOne =
-    "These terms and conditions outline the rules and regulations for the use of KachaBazar's Website, located at https://kachabazar.com/. By accessing this website we assume you accept these terms and conditions. Do not continue to use KachaBazar if you do not agree to take all of the terms and conditions stated on this page.",
+    "These terms and conditions outline the rules and regulations for the use of Cypher Store's Website, located at https://cypher-grocery-store.vercel.app/. By accessing this website we assume you accept these terms and conditions. Do not continue to use KachaBazar if you do not agree to take all of the terms and conditions stated on this page.",
   termsTextTwo =
     'The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company\'s terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves.',
   termsTextTwoA =

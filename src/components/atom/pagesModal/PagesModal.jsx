@@ -9,7 +9,7 @@ import {
 import { MdOutlinePrivacyTip } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
-const PagesModal = () => {
+const PagesModal = ({ onClick }) => {
   return (
     <div className="px-4 py-3">
       <div className="textIconDiv">
@@ -18,31 +18,31 @@ const PagesModal = () => {
           <span>Offer</span>
         </Link>
       </div>
-      <div className="textIconDiv">
+      <div className="textIconDiv" onClick={onClick}>
         <Link to="/faq">
           <BsQuestionCircle />
           <span>FAQ</span>
         </Link>
       </div>
-      <div className="textIconDiv">
+      <div className="textIconDiv" onClick={onClick}>
         <Link to="/about-us">
           <BsPeople />
           <span>About Us</span>
         </Link>
       </div>
-      <div className="textIconDiv">
+      <div className="textIconDiv" onClick={onClick}>
         <Link to="/contact-us">
           <BsTelephoneInbound />
           <span>Contact Us</span>
         </Link>
       </div>
-      <div className="textIconDiv">
+      <div className="textIconDiv" onClick={onClick}>
         <Link to="/privacy-policy">
           <MdOutlinePrivacyTip />
           <span>Privacy Policy</span>
         </Link>
       </div>
-      <div className="textIconDiv">
+      <div className="textIconDiv" onClick={onClick}>
         <Link to="/terms-conditions">
           <BsFileEarmarkText />
           <span>Terms & Conditions</span>
@@ -51,4 +51,5 @@ const PagesModal = () => {
     </div>
   );
 };
+
 export default PagesModal;

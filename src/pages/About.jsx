@@ -15,10 +15,10 @@ const About = () => {
       <div className="myContainer">
         <div className="aboutPage gx-4">
           <div className="aboutText sharedText">
-            <h3>Welcome to our KachaBazar</h3>
+            <h3>Welcome to our Store</h3>
             <p>{aboutTextOne}</p>
             <p>{aboutTextTwo}</p>
-            {/* <div> */}
+
             <div className="aboutInfoDiv">
               <div className="aboutInfo">
                 <h3>10K</h3>
@@ -35,7 +35,6 @@ const About = () => {
                 </p>
               </div>
             </div>
-            {/* </div> */}
           </div>
           <div className=" aboutImage mt-5">
             <img src={imgOne} alt="" />

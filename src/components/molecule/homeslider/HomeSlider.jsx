@@ -13,7 +13,7 @@ const HomeSlider = () => {
   return (
     <div className="homeSlider">
       <div className="myContainer">
-        <div className="row g-4 pt-2 pt-md-2 px-sm-3">
+        <div className="row g-4 pt-1 pt-md-2">
           <div className="col-lg-7">
             <Swiper
               className=""

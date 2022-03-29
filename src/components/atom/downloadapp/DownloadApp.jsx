@@ -12,10 +12,9 @@ const DownloadApp = () => {
           <section className="imageBig d-none d-md-block col-md-6 col-lg-4 col-xl-3">
             <img src={appImgLeft} alt="img-left" />
           </section>
-          {/* <UnknownChild> */}
           <section className="randomText px-4  col-md-6 offset-lg-0 col-lg-4 col-xl-5  mx-auto">
             <div className="text-center">
-              <h3>Get Your Daily Needs From Our KachaBazar Store</h3>
+              <h3>Get Your Daily Needs From Your Reliable Cypher Store</h3>
               <p>
                 There are many products you will find our shop, Choose your
                 daily necessary product from our KachaBazar shop and get some
@@ -23,7 +22,7 @@ const DownloadApp = () => {
               </p>
             </div>
             <div className="downloadAppStore pt-2">
-              <div>
+              <div className="appleStore">
                 <a
                   href="https://www.apple.com/app-store"
                   target="_blank"
@@ -32,7 +31,7 @@ const DownloadApp = () => {
                   <img src={appStoreImg} alt="applestore" />
                 </a>
               </div>
-              <div>
+              <div className="playStore">
                 <a
                   href="https://play.google.com/store/apps"
                   target="_blank"
@@ -43,7 +42,7 @@ const DownloadApp = () => {
               </div>
             </div>
           </section>
-          {/* </UnknownChild> */}
+
           <section className="imageBig d-none d-lg-block col-lg-4 col-xl-3">
             <img src={appImgRight} alt="img-right" />
           </section>

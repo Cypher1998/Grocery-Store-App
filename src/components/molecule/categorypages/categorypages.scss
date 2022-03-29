@@ -26,14 +26,13 @@ $gray-color: rgb(212, 211, 211);
 
 .categoryDisplay {
   background: white;
-  height: inherit;
+  position: fixed;
   height: 100%;
   width: 100vw;
-  z-index: 20;
-  position: fixed;
+  overflow-y: scroll;
+  z-index: 22;
   top: 0;
   left: 0;
-  overflow-y: scroll;
   scrollbar-width: 0;
   -ms-overflow-style: none;
 
@@ -41,29 +40,8 @@ $gray-color: rgb(212, 211, 211);
     display: none;
   }
 
-  @media (min-width: 576px) {
+  @media (min-width: 500px) {
     width: 420px;
-  }
-
-  nav {
-    background: $bg-color;
-    position: fixed;
-    width: 100%;
-
-    .closeModal {
-      height: 30px;
-      width: 30px;
-      border-radius: 50%;
-      background: white;
-      color: red;
-      position: absolute;
-      right: 25px;
-      cursor: pointer;
-
-      &:hover {
-        background: rgb(255, 226, 226);
-      }
-    }
   }
 
   h6 {
@@ -72,5 +50,34 @@ $gray-color: rgb(212, 211, 211);
     margin-top: 4rem;
     border-bottom: 1px solid $gray-color;
     letter-spacing: 1px;
+  }
+}
+
+.modalNav {
+  background: $bg-color;
+  position: absolute;
+  position: fixed;
+  width: 100%;
+  z-index: 25;
+  top: 0;
+  left: 0;
+
+  @media (min-width: 500px) {
+    width: 420px;
+  }
+
+  .closeModal {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: white;
+    color: red;
+    position: absolute;
+    right: 25px;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(255, 226, 226);
+    }
   }
 }

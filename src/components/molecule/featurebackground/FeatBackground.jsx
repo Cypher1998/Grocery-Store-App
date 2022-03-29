@@ -6,6 +6,7 @@ import { fetchFeaturesData } from '../../../redux/featuredcategory/featureAction
 import DisplaySpinner from '../../atom/DisplaySpinner';
 import { useEffect } from 'react';
 import ErrorText from '../../atom/ErrorText';
+import { useLocation } from 'react-router-dom';
 
 const FeatBackground = ({
   fetchFeaturesData,
@@ -13,11 +14,13 @@ const FeatBackground = ({
   loading,
   featuresData,
 }) => {
+  const location = useLocation();
+
   useEffect(() => {
     fetchFeaturesData();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [location.pathname]);
 
   return (
     <div className="features mt-4 mt-lg-0">

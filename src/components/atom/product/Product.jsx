@@ -3,7 +3,7 @@ import { BsBagPlusFill } from 'react-icons/bs';
 
 const Product = ({ imgUrl, price, discount, weight, name, stock }) => {
   const discountedPrice = (discount / 100) * price;
-  const newPrice = (price - discountedPrice).toFixed(2).replace(/[.,]0$/, '');
+  const newPrice = (price - discountedPrice).toFixed(1).replace(/[.,]0$/, '');
 
   return (
     <div className="productDisplay px-3 pb-2">

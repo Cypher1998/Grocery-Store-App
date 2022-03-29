@@ -1,5 +1,5 @@
 import './features.scss';
-
+import { Link } from 'react-router-dom';
 const Features = ({ imgUrl, title, subtitle }) => {
   const newSubtitle = subtitle.slice(0, 3);
 

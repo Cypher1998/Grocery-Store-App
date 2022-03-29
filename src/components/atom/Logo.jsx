@@ -1,4 +1,4 @@
-import logo from '../../assets/logo-light.svg';
+import logo from '../../assets/default-monochrome-white.svg';
 import { Link } from 'react-router-dom';
 
 const Logo = () => {

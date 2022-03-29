@@ -41,8 +41,14 @@
 
     img {
       height: auto;
-      width: 150px;
+      width: 130px;
       transition: transform 0.2s ease-in-out;
+    }
+
+    @media (min-width: 576px) {
+      img {
+        width: 150px;
+      }
     }
   }
 
@@ -74,13 +80,13 @@
       span:nth-of-type(1) {
         font-weight: bold;
         font-family: $open-sans-font;
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
 
       span:nth-of-type(2) {
         color: $gen-grey-color;
         text-decoration: line-through;
-        margin-left: 0.2rem;
+        margin-left: 0.1rem;
         font-size: 0.95rem;
       }
     }

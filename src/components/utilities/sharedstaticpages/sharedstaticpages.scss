@@ -6,57 +6,51 @@
   padding-top: 3.5rem;
 
   div {
-    img {
-      width: 150px;
-      height: 130px;
-
-      &:nth-of-type(2) {
-        transform: rotateY(180deg);
-      }
-    }
+    height: 100px;
+    background: $gen-color-d;
+    background: url('../../../assets/fruit-vegetables-rotate\ -copy.png') 1% /
+        120px 110px no-repeat,
+      url('../../../assets/fruit-vegetables-rotate.png') 100% / 120px 110px
+        no-repeat;
 
     h3 {
       font-weight: bold;
       text-transform: capitalize;
-      text-align: center;
+      font-family: $inter-font;
     }
 
     @media (min-width: 576px) {
-      img {
-        min-width: 200px;
-        height: 150px;
+      height: 120px;
+      background-size: 160px 140px;
+      h3 {
+        font-size: 2rem;
       }
     }
 
     @media (min-width: 768px) {
+      height: 140px;
+      background-size: 200px 170px;
       h3 {
         font-size: 2rem;
-      }
-
-      img {
-        min-width: 270px;
-        height: 170px;
       }
     }
 
     @media (min-width: 992px) {
-      padding-top: 4.5rem;
+      height: 150px;
+      background-size: 250px 180px;
 
       h3 {
         font-size: 2.5rem;
       }
-
-      img {
-        min-width: 300px;
-        height: 185px;
-      }
     }
 
     @media (min-width: 1200px) {
-      img {
-        min-width: 320px;
-        height: 200px;
-      }
+      height: 170px;
+      background-size: 300px 200px;
     }
+  }
+
+  @media (min-width: 992px) {
+    padding-top: 8.5rem;
   }
 }

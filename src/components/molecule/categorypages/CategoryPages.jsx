@@ -13,6 +13,10 @@ const CategoryPages = ({ mobileModal }) => {
     dispatch({ type: MOBILE_MODAL_CLOSE });
   };
 
+  const onClick = () => {
+    dispatch({ type: MOBILE_MODAL_CLOSE });
+  };
+
   return (
     <>
       {mobileModal && (
@@ -21,28 +25,31 @@ const CategoryPages = ({ mobileModal }) => {
           onClick={closeModal}
         ></div>
       )}
+      <nav
+        className={`py-1 modalNav d-lg-none ${
+          mobileModal ? 'moveModalHere' : 'moveModalAway'
+        }`}
+      >
+        <div className="px-4 d-flex justify-content-between align-items-center">
+          <Logo />
+          <div
+            className="closeModal d-flex justify-content-center align-items-center"
+            onClick={closeModal}
+          >
+            <FaTimes size={14} />
+          </div>
+        </div>
+      </nav>
       <div
         className={`categoryDisplay d-lg-none ${
           mobileModal ? 'moveModalHere' : 'moveModalAway'
         }`}
       >
-        <nav className="py-1">
-          <div className="px-4 d-flex justify-content-between align-items-center">
-            <Logo />
-            <div
-              className="closeModal d-flex justify-content-center align-items-center"
-              onClick={closeModal}
-            >
-              <FaTimes size={14} />
-            </div>
-          </div>
-        </nav>
-
         <h6 className="px-4 py-3">All Categories</h6>
 
         <CategoryModal />
         <h6 className="px-4 mt-4 py-2">Pages</h6>
-        <PagesModal />
+        <PagesModal onClick={onClick} />
       </div>
     </>
   );

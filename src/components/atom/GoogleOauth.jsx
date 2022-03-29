@@ -29,6 +29,7 @@ const GoogleOauth = () => {
       }
       navigate('/');
     } catch (error) {
+      console.log(error);
       toast.error('Failed to authorize user!');
     }
   };
