@@ -1,10 +1,11 @@
 import './homeslider.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+// import 'swiper/css/scrollbar';
+import 'swiper/css/autoplay';
 import CouponDiscount from '../coupondiscount/CouponDiscount';
 import { backgroundText } from '../../utilities/HomeBg';
 import { Button } from 'react-bootstrap';
@@ -16,11 +17,12 @@ const HomeSlider = () => {
         <div className="row g-4 pt-1 pt-md-2">
           <div className="col-lg-7">
             <Swiper
-              className=""
-              modules={[Navigation, Pagination, Scrollbar, A11y]}
-              spaceBetween={50}
+              modules={[Navigation, Pagination, A11y, Autoplay, Scrollbar]}
+              spaceBetween={30}
               slidesPerView={1}
               pagination={{ clickable: true }}
+              loop={true}
+              autoplay={true}
             >
               {backgroundText.map((background, index) => (
                 <SwiperSlide key={index}>

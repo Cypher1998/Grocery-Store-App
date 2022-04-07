@@ -1,12 +1,10 @@
 import './orgshopping.scss';
 import GenButton from '../GenButton';
-
+import { Link } from 'react-router-dom';
 const OrganicShopping = () => {
-  const onClick = () => {};
-
   return (
     <div className="myContainer d-none d-lg-block py-4 ">
-      <div className="organicProduct py-3 px-5 mx-3 d-flex align-items-center justify-content-between">
+      <div className="organicProduct py-3 px-4 d-flex align-items-center justify-content-between">
         <div>
           <span>100% Natural Quality</span>{' '}
           <span className="organic">Organic Product</span>
@@ -16,7 +14,9 @@ const OrganicShopping = () => {
           </p>
         </div>
         <div>
-          <GenButton text="Shop Now" onClick={onClick} />
+          <Link to="/main-category/organic-food">
+            <GenButton text="Shop Now" />
+          </Link>
         </div>
       </div>
     </div>

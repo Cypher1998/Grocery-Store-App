@@ -1,14 +1,13 @@
 @import '../../utilities/variables';
 
 .searchBox {
-  display: flex;
+  position: relative;
   font-family: $roboto-font;
 
   input {
     border-radius: 5px;
     padding: $input-padding;
     width: 100%;
-    position: relative;
     border-color: transparent;
     color: #555;
     position: relative;
@@ -21,9 +20,12 @@
   button {
     background: white;
     position: relative;
+    position: absolute;
     border-radius: 5px;
-    padding: $input-padding;
-    right: 2%;
+    right: 2px;
+    top: 2px;
+    height: 40px;
+    width: 50px;
     border-color: transparent;
     color: #888;
   }

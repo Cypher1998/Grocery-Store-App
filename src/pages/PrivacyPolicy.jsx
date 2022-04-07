@@ -1,5 +1,6 @@
 import './pagesstaticstyle.scss';
 import SharedPages from '../components/utilities/sharedstaticpages/SharedPages';
+import { useEffect } from 'react';
 import {
   privacyTextOne,
   privacyTextTwo,
@@ -14,6 +15,10 @@ import {
 } from '../components/utilities/StaticPagesText';
 
 const PrivacyPolicy = () => {
+  useEffect(() => {
+    document.title = 'Cypher Store | Privacy Policy';
+  }, []);
+
   return (
     <>
       <SharedPages text="privacy policy" />

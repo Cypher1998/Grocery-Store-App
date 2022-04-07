@@ -25,19 +25,19 @@ export const footerTexts = [
     lists: [
       {
         list: 'fish & meat',
-        url: '',
+        url: '/main-category/fish-&-meat',
       },
       {
         list: 'soft drinks',
-        url: '',
+        url: '/main-category/drinks',
       },
       {
         list: 'baby care',
-        url: '',
+        url: '/main-category/baby-care',
       },
       {
         list: 'beauty & health',
-        url: '',
+        url: '/main-category/beauty-&-health',
       },
     ],
   },

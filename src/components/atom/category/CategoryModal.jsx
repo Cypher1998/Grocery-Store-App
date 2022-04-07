@@ -6,8 +6,9 @@ import { MdArrowForwardIos } from 'react-icons/md';
 import { BiMinus } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { urlToPutInSearchBar } from '../../utilities/formatUrl';
 
-const CategoryModal = ({ error, loading, featuresData }) => {
+const CategoryModal = ({ error, loading, featuresData, onClick }) => {
   const [showChild, setShowChild] = useState(null);
   const [showField, setShowField] = useState(false);
 
@@ -17,6 +18,7 @@ const CategoryModal = ({ error, loading, featuresData }) => {
         setShowChild(text.toLowerCase());
         setShowField(!showField);
       }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     });
   };
 
@@ -24,18 +26,19 @@ const CategoryModal = ({ error, loading, featuresData }) => {
     <div className="px-4 py-2">
       {loading ? (
         <DisplaySpinner />
-      ) : error !== null ? (
+      ) : error ? (
         <ErrorText error={error} />
       ) : (
         featuresData && (
           <div className="categoryFeature">
             {featuresData.map((feature) => {
               const { id, imgUrl, title, subtitle } = feature;
+
               return (
                 <div key={id}>
                   <div onClick={(e) => showCategory(e.target.innerText)}>
                     <div className="featureHeader d-flex justify-content-between align-items-center p-2">
-                      <div className="toggler ">
+                      <div className="toggler">
                         <img src={imgUrl} alt="" />
                         <span>{title}</span>
                       </div>
@@ -52,14 +55,22 @@ const CategoryModal = ({ error, loading, featuresData }) => {
                     </div>
                     {title === showChild && showField && (
                       <ul>
-                        {subtitle.map((list, index) => (
-                          <li key={index} className="my-1">
-                            <BiMinus style={{ color: 'gray' }} />
-                            <Link to="" className="mx-1">
-                              {list}
-                            </Link>
-                          </li>
-                        ))}
+                        {subtitle.map((list, index) => {
+                          const subtitleUrl = urlToPutInSearchBar(list);
+
+                          return (
+                            <li key={index} onClick={onClick} className="my-1">
+                              <BiMinus style={{ color: 'gray' }} />
+                              <Link
+                                to={`/sub-category/${subtitleUrl}`}
+                                // to={`/sub-category/${list}`}
+                                className="mx-1"
+                              >
+                                {list}
+                              </Link>
+                            </li>
+                          );
+                        })}
                       </ul>
                     )}
                   </div>

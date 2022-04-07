@@ -22,7 +22,7 @@
 
   .featureDisplay {
     @include display-grid(6);
-    grid-gap: 1rem;
+    grid-gap: 1.1rem;
     align-items: center;
     background: white;
     border: 0.12rem solid $gen-color-b;

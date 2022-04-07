@@ -1,0 +1,26 @@
+@import '../../utilities/_variables';
+
+.errorImg {
+  .imgDiv {
+    max-width: 600px;
+    margin: 1rem auto 0;
+    text-align: center;
+
+    img {
+      width: inherit;
+      max-width: 450px;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.errText {
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: $open-sans-font;
+
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+  }
+}

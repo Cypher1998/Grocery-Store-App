@@ -12,9 +12,13 @@ import {
   contactTextFour,
 } from '../components/utilities/StaticPagesText';
 import { Button } from 'react-bootstrap';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = 'Cypher Store | Contact Us';
+  }, []);
+
   const [form, setForm] = useState({ name: '', email: '', message: '' });
 
   const { name, email, message } = form;

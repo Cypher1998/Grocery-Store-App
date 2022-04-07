@@ -1,0 +1,50 @@
+@import '../variables';
+
+.swiper-button-next,
+.swiper-button-prev {
+  background: rgb(52, 211, 153);
+  border-radius: 10px;
+  color: white;
+  padding: 1rem 1.1rem;
+
+  &::after {
+    font-size: 0.85rem;
+    font-weight: bold;
+    @include display-flex-center;
+  }
+}
+
+.featuresShared {
+  background: white;
+  border-radius: 10px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  &:hover p {
+    color: $bg-color;
+  }
+
+  div {
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 3px 7px rgba($color: #000000, $alpha: 0.3);
+    text-align: center !important;
+    height: 40px;
+    @include display-flex-center;
+    width: 40px;
+  }
+
+  img {
+    width: 22px;
+    margin: auto;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+}

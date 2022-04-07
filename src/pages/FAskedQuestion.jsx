@@ -2,6 +2,7 @@ import './pagesstaticstyle.scss';
 import SharedPages from '../components/utilities/sharedstaticpages/SharedPages';
 import faqImg from '../assets/faq.svg';
 import { Accordion } from 'react-bootstrap';
+import { useEffect } from 'react';
 import {
   quesOne,
   quesTwo,
@@ -16,6 +17,10 @@ import {
 } from '../components/utilities/StaticPagesText';
 
 const FAskedQuestion = () => {
+  useEffect(() => {
+    document.title = 'Cypher Store | FAQ';
+  }, []);
+
   return (
     <div>
       <SharedPages text="Frequently Asked Questions" />

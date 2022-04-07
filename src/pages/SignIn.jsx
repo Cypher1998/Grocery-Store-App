@@ -7,10 +7,14 @@ import GoogleOauth from '../components/atom/GoogleOauth';
 import { toggleForgotPasswordAction } from '../redux/toggleForgetPass/toggleForgetPassword';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { toast } from 'react-toastify';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ForgetPassword from '../components/atom/modalforgpass/ForgetPassword';
 
 const SignIn = ({ toggleForgotPasswordAction, forgotPassModal }) => {
+  useEffect(() => {
+    document.title = 'Cypher Store | Sign In';
+  }, []);
+
   const [showPassword, setShowPassWord] = useState(false);
   const [formData, setFormData] = useState({ email: '', password: '' });
   const { email, password } = formData;

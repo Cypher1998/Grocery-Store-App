@@ -8,9 +8,9 @@
   div {
     height: 100px;
     background: $gen-color-d;
-    background: url('../../../assets/fruit-vegetables-rotate\ -copy.png') 1% /
-        120px 110px no-repeat,
-      url('../../../assets/fruit-vegetables-rotate.png') 100% / 120px 110px
+    background: url('../../../assets/fruit-vegetables-rotate\ -copy.png') -35px /
+        130px 110px no-repeat,
+      url('../../../assets/fruit-vegetables-rotate.png') 110% / 130px 110px
         no-repeat;
 
     h3 {
@@ -21,7 +21,8 @@
 
     @media (min-width: 576px) {
       height: 120px;
-      background-size: 160px 140px;
+      background-position: -30px, 106%;
+      background-size: 170px 140px;
       h3 {
         font-size: 2rem;
       }
@@ -29,7 +30,8 @@
 
     @media (min-width: 768px) {
       height: 140px;
-      background-size: 200px 170px;
+      background-position: -30px, 105%;
+      background-size: 210px 170px;
       h3 {
         font-size: 2rem;
       }
@@ -37,6 +39,7 @@
 
     @media (min-width: 992px) {
       height: 150px;
+      background-position: -55px, 107%;
       background-size: 250px 180px;
 
       h3 {
@@ -46,6 +49,7 @@
 
     @media (min-width: 1200px) {
       height: 170px;
+      background-position: -55px, 106%;
       background-size: 300px 200px;
     }
   }

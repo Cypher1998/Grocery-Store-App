@@ -363,3 +363,71 @@ div {
     }
   }
 }
+
+// Not Found style
+.notFoundPageDiv {
+  @extend %fixed-background;
+  background: $not-found-color;
+  z-index: 100;
+  overflow: hidden;
+  @include display-flex-center;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .notFoundPage {
+    width: 90%;
+    max-width: 600px;
+    font-family: $inter-font;
+
+    .notFoundText {
+      h6 {
+        font-size: 1.15rem;
+        font-weight: 500;
+        padding-bottom: 0.5rem;
+      }
+
+      p {
+        color: $not-found-color-2;
+      }
+
+      @media (min-width: 640px) {
+        h6 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .notFoundBtn {
+      // width: 100%;
+      text-align: center;
+      a {
+        background: $bg-color;
+        padding: 0.75rem 2rem;
+        border-radius: 5px;
+        color: white;
+        display: block;
+        text-align: center;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+
+        &:hover {
+          background: $gen-color-a;
+        }
+
+        @media (min-width: 768px) {
+          display: inline;
+        }
+      }
+    }
+  }
+}

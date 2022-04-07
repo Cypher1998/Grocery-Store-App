@@ -1,0 +1,73 @@
+@import '../components/utilities/variables';
+
+.mainCategories {
+  background: $gen-color-c;
+  padding-top: 5rem;
+
+  @media (min-width: 992px) {
+    padding-top: 9rem;
+  }
+
+  .showTotalProducts {
+    background: $gen-color-f;
+    border: 1px solid $gen-color-b;
+    border-radius: 7px;
+    font-family: $roboto-font;
+
+    span.totalItems {
+      font-weight: bold;
+    }
+
+    select {
+      padding: 0.25rem 0.5rem;
+      border: 1px solid $gen-color-d;
+      border-radius: 5px;
+      outline: none;
+      font-size: 0.95rem;
+
+      @media (min-width: 768px) {
+        padding: 0.35rem 0.75rem;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .categoryProductDisplay {
+    @include display-grid(2);
+    gap: 0.6rem;
+
+    @media (min-width: 576px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+}
+
+.loadMoreBtn {
+  button {
+    background: rgb(224, 231, 255);
+    padding: 0.5rem 1rem;
+    text-transform: capitalize;
+    color: black;
+    border-color: transparent;
+    border-radius: 5px;
+
+    transition: background-color 0.1s linear, color 0.1s linear;
+
+    &:hover {
+      background: $bg-color;
+      color: white;
+    }
+  }
+}

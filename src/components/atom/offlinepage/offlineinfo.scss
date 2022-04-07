@@ -1,0 +1,35 @@
+@import '../../utilities/variables';
+
+.offline {
+  background: $not-found-color;
+  @extend %fixed-background;
+  z-index: 100;
+  overflow: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.offlineDiv {
+  @extend %fixed-background;
+  z-index: 110;
+  font-family: $inter-font;
+  @include display-flex-center;
+
+  div {
+    padding: 0 1rem;
+    text-align: center;
+
+    h6 {
+      font-size: 1.25rem;
+      padding-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    p {
+      color: $not-found-color-2;
+      font-size: 1.05rem;
+    }
+  }
+}

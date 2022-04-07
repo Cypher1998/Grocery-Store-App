@@ -4,10 +4,18 @@ import { FaTimes } from 'react-icons/fa';
 import CategoryModal from '../../atom/category/CategoryModal';
 import PagesModal from '../../atom/pagesModal/PagesModal';
 import { connect, useDispatch } from 'react-redux';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import { fetchFeaturesData } from '../../../redux/featuredcategory/featureActions';
 import { MOBILE_MODAL_CLOSE } from '../../../redux/closemodal/closeModalTypes';
 
 const CategoryPages = ({ mobileModal }) => {
   const dispatch = useDispatch();
+  const location = useLocation();
+
+  useEffect(() => {
+    dispatch(fetchFeaturesData());
+  }, [location.pathname, dispatch]);
 
   const closeModal = () => {
     dispatch({ type: MOBILE_MODAL_CLOSE });
@@ -47,7 +55,7 @@ const CategoryPages = ({ mobileModal }) => {
       >
         <h6 className="px-4 py-3">All Categories</h6>
 
-        <CategoryModal />
+        <CategoryModal onClick={onClick} />
         <h6 className="px-4 mt-4 py-2">Pages</h6>
         <PagesModal onClick={onClick} />
       </div>
@@ -60,4 +68,5 @@ const mapStateToProps = (state) => {
     mobileModal: state.modal.mobileModal,
   };
 };
+
 export default connect(mapStateToProps)(CategoryPages);

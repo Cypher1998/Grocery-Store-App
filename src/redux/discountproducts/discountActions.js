@@ -4,14 +4,7 @@ import {
   DISCOUNT_PRODUCTS_SUCCESS,
 } from './discountTypes';
 import { db } from '../../firebase.config';
-import {
-  collection,
-  query,
-  where,
-  getDocs,
-  limit,
-  orderBy,
-} from 'firebase/firestore';
+import { collection, query, where, getDocs, orderBy } from 'firebase/firestore';
 
 export const fetchDiscountedProducts = () => async (dispatch) => {
   dispatch({ type: DISCOUNT_PRODUCTS_FETCH });
@@ -20,7 +13,11 @@ export const fetchDiscountedProducts = () => async (dispatch) => {
     const productsRef = collection(db, 'products');
 
     // create query
-    const q = query(productsRef, where('discount', '!=', false), limit(18));
+    const q = query(
+      productsRef,
+      where('discDisplay', '==', true),
+      orderBy('id', 'asc')
+    );
 
     // execute query
     const querySnap = await getDocs(q);

@@ -11,6 +11,10 @@ import { useEffect } from 'react';
 import { getAuthUser } from '../redux/getauthuser/getAuthUserAction';
 
 const DashBoard = ({ getAuthUser }) => {
+  useEffect(() => {
+    document.title = 'Cypher Store | Dashboard';
+  }, []);
+
   const location = useLocation();
   useEffect(() => {
     getAuthUser();

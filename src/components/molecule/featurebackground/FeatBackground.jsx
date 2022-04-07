@@ -2,26 +2,10 @@ import './featbackground.scss';
 import UnknownChild from '../../utilities/UnknownChild';
 import Features from '../../atom/features/Features';
 import { connect } from 'react-redux';
-import { fetchFeaturesData } from '../../../redux/featuredcategory/featureActions';
 import DisplaySpinner from '../../atom/DisplaySpinner';
-import { useEffect } from 'react';
 import ErrorText from '../../atom/ErrorText';
-import { useLocation } from 'react-router-dom';
 
-const FeatBackground = ({
-  fetchFeaturesData,
-  error,
-  loading,
-  featuresData,
-}) => {
-  const location = useLocation();
-
-  useEffect(() => {
-    fetchFeaturesData();
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location.pathname]);
-
+const FeatBackground = ({ error, loading, featuresData }) => {
   return (
     <div className="features mt-4 mt-lg-0">
       <div className="myContainer">
@@ -35,8 +19,10 @@ const FeatBackground = ({
         <div className="pb-5">
           {loading ? (
             <DisplaySpinner />
-          ) : error !== null ? (
-            <ErrorText error={error} />
+          ) : error ? (
+            <>
+              <ErrorText error={error} />
+            </>
           ) : (
             featuresData && (
               <div className="featuresDisplay">
@@ -58,4 +44,4 @@ const mapStateToProps = (state) => ({
   featuresData: state.features.featuresData,
 });
 
-export default connect(mapStateToProps, { fetchFeaturesData })(FeatBackground);
+export default connect(mapStateToProps, null)(FeatBackground);

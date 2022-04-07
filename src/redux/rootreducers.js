@@ -5,6 +5,7 @@ import { discountProductsReducer } from './discountproducts/discountReducer';
 import { modalReducer } from './closemodal/closeModalReducer';
 import { getAuthUserReducer } from './getauthuser/getAuthUserReducer';
 import { toggleForgotPasswordReducer } from './toggleForgetPass/toggleForgetPdReducer';
+import { categoryProductsReducer } from './fetchcategoryproducts/fetchCategoryProductsReducer';
 
 const rootReducer = combineReducers({
   features: featuresReducer,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   modal: modalReducer,
   getAuthUser: getAuthUserReducer,
   forgotPasswordModal: toggleForgotPasswordReducer,
+  categoryProducts: categoryProductsReducer,
 });
 
 export default rootReducer;

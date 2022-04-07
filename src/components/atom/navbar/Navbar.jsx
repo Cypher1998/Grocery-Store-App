@@ -1,6 +1,6 @@
 import './navbar.scss';
 import { BsPerson, BsCart } from 'react-icons/bs';
-import { AiOutlineHome, AiOutlineAlignLeft } from 'react-icons/ai';
+import { AiOutlineAlignLeft, AiOutlineHome } from 'react-icons/ai';
 import { getAuth } from 'firebase/auth';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -19,11 +19,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className="mainNavbar py-4 d-lg-none px-md-5">
+    <div className="mainNavbar d-lg-none px-md-5">
       <div className="myContainer d-flex justify-content-between">
-        <div className="">
+        <div>
           <AiOutlineAlignLeft
-            size={25}
+            size={24}
             className="iconStyle"
             onClick={openModal}
           />
@@ -34,7 +34,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="position-relative">
-          <BsCart size={25} className="iconStyle" />
+          <BsCart size={24} className="iconStyle" />
           <span className="itemNumber">1</span>
         </div>
         <div>
@@ -42,7 +42,9 @@ const Navbar = () => {
             {loggedIn ? (
               <h2 className="iconStyle">{auth.currentUser.displayName[0]}</h2>
             ) : (
-              <BsPerson size={25} className="iconStyle" />
+              <>
+                <BsPerson size={24} className="iconStyle" />
+              </>
             )}
           </Link>
         </div>

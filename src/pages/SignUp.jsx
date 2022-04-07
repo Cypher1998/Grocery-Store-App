@@ -1,7 +1,7 @@
 import { Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { MdOutlineVisibility, MdOutlineVisibilityOff } from 'react-icons/md';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import SharedPages from '../components/utilities/sharedstaticpages/SharedPages';
 import {
   getAuth,
@@ -14,6 +14,10 @@ import { toast } from 'react-toastify';
 import GoogleOauth from '../components/atom/GoogleOauth';
 
 const SignUp = () => {
+  useEffect(() => {
+    document.title = 'Cypher Store | Sign Up';
+  }, []);
+
   const [showPassword, setShowPassWord] = useState(false);
   const [formData, setFormData] = useState({
     name: '',

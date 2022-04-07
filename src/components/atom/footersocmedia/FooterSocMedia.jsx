@@ -84,7 +84,7 @@ const FooterSocMedia = () => {
           </div>
         </div>
       </div>
-      <div className="mt-3 mb-5 pb-4 pb-lg-0 text-center">
+      <div className="mt-3 mt-md-4 mb-5 pb-4 pb-lg-0 text-center">
         <p>
           Copyright 2022 @{' '}
           <a

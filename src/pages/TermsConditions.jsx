@@ -1,5 +1,6 @@
 import './pagesstaticstyle.scss';
 import SharedPages from '../components/utilities/sharedstaticpages/SharedPages';
+import { useEffect } from 'react';
 import {
   termsTextOne,
   termsTextTwo,
@@ -16,6 +17,10 @@ import {
 import { Link } from 'react-router-dom';
 
 const TermsConditions = () => {
+  useEffect(() => {
+    document.title = 'Cypher Store | Terms & Conditions';
+  }, []);
+
   return (
     <>
       <SharedPages text="terms & condtitions" />

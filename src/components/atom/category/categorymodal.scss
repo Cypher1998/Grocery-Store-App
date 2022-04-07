@@ -3,7 +3,7 @@
 .categoryFeature {
   text-transform: capitalize;
   font-family: $open-sans-font;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
 
   .featureHeader {
     border-radius: 5px;
@@ -23,6 +23,8 @@
   .toggler {
     span {
       margin-left: 0.75rem;
+      font-weight: 500;
+      font-size: 0.92rem;
     }
   }
 

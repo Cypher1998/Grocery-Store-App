@@ -1,5 +1,6 @@
 import './pagesstaticstyle.scss';
 import SharedPages from '../components/utilities/sharedstaticpages/SharedPages';
+import { useEffect } from 'react';
 import {
   aboutTextOne,
   aboutTextTwo,
@@ -9,6 +10,10 @@ import {
 import imgOne from '../assets/ab-us-1.webp';
 
 const About = () => {
+  useEffect(() => {
+    document.title = 'Cypher Store | About Us';
+  }, []);
+
   return (
     <>
       <SharedPages text="about us" />
