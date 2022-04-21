@@ -1,0 +1,1 @@
+export const TOGGLE_CART_MODAL = 'TOGGLE_CART_MODAL';

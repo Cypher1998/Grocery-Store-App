@@ -9,6 +9,7 @@ import 'swiper/css/autoplay';
 import CouponDiscount from '../coupondiscount/CouponDiscount';
 import { backgroundText } from '../../utilities/HomeBg';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const HomeSlider = () => {
   return (
@@ -47,9 +48,8 @@ const HomeSlider = () => {
                       <Button
                         variant={background.variant}
                         className="px-3 d-none d-sm-block"
-                        onClick={background.onClick}
                       >
-                        Shop Now
+                        <Link to={`${background.linkUrl}`}>Shop Now</Link>
                       </Button>
                     </div>
                   </div>

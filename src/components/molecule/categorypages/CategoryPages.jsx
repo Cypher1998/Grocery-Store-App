@@ -3,38 +3,45 @@ import Logo from '../../atom/Logo';
 import { FaTimes } from 'react-icons/fa';
 import CategoryModal from '../../atom/category/CategoryModal';
 import PagesModal from '../../atom/pagesModal/PagesModal';
-import { connect, useDispatch } from 'react-redux';
+import { connect } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { fetchFeaturesData } from '../../../redux/featuredcategory/featureActions';
-import { MOBILE_MODAL_CLOSE } from '../../../redux/closemodal/closeModalTypes';
+import { closeMobileModal } from '../../../redux/closemodal/closeModalAction';
 
-const CategoryPages = ({ mobileModal }) => {
-  const dispatch = useDispatch();
+const CategoryPages = ({
+  mobileModal,
+  fetchFeaturesData,
+  closeMobileModal,
+}) => {
   const location = useLocation();
+  useEffect(() => {
+    if (mobileModal) {
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [mobileModal]);
 
   useEffect(() => {
-    dispatch(fetchFeaturesData());
-  }, [location.pathname, dispatch]);
+    fetchFeaturesData();
+    closeMobileModal();
 
-  const closeModal = () => {
-    dispatch({ type: MOBILE_MODAL_CLOSE });
-  };
-
-  const onClick = () => {
-    dispatch({ type: MOBILE_MODAL_CLOSE });
-  };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname]);
 
   return (
     <>
       {mobileModal && (
         <div
           className={`backdrop d-lg-none ${mobileModal && 'addBackdrop'} `}
-          onClick={closeModal}
+          onClick={closeMobileModal}
         ></div>
       )}
       <nav
-        className={`py-1 modalNav d-lg-none ${
+        className={`py-1 modalNav infoNavModal d-lg-none ${
           mobileModal ? 'moveModalHere' : 'moveModalAway'
         }`}
       >
@@ -42,22 +49,22 @@ const CategoryPages = ({ mobileModal }) => {
           <Logo />
           <div
             className="closeModal d-flex justify-content-center align-items-center"
-            onClick={closeModal}
+            onClick={closeMobileModal}
           >
             <FaTimes size={14} />
           </div>
         </div>
       </nav>
       <div
-        className={`categoryDisplay d-lg-none ${
+        className={`modalDisplay infoModal d-lg-none ${
           mobileModal ? 'moveModalHere' : 'moveModalAway'
         }`}
       >
         <h6 className="px-4 py-3">All Categories</h6>
 
-        <CategoryModal onClick={onClick} />
+        <CategoryModal />
         <h6 className="px-4 mt-4 py-2">Pages</h6>
-        <PagesModal onClick={onClick} />
+        <PagesModal />
       </div>
     </>
   );
@@ -69,4 +76,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(CategoryPages);
+export default connect(mapStateToProps, {
+  fetchFeaturesData,
+  closeMobileModal,
+})(CategoryPages);

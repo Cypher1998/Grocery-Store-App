@@ -11,30 +11,42 @@
   z-index: 17;
   position: fixed;
   background: white;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem 1.5rem;
   border-radius: 10px;
   top: 30%;
-  left: 10%;
-  width: 80%;
+  left: 8%;
+  width: 85%;
   margin: auto;
   opacity: 1;
   transition: opacity 0.25s ease-in-out;
+  font-family: $inter-font;
 
   @media (min-width: 520px) {
-    max-width: 500px;
+    max-width: 520px;
   }
   @media (min-width: 768px) {
-    padding: 2rem 3rem;
+    padding: 1.5rem 3rem;
     left: 21%;
   }
   @media (min-width: 992px) {
     left: 30%;
   }
 
-  h2 {
+  h3 {
     color: $bg-color;
     text-align: center;
     margin-bottom: 1rem;
+    font-size: 1.25rem;
+
+    @media (min-width: 640px) {
+      font-size: 1.35rem;
+    }
+  }
+
+  label {
+    @media (min-width: 640px) {
+      font-size: 1.05rem;
+    }
   }
 
   .closeModal {

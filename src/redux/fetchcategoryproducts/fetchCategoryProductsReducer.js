@@ -75,7 +75,7 @@ export const categoryProductsReducer = (state = initialState, action) => {
 
       const newList = [
         ...state.slicedCategoryProducts,
-        ...state.fetchedCategoryProducts.slice(state.index, newIndex),
+        ...state.fetchedCategoryProducts?.slice(state.index, newIndex),
       ];
 
       return {

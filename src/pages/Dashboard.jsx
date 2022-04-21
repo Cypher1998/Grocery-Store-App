@@ -60,7 +60,7 @@ const DashBoard = ({ getAuthUser }) => {
             </div>
           </div>
           <div className="linkOutlet my-4">
-            <div className="dashboardLink p-3 mb-4">
+            <div className="dashboardLink py-3 px-2 mb-4">
               <ul>
                 <DashBoardLink
                   url="order-summary"

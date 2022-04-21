@@ -4,21 +4,19 @@ import Search from '../../atom/search/Search';
 import DesktopIconNav from '../../atom/DesktopIconNav';
 import { Link } from 'react-router-dom';
 import { MdKeyboardArrowDown } from 'react-icons/md';
-import {
-  DesktopCategoryModal,
-  DesktopPageModal,
-} from '../../atom/desktopmodal/DesktopModal';
+import DesktopCategoryModal from '../../atom/desktopmodal/DesktopCategoryModal';
+import DesktopPageModal from '../../atom/desktopmodal/DesktopPageModal';
 import { connect } from 'react-redux';
 import {
-  categoryModal,
-  PageModal,
+  toggleDesktopCategoryModal,
+  toggleDesktopPageModal,
 } from '../../../redux/closemodal/closeModalAction';
 
 const SearchNav = ({
   desktopCategoryModal,
   desktopPageModal,
-  categoryModal,
-  pageModal,
+  toggleDesktopCategoryModal,
+  toggleDesktopPageModal,
 }) => {
   return (
     <>
@@ -40,7 +38,7 @@ const SearchNav = ({
           <nav className="navbarNav px-4">
             <div>
               <ul>
-                <li onClick={categoryModal}>
+                <li onClick={toggleDesktopCategoryModal}>
                   <span>category</span>
                   <MdKeyboardArrowDown size={22} />
                 </li>
@@ -50,7 +48,7 @@ const SearchNav = ({
                 <li>
                   <Link to="/contact-us">contact us</Link>
                 </li>
-                <li onClick={pageModal}>
+                <li onClick={toggleDesktopPageModal}>
                   <span>pages</span>
                   <MdKeyboardArrowDown size={22} />
                 </li>
@@ -71,12 +69,14 @@ const SearchNav = ({
       </div>
       {desktopCategoryModal && (
         <div className="d-none d-lg-block px-5">
-          <DesktopCategoryModal />
+          <DesktopCategoryModal
+            toggleDesktopCategoryModal={toggleDesktopCategoryModal}
+          />
         </div>
       )}
       {desktopPageModal && (
         <div className="d-none d-lg-block px-5">
-          <DesktopPageModal />
+          <DesktopPageModal toggleDesktopPageModal={toggleDesktopPageModal} />
         </div>
       )}
     </>
@@ -91,8 +91,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  categoryModal: () => dispatch(categoryModal()),
-  pageModal: () => dispatch(PageModal()),
+  toggleDesktopCategoryModal: () => dispatch(toggleDesktopCategoryModal()),
+  toggleDesktopPageModal: () => dispatch(toggleDesktopPageModal()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchNav);

@@ -6,34 +6,53 @@
   padding-top: 3.5rem;
 
   div {
-    height: 100px;
+    height: 90px;
     background: $gen-color-d;
-    background: url('../../../assets/fruit-vegetables-rotate\ -copy.png') -35px /
-        130px 110px no-repeat,
-      url('../../../assets/fruit-vegetables-rotate.png') 110% / 130px 110px
+    background: url('../../../assets/fruit-vegetables-rotate\ -copy.png') -30px -5px/
+        70px 100px no-repeat,
+      url('../../../assets/fruit-vegetables-rotate.png') 112% -5px/ 70px 100px
         no-repeat;
 
     h3 {
       font-weight: bold;
       text-transform: capitalize;
       font-family: $inter-font;
+      font-size: 1.1rem;
+      padding-top: 1rem;
+      text-align: center;
     }
 
+    @media (min-width: 420px) {
+      height: 100px;
+      background-position: -50px -20px, 116% -20px;
+      background-size: 120px 130px;
+      h3 {
+        font-size: 1.25rem;
+      }
+    }
+    @media (min-width: 520px) {
+      height: 100px;
+      background-position: -45px -25px, 112% -25px;
+      background-size: 120px 130px;
+      h3 {
+        font-size: 1.4rem;
+      }
+    }
     @media (min-width: 576px) {
       height: 120px;
-      background-position: -30px, 106%;
-      background-size: 170px 140px;
+      background-position: -20px -22px, 104% -22px;
+      background-size: 135px 145px;
       h3 {
-        font-size: 2rem;
+        font-size: 1.4rem;
       }
     }
 
     @media (min-width: 768px) {
-      height: 140px;
-      background-position: -30px, 105%;
-      background-size: 210px 170px;
+      height: 135px;
+      background-position: -20px -22px, 103% -22px;
+      background-size: 175px 170px;
       h3 {
-        font-size: 2rem;
+        font-size: 1.75rem;
       }
     }
 
@@ -43,12 +62,13 @@
       background-size: 250px 180px;
 
       h3 {
-        font-size: 2.5rem;
+        padding-top: 0;
+        font-size: 2.1rem;
       }
     }
 
     @media (min-width: 1200px) {
-      height: 170px;
+      height: 165px;
       background-position: -55px, 106%;
       background-size: 300px 200px;
     }

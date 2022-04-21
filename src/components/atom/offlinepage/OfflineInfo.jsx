@@ -1,6 +1,18 @@
 import './offlineinfo.scss';
+import { useEffect } from 'react';
+import { connect } from 'react-redux';
 
-const OfflineInfo = () => {
+const OfflineInfo = ({ featureError, categoryError, searchError }) => {
+  useEffect(() => {
+    if (featureError || categoryError || searchError) {
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [featureError, categoryError, searchError]);
+
   return (
     <>
       <div className="offline"></div>
@@ -14,4 +26,10 @@ const OfflineInfo = () => {
   );
 };
 
-export default OfflineInfo;
+const mapStateToProps = (state) => ({
+  featureError: state.features.error,
+  categoryError: state.categoryProducts.error,
+  searchError: state.searchQueryProducts.error,
+});
+
+export default connect(mapStateToProps, null)(OfflineInfo);

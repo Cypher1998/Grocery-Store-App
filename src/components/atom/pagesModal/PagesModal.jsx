@@ -6,46 +6,52 @@ import {
   BsFileEarmarkText,
   BsPeople,
 } from 'react-icons/bs';
-import { MdOutlinePrivacyTip } from 'react-icons/md';
+import { MdOutlinePrivacyTip, MdOutlineErrorOutline } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
-const PagesModal = ({ onClick }) => {
+const PagesModal = ({ toggleDesktopPageModal }) => {
   return (
     <div className="px-4 py-3">
-      <div className="textIconDiv">
+      <div className="textIconDiv" onClick={toggleDesktopPageModal}>
         <Link to="/">
           <BsGift />
           <span>Offer</span>
         </Link>
       </div>
-      <div className="textIconDiv" onClick={onClick}>
+      <div className="textIconDiv" onClick={toggleDesktopPageModal}>
         <Link to="/faq">
           <BsQuestionCircle />
           <span>FAQ</span>
         </Link>
       </div>
-      <div className="textIconDiv" onClick={onClick}>
+      <div className="textIconDiv" onClick={toggleDesktopPageModal}>
         <Link to="/about-us">
           <BsPeople />
           <span>About Us</span>
         </Link>
       </div>
-      <div className="textIconDiv" onClick={onClick}>
+      <div className="textIconDiv" onClick={toggleDesktopPageModal}>
         <Link to="/contact-us">
           <BsTelephoneInbound />
           <span>Contact Us</span>
         </Link>
       </div>
-      <div className="textIconDiv" onClick={onClick}>
+      <div className="textIconDiv" onClick={toggleDesktopPageModal}>
         <Link to="/privacy-policy">
           <MdOutlinePrivacyTip />
           <span>Privacy Policy</span>
         </Link>
       </div>
-      <div className="textIconDiv" onClick={onClick}>
+      <div className="textIconDiv" onClick={toggleDesktopPageModal}>
         <Link to="/terms-conditions">
           <BsFileEarmarkText />
           <span>Terms & Conditions</span>
+        </Link>
+      </div>
+      <div className="textIconDiv" onClick={toggleDesktopPageModal}>
+        <Link to="/404">
+          <MdOutlineErrorOutline />
+          <span>404</span>
         </Link>
       </div>
     </div>

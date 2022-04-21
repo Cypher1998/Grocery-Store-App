@@ -9,15 +9,14 @@ export const backgroundText = [
     bigText: 'the best quality products guaranteed!',
     smallText:
       'Dramatically facilitate effective total linkage for go forward process',
-    variant: 'success',
-    onClick: () => console.log(222),
+    linkUrl: '/main-category/fruits-&-vegetable',
   },
   {
     url: bgFive,
     bigText: 'best different type of grocery store.',
     smallText: 'Quickly aggregate empowered networks after emerging products',
     variant: 'dark',
-    onClick: () => console.log(333),
+    linkUrl: '/main-category/organic-food',
   },
   {
     url: bgTwo,
@@ -26,7 +25,7 @@ export const backgroundText = [
       'Intrinsically fashion performance based products rather than accurate benefits',
     variant: 'success',
     transform: 'translateX(10rem)',
-    onClick: () => console.log(444),
+    linkUrl: '/main-category/drinks',
   },
   {
     url: bgOne,
@@ -34,6 +33,6 @@ export const backgroundText = [
     smallText: 'Live healthy...',
     variant: 'info',
     color: 'rgb(220, 220, 250)',
-    onClick: () => console.log(555),
+    linkUrl: '/main-category/fish-&-meat',
   },
 ];

@@ -7,7 +7,7 @@ const Features = ({ imgUrl, title, subtitle }) => {
   const newSubtitle = subtitle.slice(0, 3);
 
   const titleUrl = urlToPutInSearchBar(title);
-  console.log(titleUrl);
+
   return (
     <div className="featureDisplay p-2">
       <div className="image">

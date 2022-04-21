@@ -58,7 +58,6 @@ export const fetchCategoryProducts = (category, text) => async (dispatch) => {
       }
     }
   } catch (error) {
-    console.log(error);
     dispatch({
       type: FETCHING_CATEGORY_PRODUCTS_FAILED,
       payload: 'fetching failed',

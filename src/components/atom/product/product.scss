@@ -9,22 +9,16 @@
   font-family: $inter-font;
   text-overflow: clip;
   position: relative;
+  width: 100%;
 
-  .stock {
-    @extend %stock-discount;
+  .stock-out-product {
+    @extend %top-position;
     left: 1rem;
-    color: rgb(220, 38, 38);
-    background: rgb(254 226 226);
-    border-radius: 10px;
-    font-weight: bold;
   }
 
-  .discount {
-    @extend %stock-discount;
+  .discount-product {
+    @extend %top-position;
     right: 1rem;
-    color: white;
-    background: rgb(249, 115, 22);
-    border-radius: 5px;
   }
 
   .productImg {
@@ -94,7 +88,11 @@
       }
     }
 
-    button {
+    .noStockCursor {
+      cursor: default !important;
+    }
+
+    .productBtn {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -108,6 +106,32 @@
       &:hover {
         background: $bg-color;
         color: white;
+      }
+    }
+
+    .productAddBtn {
+      background: $bg-color;
+      padding: 0.3rem 0.5rem;
+      border-radius: 5px;
+      font-weight: 500;
+      color: white;
+
+      .button {
+        background: transparent;
+        border: none;
+        font-size: 0.9rem;
+        color: white;
+        color: $not-found-color;
+
+        span {
+          font-weight: bolder;
+        }
+      }
+
+      span {
+        padding: 0.075rem 0.3rem 0;
+        font-family: $open-sans-font;
+        font-size: 0.93rem;
       }
     }
   }

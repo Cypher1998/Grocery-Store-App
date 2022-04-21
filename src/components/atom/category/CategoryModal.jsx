@@ -8,7 +8,12 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { urlToPutInSearchBar } from '../../utilities/formatUrl';
 
-const CategoryModal = ({ error, loading, featuresData, onClick }) => {
+const CategoryModal = ({
+  error,
+  loading,
+  featuresData,
+  toggleDesktopCategoryModal,
+}) => {
   const [showChild, setShowChild] = useState(null);
   const [showField, setShowField] = useState(false);
 
@@ -59,11 +64,14 @@ const CategoryModal = ({ error, loading, featuresData, onClick }) => {
                           const subtitleUrl = urlToPutInSearchBar(list);
 
                           return (
-                            <li key={index} onClick={onClick} className="my-1">
+                            <li
+                              key={index}
+                              onClick={toggleDesktopCategoryModal}
+                              className="my-1"
+                            >
                               <BiMinus style={{ color: 'gray' }} />
                               <Link
                                 to={`/sub-category/${subtitleUrl}`}
-                                // to={`/sub-category/${list}`}
                                 className="mx-1"
                               >
                                 {list}

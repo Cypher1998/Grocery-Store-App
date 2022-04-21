@@ -12,6 +12,10 @@
     border-radius: 10px;
     position: relative;
 
+    a {
+      color: white;
+    }
+
     @media (min-width: 576px) {
       height: 270px;
     }

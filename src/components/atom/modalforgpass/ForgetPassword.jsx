@@ -39,7 +39,7 @@ const ForgetPassword = () => {
           <FaTimes size={14} />
         </div>
         <div>
-          <h2>FORGOT PASSWORD</h2>
+          <h3>FORGOT PASSWORD</h3>
           <form onSubmit={onSubmit}>
             <div className="mb-4">
               <label htmlFor="email">Enter your email</label>

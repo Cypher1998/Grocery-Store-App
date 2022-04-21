@@ -13,6 +13,7 @@ $gen-color-d: rgb(238, 242, 255);
 $gen-color-e: rgb(34, 197, 94);
 $gen-color-f: rgb(255, 237, 213);
 $gen-color-g: rgb(156, 163, 175);
+$gen-color-h: rgb(107, 114, 128);
 $gen-grey-color: rgb(6, 7, 7);
 $grid-repeat-num: 1;
 
@@ -51,6 +52,7 @@ $grid-repeat-num: 1;
   left: 0;
   bottom: 0;
   right: 0;
+  height: 100vh;
 }
 
 %desktop-Modal {
@@ -69,10 +71,13 @@ $grid-repeat-num: 1;
   }
 }
 
-%stock-discount {
+%top-position {
   position: absolute;
-  z-index: 1;
   top: 1rem;
-  font-size: 0.77rem;
+}
+
+%stock-discount {
+  z-index: 1;
+  font-size: 0.78rem;
   letter-spacing: 0.5px;
 }

@@ -1,8 +1,8 @@
 import {
   MOBILE_MODAL_OPEN,
   MOBILE_MODAL_CLOSE,
-  DESKTOP_CATEGORY_MODAL,
-  DESKTOP_PAGE_MODAL,
+  DESKTOP_CATEGORY_MODAL_CLOSE,
+  DESKTOP_PAGE_MODAL_CLOSE,
 } from './closeModalTypes';
 
 const initialState = {
@@ -23,13 +23,13 @@ export const modalReducer = (state = initialState, action) => {
         ...state,
         mobileModal: false,
       };
-    case DESKTOP_CATEGORY_MODAL:
+    case DESKTOP_CATEGORY_MODAL_CLOSE:
       return {
         ...state,
         desktopCategoryModal: !state.desktopCategoryModal,
         desktopPageModal: false,
       };
-    case DESKTOP_PAGE_MODAL:
+    case DESKTOP_PAGE_MODAL_CLOSE:
       return {
         ...state,
         desktopPageModal: !state.desktopPageModal,

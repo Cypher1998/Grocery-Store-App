@@ -94,10 +94,11 @@ const MainCategory = ({
           </div>
         ) : error ? (
           <OfflineInfo />
-        ) : fetchedCategoryProducts && fetchedCategoryProducts.length > 1 ? (
+        ) : fetchedCategoryProducts && fetchedCategoryProducts.length > 0? (
           <div className="pt-3 pb-5">
             <div className="categoryProductDisplay">
               {slicedCategoryProducts?.map((product) => {
+                product.count = 1;
                 return <Product key={product.id} {...product} />;
               })}
             </div>

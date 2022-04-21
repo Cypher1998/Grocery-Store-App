@@ -3,39 +3,36 @@ import { BsPerson, BsCart } from 'react-icons/bs';
 import { AiOutlineAlignLeft, AiOutlineHome } from 'react-icons/ai';
 import { getAuth } from 'firebase/auth';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { MOBILE_MODAL_OPEN } from '../../../redux/closemodal/closeModalTypes';
+import { connect } from 'react-redux';
+import { openMobileModal } from '../../../redux/closemodal/closeModalAction';
+import { toggleCartModal } from '../../../redux/cartmodal/cartModalAction';
 import { useAuthStatus } from '../../customHooks/useAuthStatus';
 
-const Navbar = () => {
+const Navbar = ({ openMobileModal, toggleCartModal, cart }) => {
   const auth = getAuth();
   const { loggedIn } = useAuthStatus();
-  const dispatch = useDispatch();
 
-  const openModal = () => {
-    dispatch({
-      type: MOBILE_MODAL_OPEN,
-    });
-  };
+  const getCartTotalCount = () =>
+    cart?.reduce((amount, item) => item.count + amount, 0);
 
   return (
     <div className="mainNavbar d-lg-none px-md-5">
-      <div className="myContainer d-flex justify-content-between">
+      <div className="myContainer d-flex justify-content-between align-items-center">
         <div>
           <AiOutlineAlignLeft
-            size={24}
+            size={23.5}
             className="iconStyle"
-            onClick={openModal}
+            onClick={openMobileModal}
           />
         </div>
         <div>
           <Link to="/">
-            <AiOutlineHome size={25} className="iconStyle" />
+            <AiOutlineHome size={23.5} className="iconStyle" />
           </Link>
         </div>
-        <div className="position-relative">
-          <BsCart size={24} className="iconStyle" />
-          <span className="itemNumber">1</span>
+        <div className="position-relative" onClick={toggleCartModal}>
+          <BsCart size={23.5} className="iconStyle" />
+          <span className="itemNumber">{getCartTotalCount()}</span>
         </div>
         <div>
           <Link to="/dashboard">
@@ -43,7 +40,7 @@ const Navbar = () => {
               <h2 className="iconStyle">{auth.currentUser.displayName[0]}</h2>
             ) : (
               <>
-                <BsPerson size={24} className="iconStyle" />
+                <BsPerson size={23.5} className="iconStyle" />
               </>
             )}
           </Link>
@@ -53,4 +50,10 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+const mapStateToProps = (state) => ({
+  cart: state.cartProducts.cart,
+});
+
+export default connect(mapStateToProps, { openMobileModal, toggleCartModal })(
+  Navbar
+);

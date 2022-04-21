@@ -55,7 +55,6 @@ const Profile = ({ loggedInUser, loadingUser, error }) => {
       return;
     }
     try {
-      console.log(imgUrl);
       if (imgUrl !== null) {
         const storeImg = async (image) => {
           return new Promise((resolve, reject) => {
@@ -68,16 +67,14 @@ const Profile = ({ loggedInUser, loadingUser, error }) => {
               (snapshot) => {
                 const progress =
                   (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                console.log('Upload is ' + progress + '% done');
+                return progress;
               },
               (error) => {
                 reject(error);
-                console.log(error);
               },
               () => {
                 getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                   resolve(downloadURL);
-                  console.log(downloadURL);
                 });
               }
             );
@@ -86,7 +83,6 @@ const Profile = ({ loggedInUser, loadingUser, error }) => {
         const formattedUrl = await Promise.all(
           [...imgUrl].map((image) => storeImg(image))
         ).catch((e) => {
-          console.log(e);
           return new Error();
         });
 
@@ -146,8 +142,8 @@ const Profile = ({ loggedInUser, loadingUser, error }) => {
 
   return (
     <section>
-      <div className="myProfile p-3 pt-2">
-        <h2 className="mb-4">My Profile</h2>
+      <div className="myProfile p-1 pt-2">
+        <h3 className="mb-4">My Profile</h3>
         {loading && (
           <div className="onLoad">
             <DisplaySpinner />
@@ -199,7 +195,7 @@ const Profile = ({ loggedInUser, loadingUser, error }) => {
               style={{ cursor: !changeDetails ? 'not-allowed' : 'pointer' }}
             />
           </div>
-          <div className="my-4 d-flex justify-content-between">
+          <div className="mt-4 mb-2 d-flex justify-content-between">
             {changeDetails && (
               <Button variant="warning" type="submit">
                 Update Profile

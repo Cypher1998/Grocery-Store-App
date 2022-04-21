@@ -12,6 +12,9 @@ const Search = () => {
       return;
     }
     navigate(`/search?query=${text}`);
+    setTimeout(() => {
+      setText('');
+    }, 1000);
   };
 
   return (

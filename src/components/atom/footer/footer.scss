@@ -4,6 +4,7 @@
   @include display-grid(2);
   gap: 1.5rem;
   font-family: $roboto-font;
+  overflow-y: hidden;
 
   .footerText {
     text-transform: capitalize;
@@ -21,8 +22,12 @@
 
       li {
         margin-bottom: 0.5rem;
-        font-size: 0.92rem;
+        font-size: 0.9rem;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        @media (min-width: 512px) {
+          font-size: 0.92rem;
+        }
 
         @media (min-width: 768px) {
           font-size: 0.95rem;
@@ -47,8 +52,12 @@
     p {
       margin-top: 1rem;
       line-height: 2;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+      @media (min-width: 512px) {
+        font-size: 0.9rem;
+      }
 
       @media (min-width: 768px) {
         font-size: 0.95rem;

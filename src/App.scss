@@ -56,6 +56,38 @@ a {
   }
 }
 
+.modalDisplay {
+  background: white;
+  position: fixed;
+  height: 100%;
+  width: 100vw;
+  overflow-y: scroll;
+  z-index: 22;
+  top: 0;
+  scrollbar-width: 0;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: 500px) {
+    width: 420px;
+  }
+}
+
+.modalNav {
+  position: absolute;
+  position: fixed;
+  width: 100%;
+  z-index: 25;
+  top: 0;
+
+  @media (min-width: 500px) {
+    width: 420px;
+  }
+}
+
 .button {
   background: $bg-color;
   border-color: $bg-color;
@@ -63,20 +95,49 @@ a {
 
 .error h5 {
   text-transform: capitalize;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .itemNumber {
-  width: 22px;
-  height: 22px;
-  text-align: center;
   position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  @include display-flex-center;
   background: rgb(239 68 68);
   color: white;
-  border-radius: 50%;
   font-size: 0.85rem;
-  top: -10px;
-  right: -10px;
+  font-weight: 500;
+  top: -4px;
+  right: -7px;
+
+  @media (min-width: 992px) {
+    top: -7px;
+    right: -9px;
+  }
+}
+
+.stock-out {
+  @extend %stock-discount;
+  color: rgb(220, 38, 38);
+  background: rgb(254 226 226);
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.stock-in {
+  @extend %stock-discount;
+  color: $gen-color-a;
+  background: rgb(209 250 229);
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.discount {
+  @extend %stock-discount;
+  color: white;
+  background: rgb(249, 115, 22);
+  border-radius: 5px;
 }
 
 .bgDisplayProducts {
@@ -89,6 +150,10 @@ a {
 
   @media (min-width: 40rem) {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 52rem) {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   @media (min-width: 64rem) {

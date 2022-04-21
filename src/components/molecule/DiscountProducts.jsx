@@ -35,6 +35,7 @@ const DiscountProducts = ({ fetchDiscountedProducts, productResult }) => {
           discountProducts && (
             <div className="productsDisplay">
               {discountProducts.map((product) => {
+                product.count = 1;
                 return <Product key={product.id} {...product} />;
               })}
             </div>
