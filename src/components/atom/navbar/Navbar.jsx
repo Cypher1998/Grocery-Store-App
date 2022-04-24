@@ -12,6 +12,10 @@ const Navbar = ({ openMobileModal, toggleCartModal, cart }) => {
   const auth = getAuth();
   const { loggedIn } = useAuthStatus();
 
+  const onClick = () => {
+    document.documentElement.scrollTop = 0;
+  };
+
   const getCartTotalCount = () =>
     cart?.reduce((amount, item) => item.count + amount, 0);
 
@@ -25,7 +29,7 @@ const Navbar = ({ openMobileModal, toggleCartModal, cart }) => {
             onClick={openMobileModal}
           />
         </div>
-        <div>
+        <div onClick={onClick}>
           <Link to="/">
             <AiOutlineHome size={23.5} className="iconStyle" />
           </Link>
@@ -34,7 +38,7 @@ const Navbar = ({ openMobileModal, toggleCartModal, cart }) => {
           <BsCart size={23.5} className="iconStyle" />
           <span className="itemNumber">{getCartTotalCount()}</span>
         </div>
-        <div>
+        <div onClick={onClick}>
           <Link to="/dashboard">
             {loggedIn ? (
               <h2 className="iconStyle">{auth.currentUser.displayName[0]}</h2>

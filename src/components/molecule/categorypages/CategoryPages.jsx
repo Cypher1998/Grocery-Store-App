@@ -8,11 +8,13 @@ import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { fetchFeaturesData } from '../../../redux/featuredcategory/featureActions';
 import { closeMobileModal } from '../../../redux/closemodal/closeModalAction';
+import { removeCartModal } from '../../../redux/cartmodal/cartModalAction';
 
 const CategoryPages = ({
   mobileModal,
   fetchFeaturesData,
   closeMobileModal,
+  removeCartModal,
 }) => {
   const location = useLocation();
   useEffect(() => {
@@ -28,7 +30,9 @@ const CategoryPages = ({
   useEffect(() => {
     fetchFeaturesData();
     closeMobileModal();
+    removeCartModal();
 
+    document.documentElement.scrollTop = 0;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]);
 
@@ -79,4 +83,5 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps, {
   fetchFeaturesData,
   closeMobileModal,
+  removeCartModal,
 })(CategoryPages);

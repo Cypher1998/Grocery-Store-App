@@ -22,22 +22,23 @@
     text-align: center;
 
     h6 {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       padding-bottom: 0.5rem;
       font-weight: bold;
     }
 
     p {
       color: $not-found-color-2;
+      font-size: 0.95rem;
     }
 
     @media (min-width: 768px) {
       h6 {
-        font-size: 1.25rem;
+        font-size: 1.225rem;
       }
 
       p {
-        font-size: 1.05rem;
+        font-size: 1.02rem;
       }
     }
   }

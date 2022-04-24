@@ -6,7 +6,11 @@
   bottom: 0;
   width: 100%;
   z-index: 5;
-  padding: 1.12rem 0;
+  padding: 0.9rem 0;
+
+  @media (min-width: 640px) {
+    padding: 1rem 0;
+  }
 }
 
 h2.iconStyle {

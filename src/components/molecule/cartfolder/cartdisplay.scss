@@ -1,20 +1,27 @@
 @import '../../utilities/variables';
 
+.backdrop {
+  @extend %backdrop;
+  transition: opacity 0.2s ease-in-out;
+  background: rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+}
+
 .cartModalNav {
   right: 0;
   background: $gen-color-d;
   font-family: $inter-font;
-  padding: 1.25rem 0;
+  padding: 1.2rem 0;
 
   .navIcon {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     margin-right: 0.5rem;
     margin-top: -0.25rem;
   }
 
   .text {
     font-weight: bold;
-    font-size: 1.17rem;
+    font-size: 1.02rem;
     white-space: nowrap;
   }
 
@@ -26,6 +33,7 @@
 
     span {
       margin-left: 0.25rem;
+      font-size: 0.975rem;
     }
 
     &:hover {
@@ -36,10 +44,11 @@
 
 .cartModal {
   right: 0;
+  overflow: hidden;
 
   .cartFill {
-    height: 88vh;
-    padding: 4rem 0 1rem;
+    height: 88.5vh;
+    padding: 3rem 0 1rem;
 
     overflow: scroll;
     &::-webkit-scrollbar {
@@ -47,7 +56,7 @@
     }
 
     .cartProduct {
-      padding: 0.75rem 1rem;
+      padding: 0.75rem 0.85rem 0.5rem;
       border-bottom: 1px solid $gen-color-b;
       display: grid;
       @include display-grid(11);
@@ -93,12 +102,20 @@
         }
 
         .name {
-          font-size: 0.92rem;
+          font-size: 0.875rem;
+
+          @media (min-width: 640px) {
+            font: 0.925rem;
+          }
         }
 
         .singlePrice {
-          font-size: 0.85rem;
-          transform: translateY(-0.2rem);
+          font-size: 0.82rem;
+          transform: translateY(-0.15rem);
+
+          @media (min-width: 640px) {
+            font-size: 0.85rem;
+          }
 
           a {
             color: $gen-color-h;
@@ -109,12 +126,14 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
+          transform: translateY(-0.25rem);
 
           .newPrice {
             font-weight: 500;
+            font-size: 0.95rem;
 
             @media (min-width: 640px) {
-              font-size: 1.1rem;
+              font-size: 1.02rem;
             }
           }
 
@@ -125,7 +144,7 @@
 
           .cartButton {
             border: 1px solid $gen-color-b;
-            padding: 0.15rem 0.35rem;
+            padding: 0.15rem 0.5rem;
             border-radius: 5px;
             font-weight: 500;
 
@@ -138,11 +157,12 @@
             }
 
             span {
-              padding: 0.09rem 0.3rem 0;
+              padding: 0.09rem 0.45rem 0;
               font-size: 0.93rem;
 
               @media (min-width: 640px) {
                 padding: 0.1rem 0.5rem 0;
+                font-size: 0.95rem;
               }
             }
           }
@@ -161,7 +181,7 @@
       }
 
       &:first-child {
-        padding-top: 1rem;
+        margin-top: 0.75rem;
       }
 
       &:hover {
@@ -218,7 +238,14 @@
   width: 100%;
   z-index: 250;
   background: white;
-  height: 14.75vh;
+  height: 14vh;
+  display: flex;
+  align-items: center;
+
+  a {
+    display: block;
+    width: 100%;
+  }
 
   button {
     background: $bg-color;

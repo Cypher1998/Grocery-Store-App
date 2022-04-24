@@ -4,7 +4,7 @@ import { MdOutlineLocationOn } from 'react-icons/md';
 
 const singleProductInfo = () => {
   return (
-    <div className="singleProductInfo p-3">
+    <div className="singleProductInfo py-2">
       <ul>
         <li>
           <span className="iconSpan">

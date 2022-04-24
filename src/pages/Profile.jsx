@@ -142,8 +142,8 @@ const Profile = ({ loggedInUser, loadingUser, error }) => {
 
   return (
     <section>
-      <div className="myProfile p-1 pt-2">
-        <h3 className="mb-4">My Profile</h3>
+      <div className="myProfile p-md-1">
+        <h3>My Profile</h3>
         {loading && (
           <div className="onLoad">
             <DisplaySpinner />

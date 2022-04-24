@@ -6,6 +6,7 @@ import { FaTimes } from 'react-icons/fa';
 import { useEffect } from 'react';
 import CartProduct from '../../atom/CartProduct';
 import { getAuth } from 'firebase/auth';
+import { Link } from 'react-router-dom';
 
 const CartDisplay = ({ cartModalState, toggleCartModal, cart }) => {
   const auth = getAuth();
@@ -25,10 +26,6 @@ const CartDisplay = ({ cartModalState, toggleCartModal, cart }) => {
   );
 
   const emptyCart = 0;
-
-  const proceedToCheckout = () => {
-    console.log(auth.currentUser);
-  };
 
   return (
     <>
@@ -51,7 +48,7 @@ const CartDisplay = ({ cartModalState, toggleCartModal, cart }) => {
             <span className="text">Shopping Cart</span>
           </div>
           <button onClick={toggleCartModal}>
-            <FaTimes size={13} />
+            <FaTimes size={12} />
             <span>close</span>
           </button>
         </div>
@@ -85,14 +82,20 @@ const CartDisplay = ({ cartModalState, toggleCartModal, cart }) => {
             </div>
           </div>
         )}
-        <div className="checkoutBtn p-3">
-          <button onClick={proceedToCheckout}>
-            <span className="text">proceed to checkout</span>
-            <span className="amount">
-              $
-              {cart.length ? totalPriceInCart.toFixed(2) : emptyCart.toFixed(2)}
-            </span>
-          </button>
+        <div className="checkoutBtn px-3">
+          <Link to={cart.length ? '/checkout' : '/'}>
+            <button>
+              <span className="text">
+                {cart.length ? 'proceed to checkout' : 'start Shopping'}
+              </span>
+              <span className="amount">
+                $
+                {cart.length
+                  ? totalPriceInCart.toFixed(2)
+                  : emptyCart.toFixed(2)}
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
     </>

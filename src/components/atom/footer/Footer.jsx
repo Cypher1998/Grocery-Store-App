@@ -5,6 +5,10 @@ import LgFooterDetails from '../../atom/lstopfootdetails/LgFooterDetails';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const onClick = () => {
+    document.documentElement.scrollTop = 0;
+  };
+
   return (
     <>
       <LgFooterDetails />
@@ -14,7 +18,7 @@ const Footer = () => {
             <p className="header">{footerText.header}</p>
             <ul>
               {footerText.lists.map((list, index) => (
-                <li key={index}>
+                <li key={index} onClick={onClick}>
                   <Link to={list.url} className="link">
                     {list.list}
                   </Link>

@@ -4,9 +4,15 @@
   @media (min-width: 992px) {
     @include display-grid(2);
     align-items: center;
-    gap: 1.75rem;
+    gap: 1.5rem;
   }
+
   .aboutText {
+    h3 {
+      font-family: $inter-font;
+      margin-top: 0.85rem;
+      font-size: 1.3rem;
+    }
     .aboutInfoDiv {
       display: grid;
       gap: 1.5rem;
@@ -44,9 +50,13 @@
   }
 
   p {
-    font-size: 0.98rem;
+    font-size: 0.92rem;
     line-height: 1.7;
     font-family: $inter-font;
+
+    @media (min-width: 768px) {
+      font-size: 0.95rem;
+    }
   }
 
   @media (min-width: 992px) {
@@ -186,8 +196,8 @@ div {
 
 .privacyPolicy {
   display: grid;
-  gap: 0.5rem;
-  margin: 2rem 0;
+  gap: 0.2rem;
+  margin: 1.5rem 0;
 
   h4 {
     font-weight: bold;
@@ -197,8 +207,8 @@ div {
 
 .terms {
   display: grid;
-  gap: 0.5rem;
-  margin: 2rem 0;
+  gap: 0.2rem;
+  margin: 0 0 2rem;
 
   h4,
   h5 {
@@ -328,6 +338,10 @@ div {
       font-family: $inter-font;
     }
   }
+}
+
+.outletPage {
+  padding: 0.75rem;
 }
 
 .profile {

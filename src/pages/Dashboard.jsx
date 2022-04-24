@@ -41,9 +41,9 @@ const DashBoard = ({ getAuthUser }) => {
 
   return (
     <>
-      <div className="dashboard mb-5 ">
+      <div className="dashboard mb-4">
         <div className="myContainer">
-          <div className="welcome mb-3 d-flex px-sm-4 justify-content-between align-items-center">
+          <div className="welcome mb-2 d-flex px-sm-4 justify-content-between align-items-center">
             <div>
               <h5>
                 Welcome, <span>{newName}</span>
@@ -59,8 +59,8 @@ const DashBoard = ({ getAuthUser }) => {
               )}
             </div>
           </div>
-          <div className="linkOutlet my-4">
-            <div className="dashboardLink py-3 px-2 mb-4">
+          <div className="linkOutlet my-3">
+            <div className="dashboardLink py-3 px-2 mb-3">
               <ul>
                 <DashBoardLink
                   url="order-summary"
@@ -88,7 +88,7 @@ const DashBoard = ({ getAuthUser }) => {
                 </li>
               </ul>
             </div>
-            <div className="outletPage p-3 px-lg-4">
+            <div className="outletPage px-lg-4">
               <Outlet />
             </div>
           </div>

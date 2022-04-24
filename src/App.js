@@ -18,6 +18,7 @@ import IndexRoute from './pages/IndexRoute';
 import ProductPage from './pages/ProductPage';
 import Profile from './pages/Profile';
 import ChangePassword from './pages/ChangePassword';
+import CheckOutPage from './pages/CheckOutPage';
 import OrderPage from './pages/OrderPage';
 import SearchPage from './pages/SearchPage';
 import TermsConditions from './pages/TermsConditions';
@@ -56,6 +57,9 @@ function App({ error }) {
                 <Route path="my-orders" element={<OrderPage />} />
                 <Route path="change-password" element={<ChangePassword />} />
               </Route>
+            </Route>
+            <Route path="/checkout" element={<PrivateRoute />}>
+              <Route path="/checkout" element={<CheckOutPage />} />
             </Route>
             <Route path="/terms-conditions" element={<TermsConditions />} />
             <Route path="/faq" element={<FAskedQuestion />} />
