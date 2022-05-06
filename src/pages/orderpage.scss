@@ -1,0 +1,136 @@
+@import '../components/utilities/variables';
+
+.userOrdersPage {
+  .userOrdersSpinner {
+    height: 100px;
+    @include display-flex-center;
+  }
+
+  .no-orders {
+    margin-top: 0.5rem;
+  }
+
+  .table {
+    background: white;
+
+    .otherStatus {
+      color: rgb(99 120 241) !important;
+    }
+
+    div {
+      overflow-x: scroll;
+      width: 100%;
+
+      &::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: $gen-color-b;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $gen-color-g;
+        border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: $gen-color-h;
+      }
+    }
+
+    table {
+      margin-bottom: 0.25rem;
+      border-collapse: collapse;
+      border-radius: 7px;
+      overflow: hidden;
+      width: inherit;
+
+      th,
+      td {
+        border-bottom: 1px solid rgb(229, 231, 235);
+      }
+    }
+
+    thead {
+      background: $gen-color-b;
+
+      th {
+        text-transform: uppercase;
+        height: 2.5rem;
+        font-size: 0.83rem;
+        color: $table-head-color;
+        padding: 0.35rem 1rem;
+        text-align: center;
+        letter-spacing: 0.5px;
+
+        &:first-of-type {
+          min-width: 80px;
+        }
+
+        &:nth-of-type(2) {
+          min-width: 160px;
+        }
+
+        &:nth-of-type(3) {
+          min-width: 120px;
+        }
+
+        &:nth-of-type(4) {
+          min-width: 120px;
+        }
+
+        &:nth-of-type(5) {
+          min-width: 120px;
+        }
+
+        &:last-of-type {
+          width: 120px;
+        }
+      }
+    }
+
+    tbody {
+      td {
+        padding: 0.75rem 1rem;
+        font-size: 0.91rem;
+        text-transform: capitalize;
+        text-align: center;
+        font-weight: 500;
+        letter-spacing: 0.15px;
+
+        @media (min-width: 768px) {
+          font-size: 0.95rem;
+        }
+
+        &:nth-of-type(2) {
+          white-space: nowrap;
+        }
+
+        &:nth-of-type(3) {
+          font-weight: 500;
+        }
+
+        &:nth-of-type(4) {
+          color: rgb(249, 115, 22);
+        }
+
+        &:nth-of-type(5) {
+          font-weight: bold;
+          font-size: 0.93rem;
+          letter-spacing: 0.5px;
+        }
+
+        &:last-of-type {
+          a {
+            color: $gen-color-a;
+            background-color: rgb(209, 250, 229);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            letter-spacing: 0.25px;
+          }
+        }
+      }
+    }
+  }
+}

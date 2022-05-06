@@ -34,33 +34,39 @@ const ProductPage = ({
   }, [paramToUse]);
 
   return (
-    <div className="singlePage">
-      {loading ? (
-        <div className="spinnerDisplay">
-          <DisplaySpinner />
-        </div>
-      ) : error !== null ? (
+    <>
+      {!navigator.onLine ? (
         <OfflineInfo />
       ) : (
-        singleProduct &&
-        relatedProducts && (
-          <div className="myContainer">
-            <BreadCrumb category={singleProduct.subcategory} text={text} />
-            <div className="singlePageProductDisplay myContainer pb-3 p-xl-5">
-              <SingleProductPage {...singleProduct} count={1} />
+        <div className="singlePage">
+          {loading ? (
+            <div className="spinnerDisplay">
+              <DisplaySpinner />
             </div>
-            <div className="relatedProducts mt-5">
-              <h5>related products</h5>
-              <div className="productsDisplay">
-                {relatedProducts.map((product) => {
-                  return <Product key={product.id} {...product} />;
-                })}
+          ) : error !== null ? (
+            <OfflineInfo />
+          ) : (
+            singleProduct &&
+            relatedProducts && (
+              <div className="myContainer">
+                <BreadCrumb category={singleProduct.subcategory} text={text} />
+                <div className="singlePageProductDisplay myContainer pb-3 p-xl-5">
+                  <SingleProductPage {...singleProduct} count={1} />
+                </div>
+                <div className="relatedProducts mt-5">
+                  <h5>related products</h5>
+                  <div className="productsDisplay">
+                    {relatedProducts.map((product) => {
+                      return <Product key={product.id} {...product} />;
+                    })}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        )
+            )
+          )}
+        </div>
       )}
-    </div>
+    </>
   );
 };
 

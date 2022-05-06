@@ -16,7 +16,7 @@ const DesktopIconNav = ({ toggleCartModal, cart }) => {
     <div className="d-flex justify-content-between align-items-center">
       <BsBell size={23} className="iconStyle" />
       <div
-        className="position-relative d-flex justify-content-between align-items-center"
+        className="position-relative cartClick d-flex justify-content-between align-items-center"
         onClick={toggleCartModal}
       >
         <BsCart size={23} className="iconStyle" />

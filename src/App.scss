@@ -183,3 +183,71 @@ a {
     padding-top: 2rem;
   }
 }
+
+@media print {
+  .myContainer {
+    padding: 0;
+  }
+
+  .orderInvoiceDiv {
+    padding: 0 !important;
+    background: white;
+
+    .greetings {
+      display: none;
+    }
+
+    .invoice {
+      padding: 2rem;
+    }
+
+    .table {
+      padding: 2rem;
+    }
+
+    .paymentInfo {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  #download {
+    display: none;
+  }
+
+  .footerDisplay {
+    display: none;
+
+    .footerText {
+      display: none;
+    }
+
+    .addressLogo {
+      display: none;
+    }
+  }
+
+  #footerSocialMedia {
+    display: none;
+  }
+
+  .mainNavbar {
+    display: none;
+  }
+
+  .downloadBtns {
+    display: none;
+
+    button.printBtn {
+      display: none;
+    }
+
+    a.downloadBtn {
+      display: none;
+    }
+  }
+
+  .mainNavbarFixed {
+    display: none;
+  }
+}

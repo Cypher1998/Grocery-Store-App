@@ -1,4 +1,5 @@
 import './featbackground.scss';
+import { useEffect } from 'react';
 import UnknownChild from '../../utilities/UnknownChild';
 import Features from '../../atom/features/Features';
 import { connect } from 'react-redux';
@@ -6,6 +7,12 @@ import DisplaySpinner from '../../atom/DisplaySpinner';
 import ErrorText from '../../atom/ErrorText';
 
 const FeatBackground = ({ error, loading, featuresData }) => {
+  useEffect(() => {
+    if (error !== null) {
+      window.location.reload();
+    }
+  }, [error]);
+
   return (
     <div className="features mt-4 mt-lg-0">
       <div className="myContainer">

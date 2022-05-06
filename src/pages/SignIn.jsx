@@ -9,6 +9,7 @@ import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { toast } from 'react-toastify';
 import { useState, useEffect } from 'react';
 import ForgetPassword from '../components/atom/modalforgpass/ForgetPassword';
+import OfflineInfo from '../components/atom/offlinepage/OfflineInfo';
 
 const SignIn = ({ toggleForgotPasswordAction, forgotPassModal }) => {
   useEffect(() => {
@@ -56,61 +57,67 @@ const SignIn = ({ toggleForgotPasswordAction, forgotPassModal }) => {
 
   return (
     <>
-      <SharedPages text="sign in" />
-      {forgotPassModal && <ForgetPassword />}
-      <div className="myContainer signPage">
-        <form onSubmit={onSubmit}>
-          <div className="email">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              placeholder="enter your email"
-              onChange={onChange}
-            />
-          </div>
-          <div className="password">
-            <label htmlFor="password">Password</label>
-            <input
-              type={showPassword ? 'text' : 'password'}
-              id="password"
-              placeholder="enter your password"
-              value={password}
-              onChange={onChange}
-            />
-            <div className="showPassword">
-              {!showPassword ? (
-                <MdOutlineVisibility
-                  size={21}
-                  onClick={() => setShowPassWord((prevState) => !prevState)}
+      {!navigator.onLine ? (
+        <OfflineInfo />
+      ) : (
+        <>
+          <SharedPages text="sign in" />
+          {forgotPassModal && <ForgetPassword />}
+          <div className="myContainer signPage">
+            <form onSubmit={onSubmit}>
+              <div className="email">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  value={email}
+                  placeholder="enter your email"
+                  onChange={onChange}
                 />
-              ) : (
-                <MdOutlineVisibilityOff
-                  size={21}
-                  onClick={() => setShowPassWord((prevState) => !prevState)}
+              </div>
+              <div className="password">
+                <label htmlFor="password">Password</label>
+                <input
+                  type={showPassword ? 'text' : 'password'}
+                  id="password"
+                  placeholder="enter your password"
+                  value={password}
+                  onChange={onChange}
                 />
-              )}
+                <div className="showPassword">
+                  {!showPassword ? (
+                    <MdOutlineVisibility
+                      size={21}
+                      onClick={() => setShowPassWord((prevState) => !prevState)}
+                    />
+                  ) : (
+                    <MdOutlineVisibilityOff
+                      size={21}
+                      onClick={() => setShowPassWord((prevState) => !prevState)}
+                    />
+                  )}
+                </div>
+              </div>
+              <div className="forgetPassword my-2">
+                <p onClick={toggleForgotPasswordAction}>Forgot Password?</p>
+              </div>
+              <div className="buttonStyle">
+                <Button variant="success" type="submit">
+                  Sign In
+                </Button>
+              </div>
+            </form>
+            <div className="buttonStyle my-4">
+              <p>OR</p>
+              <GoogleOauth />
+            </div>
+            <div className="register text-center ">
+              <p className="px-2">Not a registered user?</p>
+              <Link to="/sign-up">Sign Up</Link>
             </div>
           </div>
-          <div className="forgetPassword my-2">
-            <p onClick={toggleForgotPasswordAction}>Forgot Password?</p>
-          </div>
-          <div className="buttonStyle">
-            <Button variant="success" type="submit">
-              Sign In
-            </Button>
-          </div>
-        </form>
-        <div className="buttonStyle my-4">
-          <p>OR</p>
-          <GoogleOauth />
-        </div>
-        <div className="register text-center ">
-          <p className="px-2">Not a registered user?</p>
-          <Link to="/sign-up">Sign Up</Link>
-        </div>
-      </div>
+        </>
+      )}
     </>
   );
 };

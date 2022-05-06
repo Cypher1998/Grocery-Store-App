@@ -4,7 +4,7 @@ import ExpiredNotice from '../../atom/ExpiredNotice';
 import ShowCounter from '../showcounter/ShowCounter';
 
 const CouponDiscount = () => {
-  const countDownDate = new Date('Apr 15, 2022 00:00:00').getTime();
+  const countDownDate = new Date('Aug 10, 2022 00:00:00').getTime();
 
   const [days, hours, minutes, seconds] = useCountdown(countDownDate);
 

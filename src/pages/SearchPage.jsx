@@ -32,7 +32,7 @@ const SearchPage = ({
   useEffect(() => {
     document.title = 'Cypher Store | Search';
   }, []);
-  console.log(searchProducts, slicedSearchProducts);
+
   useEffect(() => {
     fetchSearchQueryProducts(query);
 
@@ -48,69 +48,75 @@ const SearchPage = ({
   };
 
   return (
-    <div className="mainCategories">
-      <div className="myContainer">
-        <SharedCategory />
-        <SharedCategorySlider />
-        <div className="showTotalProducts p-3 d-flex justify-content-between align-items-center">
-          {loading ? (
-            <p className="mb-0 ">Fetching...</p>
-          ) : searchProducts && searchProducts?.length > 0 ? (
-            <>
-              <p className="mb-0">
-                Showing{' '}
-                <span className="totalItems">
-                  {slicedSearchProducts?.length}
-                </span>{' '}
-                of total{' '}
-                <span className="totalItems">{searchProducts?.length}</span>{' '}
-                items Found
-              </p>
-              <select onChange={onChange}>
-                <option value="" hidden>
-                  Sort By Price
-                </option>
-                <option value="low-first">Low to High</option>
-                <option value="high-first">High To Low</option>
-              </select>
-            </>
-          ) : (
-            <>
-              <p className="mb-0">Zero items fetched</p>
-              <select onChange={onChange}>
-                <option value="">Sort By Price</option>
-              </select>
-            </>
-          )}
-        </div>
-
-        {loading ? (
-          <div className="pb-2 pt-3">
-            <DisplaySpinner />
-          </div>
-        ) : error ? (
-          <OfflineInfo />
-        ) : searchProducts && searchProducts.length > 0 ? (
-          <div className="pt-3 pb-5">
-            <div className="categoryProductDisplay">
-              {slicedSearchProducts?.map((product) => {
-                product.count = 1;
-                return <Product key={product.id} {...product} />;
-              })}
+    <>
+      {!navigator.onLine ? (
+        <OfflineInfo />
+      ) : (
+        <div className="mainCategories">
+          <div className="myContainer">
+            <SharedCategory />
+            <SharedCategorySlider />
+            <div className="showTotalProducts p-3 d-flex justify-content-between align-items-center">
+              {loading ? (
+                <p className="mb-0 ">Fetching...</p>
+              ) : searchProducts && searchProducts?.length > 0 ? (
+                <>
+                  <p className="mb-0">
+                    Showing{' '}
+                    <span className="totalItems">
+                      {slicedSearchProducts?.length}
+                    </span>{' '}
+                    of total{' '}
+                    <span className="totalItems">{searchProducts?.length}</span>{' '}
+                    items Found
+                  </p>
+                  <select onChange={onChange}>
+                    <option value="" hidden>
+                      Sort By Price
+                    </option>
+                    <option value="low-first">Low to High</option>
+                    <option value="high-first">High To Low</option>
+                  </select>
+                </>
+              ) : (
+                <>
+                  <p className="mb-0">Zero items fetched</p>
+                  <select onChange={onChange}>
+                    <option value="">Sort By Price</option>
+                  </select>
+                </>
+              )}
             </div>
+
+            {loading ? (
+              <div className="pb-2 pt-3">
+                <DisplaySpinner />
+              </div>
+            ) : error ? (
+              <OfflineInfo />
+            ) : searchProducts && searchProducts.length > 0 ? (
+              <div className="pt-3 pb-5">
+                <div className="categoryProductDisplay">
+                  {slicedSearchProducts?.map((product) => {
+                    product.count = 1;
+                    return <Product key={product.id} {...product} />;
+                  })}
+                </div>
+              </div>
+            ) : (
+              <>
+                <NoResultImg />
+              </>
+            )}
+            {showMore && searchProducts?.length > 10 && (
+              <div className="loadMoreBtn text-center pt-1 pb-5">
+                <button onClick={fetchMore}>load more</button>
+              </div>
+            )}
           </div>
-        ) : (
-          <>
-            <NoResultImg />
-          </>
-        )}
-        {showMore && searchProducts?.length > 10 && (
-          <div className="loadMoreBtn text-center pt-1 pb-5">
-            <button onClick={fetchMore}>load more</button>
-          </div>
-        )}
-      </div>
-    </div>
+        </div>
+      )}
+    </>
   );
 };
 

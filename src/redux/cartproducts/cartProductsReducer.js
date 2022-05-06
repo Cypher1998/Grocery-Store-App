@@ -2,6 +2,7 @@ import {
   ADD_PRODUCT,
   REMOVE_PRODUCT,
   DECREASE_QUANTITY,
+  EMPTY_CART_CONTENT,
 } from './cartProductsTypes';
 
 const initialState = {
@@ -68,6 +69,11 @@ export const cartProductsReducer = (state = initialState, action) => {
     case REMOVE_PRODUCT:
       return {
         cart: state.cart.filter((item) => item.id !== action.payload),
+      };
+
+    case EMPTY_CART_CONTENT:
+      return {
+        cart: [],
       };
 
     default:

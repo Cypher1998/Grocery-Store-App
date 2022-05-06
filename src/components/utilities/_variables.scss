@@ -15,6 +15,8 @@ $gen-color-f: rgb(255, 237, 213);
 $gen-color-g: rgb(156, 163, 175);
 $gen-color-h: rgb(107, 114, 128);
 $gen-grey-color: rgb(6, 7, 7);
+$table-head-color: rgb(55, 65, 81);
+$input-border-color: rgb(230, 223, 223);
 $grid-repeat-num: 1;
 
 @mixin clamp-text() {
@@ -25,9 +27,24 @@ $grid-repeat-num: 1;
   -webkit-box-orient: vertical;
 }
 
+@mixin orderGrid {
+  display: grid;
+  gap: 1rem 1.5rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @mixin display-flex-center {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+@mixin display-flex-between {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -44,6 +61,24 @@ $grid-repeat-num: 1;
   left: 0;
   z-index: 15;
   background: rgba(0, 0, 0, 0.4);
+}
+
+%downloadPrintBtn {
+  background: $bg-color;
+  border: none;
+  padding: 0.45rem 1rem;
+  color: white;
+  border-radius: 5px;
+  text-transform: capitalize;
+
+  span {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+  }
+
+  &:hover {
+    background: $gen-color-a;
+  }
 }
 
 %fixed-background {

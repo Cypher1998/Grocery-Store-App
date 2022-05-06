@@ -5,6 +5,7 @@ import {
   BsTelephoneInbound,
   BsFileEarmarkText,
   BsPeople,
+  BsBagCheck
 } from 'react-icons/bs';
 import { MdOutlinePrivacyTip, MdOutlineErrorOutline } from 'react-icons/md';
 import { Link } from 'react-router-dom';
@@ -16,6 +17,12 @@ const PagesModal = ({ toggleDesktopPageModal }) => {
         <Link to="/">
           <BsGift />
           <span>Offer</span>
+        </Link>
+      </div>
+      <div className="textIconDiv" onClick={toggleDesktopPageModal}>
+        <Link to="/checkout">
+          <BsBagCheck />
+          <span>Checkout</span>
         </Link>
       </div>
       <div className="textIconDiv" onClick={toggleDesktopPageModal}>

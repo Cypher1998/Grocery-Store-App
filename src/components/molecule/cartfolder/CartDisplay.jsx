@@ -5,11 +5,9 @@ import { BsBagCheck, BsBagX } from 'react-icons/bs';
 import { FaTimes } from 'react-icons/fa';
 import { useEffect } from 'react';
 import CartProduct from '../../atom/CartProduct';
-import { getAuth } from 'firebase/auth';
 import { Link } from 'react-router-dom';
 
 const CartDisplay = ({ cartModalState, toggleCartModal, cart }) => {
-  const auth = getAuth();
   useEffect(() => {
     if (cartModalState) {
       document.body.style.overflow = 'hidden';
@@ -19,7 +17,7 @@ const CartDisplay = ({ cartModalState, toggleCartModal, cart }) => {
       document.body.style.overflow = 'auto';
     };
   }, [cartModalState]);
-  // console.log(typeof cart[0]);
+
   const totalPriceInCart = cart?.reduce(
     (amount, product) => amount + product.count * +product.price,
     0
@@ -105,6 +103,7 @@ const CartDisplay = ({ cartModalState, toggleCartModal, cart }) => {
 const mapStateToProps = (state) => ({
   cartModalState: state.toggleCartModal,
   cart: state.cartProducts.cart,
+  productResult: state.popularProducts,
 });
 
 export default connect(mapStateToProps, { toggleCartModal })(CartDisplay);

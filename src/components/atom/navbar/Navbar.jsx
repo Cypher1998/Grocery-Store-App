@@ -34,7 +34,7 @@ const Navbar = ({ openMobileModal, toggleCartModal, cart }) => {
             <AiOutlineHome size={23.5} className="iconStyle" />
           </Link>
         </div>
-        <div className="position-relative" onClick={toggleCartModal}>
+        <div className="position-relative cartClick" onClick={toggleCartModal}>
           <BsCart size={23.5} className="iconStyle" />
           <span className="itemNumber">{getCartTotalCount()}</span>
         </div>

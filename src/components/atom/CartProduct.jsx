@@ -8,7 +8,10 @@ import {
   addProductToCart,
   decreaseProductQuantity,
 } from '../../redux/cartproducts/cartProductsAction';
-import { toggleCartModal } from '../../redux/cartmodal/cartModalAction';
+import {
+  toggleCartModal,
+  removeCartModal,
+} from '../../redux/cartmodal/cartModalAction';
 
 const CartProduct = ({
   id,
@@ -21,12 +24,12 @@ const CartProduct = ({
   decreaseProductQuantity,
   cart,
   toggleCartModal,
+  removeCartModal,
 }) => {
   const nameToPutInUrl = urlToPutInSearchBar(name);
 
   const cartCount = (id) => {
     const product = cart?.find((item) => item.id === id);
-    // console.log(product);
     if (!product) return 0;
     return product?.count;
   };
@@ -42,22 +45,22 @@ const CartProduct = ({
       <div className="imageDiv">
         <div className="image">
           <Link to={`/product/${nameToPutInUrl}`}>
-            <img src={imgUrl} alt={name} onClick={toggleCartModal} />
+            <img src={imgUrl} alt={name} onClick={removeCartModal} />
           </Link>
         </div>
       </div>
       <div className="details">
-        <p className="name" onClick={toggleCartModal}>
+        <p className="name" onClick={removeCartModal}>
           <Link to={`/product/${nameToPutInUrl}`}>{name}</Link>
         </p>
-        <p className="singlePrice" onClick={toggleCartModal}>
+        <p className="singlePrice" onClick={removeCartModal}>
           <Link to={`/product/${nameToPutInUrl}`}>
             item price <span>${price}</span>
           </Link>
         </p>
         <div className="buttonDiv mt-1">
           <p className="newPrice">${(count * price).toFixed(2)}</p>
-          <div className="cartButton d-flex align-items-center flex-wrap">
+          <div className="cartButton d-flex align-items-center">
             <button
               disabled={cartCount(id) === 1}
               className="button"
@@ -90,4 +93,5 @@ export default connect(mapStateToProps, {
   addProductToCart,
   decreaseProductQuantity,
   toggleCartModal,
+  removeCartModal,
 })(CartProduct);

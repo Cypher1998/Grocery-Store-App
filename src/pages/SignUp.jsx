@@ -8,6 +8,7 @@ import {
   createUserWithEmailAndPassword,
   updateProfile,
 } from 'firebase/auth';
+import OfflineInfo from '../components/atom/offlinepage/OfflineInfo';
 import { db } from '../firebase.config';
 import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { toast } from 'react-toastify';
@@ -71,77 +72,83 @@ const SignUp = () => {
 
   return (
     <>
-      <SharedPages text="sign up" />
-      <div className="myContainer signPage">
-        <form onSubmit={onSubmit}>
-          <div className="name">
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              value={name}
-              placeholder="Moroof Adeyemi"
-              onChange={onChange}
-            />
-          </div>
-          <div className="email">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              placeholder="codedshegzy@gmail.com"
-              onChange={onChange}
-            />
-          </div>
-          <div className="number">
-            <label htmlFor="number">Number</label>
-            <input
-              type="text"
-              id="number"
-              value={number}
-              placeholder="+2349067793929"
-              onChange={onChange}
-            />
-          </div>
-          <div className="password">
-            <label htmlFor="password">Password</label>
-            <input
-              type={showPassword ? 'text' : 'password'}
-              id="password"
-              placeholder="known to me"
-              value={password}
-              onChange={onChange}
-            />
-            <div className="showPassword">
-              {!showPassword ? (
-                <MdOutlineVisibility
-                  size={21}
-                  onClick={() => setShowPassWord((prevState) => !prevState)}
+      {!navigator.onLine ? (
+        <OfflineInfo />
+      ) : (
+        <>
+          <SharedPages text="sign up" />
+          <div className="myContainer signPage">
+            <form onSubmit={onSubmit}>
+              <div className="name">
+                <label htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  value={name}
+                  placeholder="Moroof Adeyemi"
+                  onChange={onChange}
                 />
-              ) : (
-                <MdOutlineVisibilityOff
-                  size={21}
-                  onClick={() => setShowPassWord((prevState) => !prevState)}
+              </div>
+              <div className="email">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  value={email}
+                  placeholder="codedshegzy@gmail.com"
+                  onChange={onChange}
                 />
-              )}
+              </div>
+              <div className="number">
+                <label htmlFor="number">Number</label>
+                <input
+                  type="text"
+                  id="number"
+                  value={number}
+                  placeholder="+2349067793929"
+                  onChange={onChange}
+                />
+              </div>
+              <div className="password">
+                <label htmlFor="password">Password</label>
+                <input
+                  type={showPassword ? 'text' : 'password'}
+                  id="password"
+                  placeholder="known to me"
+                  value={password}
+                  onChange={onChange}
+                />
+                <div className="showPassword">
+                  {!showPassword ? (
+                    <MdOutlineVisibility
+                      size={21}
+                      onClick={() => setShowPassWord((prevState) => !prevState)}
+                    />
+                  ) : (
+                    <MdOutlineVisibilityOff
+                      size={21}
+                      onClick={() => setShowPassWord((prevState) => !prevState)}
+                    />
+                  )}
+                </div>
+              </div>
+              <div className="buttonStyle mt-3">
+                <Button variant="success" type="submit">
+                  Sign Up
+                </Button>
+              </div>
+            </form>
+            <div className="buttonStyle my-4">
+              <p>OR</p>
+              <GoogleOauth />
+            </div>
+            <div className="register text-center ">
+              <p className="px-2">Already a user?</p>
+              <Link to="/sign-in">Sign In</Link>
             </div>
           </div>
-          <div className="buttonStyle mt-3">
-            <Button variant="success" type="submit">
-              Sign Up
-            </Button>
-          </div>
-        </form>
-        <div className="buttonStyle my-4">
-          <p>OR</p>
-          <GoogleOauth />
-        </div>
-        <div className="register text-center ">
-          <p className="px-2">Already a user?</p>
-          <Link to="/sign-in">Sign In</Link>
-        </div>
-      </div>
+        </>
+      )}
     </>
   );
 };

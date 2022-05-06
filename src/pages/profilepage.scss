@@ -81,10 +81,16 @@
     @media (min-width: 992px) {
       @include display-grid(7);
       gap: 2.5rem;
+      position: relative;
 
       .dashboardLink {
         grid-column: 1/3;
         align-self: start;
+
+        @media (min-width: 992px) {
+          position: sticky;
+          top: 9rem;
+        }
       }
       .outletPage {
         grid-column: 3/8;
@@ -139,6 +145,18 @@
     .outletPage {
       background: white;
       border-radius: 10px;
+    }
+  }
+
+  .profileSpinner {
+    height: 100px;
+    @include display-flex-center;
+  }
+
+  .profileError {
+    p{
+      font-weight:500;
+      font-size:1.05rem;
     }
   }
 }

@@ -31,7 +31,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
         <div className="col-6 col-xl-6">
           <div className="timerText">
             <span>10%</span> off <span>Active</span>
-            <p>Winter Gift Voucher</p>
+            <p>Cypher Gift Voucher</p>
           </div>
           <div className="timerNum">
             <span>{days}d</span> : <span>{hours}h</span> :{' '}
@@ -39,8 +39,8 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           </div>
         </div>
         <div className="col-3 timerDetails">
-          <h6>WINTER22</h6>
-          <p>Apply when shopping is more than $200</p>
+          <h6>CYPHER22</h6>
+          <p>Apply when shopping is more than $400</p>
         </div>
       </div>
     </>

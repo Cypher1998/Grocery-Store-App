@@ -1,0 +1,237 @@
+@import '../components/utilities/variables';
+
+.orderInvoiceDiv {
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  background: $gen-color-c;
+
+  @media (min-width: 992px) {
+    padding-top: 10rem;
+  }
+
+  h6 {
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: $gen-color-h;
+    margin-bottom: 0.25rem;
+  }
+
+  .orderSpinner {
+    height: 25vh;
+    @include display-flex-center;
+  }
+
+  .orderInvoice {
+    font-family: $inter-font;
+    .greetings {
+      background: $not-found-color;
+      background: darken($color: $not-found-color, $amount: 6);
+      padding: 0.6rem 0.75rem;
+      border-radius: 7px;
+
+      @media (min-width: 768px) {
+        font-size: 1.05rem;
+      }
+
+      span {
+        color: $bg-color;
+        font-weight: 500;
+      }
+    }
+
+    .invoice {
+      background: $gen-color-d;
+      border-radius: 7px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+
+      .firstDiv {
+        border-bottom: 1px solid white;
+
+        h4 {
+          font-weight: bold;
+          margin: 0 0 1rem;
+        }
+
+        .logoDiv {
+          max-width: 250px;
+
+          p {
+            margin-top: 0.5rem;
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            color: $gen-color-h;
+          }
+        }
+        img {
+          width: 80px;
+        }
+      }
+
+      .secondDiv {
+        p {
+          margin: 0;
+          font-size: 0.95rem;
+          color: $gen-color-h;
+          line-height: 1.4;
+        }
+
+        .invoiceTo {
+          max-width: 280px;
+        }
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    counter-reset: section;
+    border: 1px solid $gen-color-b;
+    table-layout: fixed;
+
+    .count::before {
+      counter-increment: section;
+      content: counter(section);
+    }
+  }
+
+  .table {
+    background: white;
+    margin-bottom: 0;
+
+    div {
+      overflow-x: scroll;
+      border-radius: 5px;
+
+      @media (min-width: 768px) {
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+
+      &::-webkit-scrollbar {
+        height: 7px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: $gen-color-b;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $gen-color-g;
+        border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: $gen-color-h;
+      }
+    }
+
+    thead {
+      background: $gen-color-c;
+
+      th {
+        text-transform: uppercase;
+        height: 2.5rem;
+        font-size: 0.8rem;
+        color: $gen-color-h;
+        padding: 0.1rem 1rem 0.35rem;
+        text-align: center;
+
+        &:first-of-type {
+          width: 70px;
+        }
+
+        &:nth-of-type(2) {
+          width: 180px;
+        }
+
+        &:nth-of-type(3) {
+          width: 120px;
+        }
+
+        &:nth-of-type(4) {
+          width: 90px;
+        }
+
+        &:last-of-type {
+          width: 120px;
+        }
+      }
+    }
+
+    tbody {
+      td {
+        padding: 0.35rem 1rem;
+        font-size: 0.92rem;
+        text-transform: capitalize;
+        text-align: center;
+
+        @media (min-width: 768px) {
+          font-size: 0.95rem;
+        }
+
+        &:first-of-type {
+          color: $gen-color-h;
+        }
+
+        &:nth-of-type(2) {
+          color: $gen-color-h;
+        }
+
+        &:nth-of-type(3) {
+          font-weight: 500;
+        }
+
+        &:nth-of-type(4) {
+          font-weight: 500;
+        }
+
+        &:last-of-type {
+          color: lighten($color: red, $amount: 10);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .paymentInfo {
+    background: $not-found-color;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .priceOne {
+      font-size: 1.25rem;
+      color: $gen-color-e;
+      font-weight: 500;
+    }
+
+    .priceTwo {
+      font-size: 1.5rem;
+      color: lighten($color: red, $amount: 10);
+      font-weight: 500;
+    }
+
+    h6 {
+      font-size: 0.92rem;
+      color: $not-found-color-2;
+    }
+  }
+
+  .downloadBtns {
+    border-radius: 7px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    background: white;
+
+    .printBtn {
+      @extend %downloadPrintBtn;
+
+      @media (max-width: 376px) {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}

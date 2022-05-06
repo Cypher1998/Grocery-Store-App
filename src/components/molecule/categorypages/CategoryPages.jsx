@@ -29,10 +29,16 @@ const CategoryPages = ({
 
   useEffect(() => {
     fetchFeaturesData();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
     closeMobileModal();
     removeCartModal();
 
     document.documentElement.scrollTop = 0;
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]);
 

@@ -2,7 +2,7 @@ import './footersocmedia.scss';
 import paymentLogo from '../../../assets/payment-logo.webp';
 const FooterSocMedia = () => {
   return (
-    <section className="myContainer">
+    <section className="myContainer" id="footerSocialMedia">
       <div className="socialMediaBg">
         <div className="row align-items-center">
           <div className="col-md-5 col-lg-4">

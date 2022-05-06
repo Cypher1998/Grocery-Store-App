@@ -5,15 +5,13 @@ import { Button } from 'react-bootstrap';
 import DisplaySpinner from '../components/atom/DisplaySpinner';
 import { getAuth, updateProfile } from 'firebase/auth';
 import { updateDoc, doc } from 'firebase/firestore';
-import { getAuthUser } from '../redux/getauthuser/getAuthUserAction';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { db, storage } from '../firebase.config';
 import { toast } from 'react-toastify';
-import ErrorText from '../components/atom/ErrorText';
 
 const Profile = ({ loggedInUser, loadingUser, error }) => {
   useEffect(() => {
-    getAuthUser();
+    document.title = 'Cypher Store | My Profile';
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -134,96 +132,109 @@ const Profile = ({ loggedInUser, loadingUser, error }) => {
     }
   };
 
-  if (loadingUser) {
-    return <DisplaySpinner />;
-  } else if (error !== null) {
-    return <ErrorText />;
-  }
-
   return (
     <section>
       <div className="myProfile p-md-1">
         <h3>My Profile</h3>
-        {loading && (
-          <div className="onLoad">
+        {loadingUser ? (
+          <div className="profileSpinner">
             <DisplaySpinner />
           </div>
-        )}
-        <form onSubmit={onSubmit}>
-          <div className="mt-3">
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              id="username"
-              value={username}
-              onChange={onChange}
-              disabled={!changeDetails}
-            />
+        ) : error ? (
+          <div className="text-danger profileError">
+            <p>Failed to fetch profile details</p>
           </div>
-          <div className="my-3">
-            <label htmlFor="name">Email</label>
-            <input type="email" value={useremail} disabled={true} />
-          </div>
-          <div>
-            <label htmlFor="name">Phone Number</label>
-            <input
-              type="text"
-              id="usernumber"
-              value={usernumber}
-              onChange={onChange}
-              disabled={!changeDetails}
-            />
-          </div>
-          <div className="my-3">
-            <label htmlFor="name">Address</label>
-            <textarea
-              cols="30"
-              rows="3"
-              disabled={!changeDetails}
-              onChange={onChange}
-              id="useraddress"
-              value={useraddress}
-            ></textarea>
-          </div>
-          <div className="file my-3">
-            <label htmlFor="name">Upload Image</label>
-            <input
-              type="file"
-              accept=".jpg,.jpeg,.png"
-              onChange={onChange}
-              disabled={!changeDetails}
-              style={{ cursor: !changeDetails ? 'not-allowed' : 'pointer' }}
-            />
-          </div>
-          <div className="mt-4 mb-2 d-flex justify-content-between">
-            {changeDetails && (
-              <Button variant="warning" type="submit">
-                Update Profile
-              </Button>
-            )}
+        ) : (
+          loggedInUser && (
+            <>
+              {loading && (
+                <div className="onLoad">
+                  <DisplaySpinner />
+                </div>
+              )}
+              <form onSubmit={onSubmit}>
+                <div className="mt-3">
+                  <label htmlFor="name">Name</label>
+                  <input
+                    type="text"
+                    id="username"
+                    value={username}
+                    onChange={onChange}
+                    disabled={!changeDetails}
+                  />
+                </div>
+                <div className="my-3">
+                  <label htmlFor="name">Email</label>
+                  <input type="email" value={useremail} disabled={true} />
+                </div>
+                <div>
+                  <label htmlFor="name">Phone Number</label>
+                  <input
+                    type="text"
+                    id="usernumber"
+                    value={usernumber || loggedInUser?.number}
+                    onChange={onChange}
+                    disabled={!changeDetails}
+                  />
+                </div>
+                <div className="my-3">
+                  <label htmlFor="name">Address</label>
+                  <textarea
+                    cols="30"
+                    rows="3"
+                    disabled={!changeDetails}
+                    onChange={onChange}
+                    id="useraddress"
+                    value={useraddress}
+                  ></textarea>
+                </div>
+                <div className="file my-3">
+                  <label htmlFor="name">Upload Image</label>
+                  <input
+                    type="file"
+                    accept=".jpg,.jpeg,.png"
+                    onChange={onChange}
+                    disabled={!changeDetails}
+                    style={{
+                      cursor: !changeDetails ? 'not-allowed' : 'pointer',
+                    }}
+                  />
+                </div>
+                <div className="mt-4 mb-2 d-flex justify-content-between">
+                  {changeDetails && (
+                    <Button
+                      className="px-4 py-2"
+                      variant="secondary"
+                      onClick={() =>
+                        setChangeDetails((prevState) => !prevState)
+                      }
+                    >
+                      Cancel
+                    </Button>
+                  )}
 
-            {changeDetails && (
-              <Button
-                className="px-4 py-2"
-                variant="secondary"
-                onClick={() => setChangeDetails((prevState) => !prevState)}
-              >
-                Cancel
-              </Button>
-            )}
-            {!changeDetails && (
-              <Button
-                variant="dark"
-                className="px-4 py-2"
-                onClick={() => {
-                  setChangeDetails((prevState) => !prevState);
-                }}
-              >
-                Edit Profile
-              </Button>
-            )}
-          </div>
-        </form>
+                  {changeDetails && (
+                    <Button variant="warning" type="submit">
+                      Update Profile
+                    </Button>
+                  )}
+
+                  {!changeDetails && (
+                    <Button
+                      variant="dark"
+                      className="px-4 py-2"
+                      onClick={() => {
+                        setChangeDetails((prevState) => !prevState);
+                      }}
+                    >
+                      Edit Profile
+                    </Button>
+                  )}
+                </div>
+              </form>
+            </>
+          )
+        )}
       </div>
     </section>
   );
@@ -235,4 +246,4 @@ const mapStateToProps = (state) => ({
   error: state.getAuthUser.error,
 });
 
-export default connect(mapStateToProps, { getAuthUser })(Profile);
+export default connect(mapStateToProps, null)(Profile);

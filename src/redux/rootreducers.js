@@ -10,6 +10,8 @@ import { searchQueryProductsReducer } from './searchqueryproducts/searchQueryRed
 import { fetchSIngleProductReducer } from './fetchsingleproduct/fetchSingleProductReducer';
 import { toggleCartModalReducer } from './cartmodal/cartModalReducer';
 import { cartProductsReducer } from './cartproducts/cartProductsReducer';
+import { fetchInvoiceReducer } from './fetchinvoice/fetchInvoiceReducer';
+import { fetchAllUserOrdersReducer } from './fetchuserorders/fetchUserOrdersReducer';
 
 const rootReducer = combineReducers({
   features: featuresReducer,
@@ -23,6 +25,8 @@ const rootReducer = combineReducers({
   singleProductFetched: fetchSIngleProductReducer,
   toggleCartModal: toggleCartModalReducer,
   cartProducts: cartProductsReducer,
+  fetchInvoice: fetchInvoiceReducer,
+  fetchUserOrders: fetchAllUserOrdersReducer,
 });
 
 export default rootReducer;
