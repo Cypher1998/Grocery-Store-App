@@ -32,6 +32,10 @@ const SingleProductPage = ({
   };
 
   const onAddItemToCart = () => {
+    if (stock < 5) {
+      toast.error('Product is out of stock');
+      return;
+    }
     addProductToCart(
       { id, count, imgUrl, price: discount ? newPrice : price, name },
       numOfItemsPurchased
