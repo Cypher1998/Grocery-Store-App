@@ -8,6 +8,9 @@
 # service-key
 grocery-app-store-service-key.json
 
+# vscode folder
+/.vscode
+
 # testing
 /coverage
 

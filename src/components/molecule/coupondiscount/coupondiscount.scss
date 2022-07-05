@@ -1,14 +1,71 @@
 @import '../../utilities/variables';
 
-.coupon {
-  border: 2px solid rgb(249 115 22);
-  border-radius: 5px;
-  background: rgb(249, 250, 251);
+.timer {
+	border: 1px solid #eee;
+	border-radius: 5px;
 
-  &:hover {
-    border-color: $bg-color;
-  }
-  .couponText {
-    background: rgb(255, 237, 213);
-  }
+	img {
+		width: 85%;
+		min-height: 70px;
+		border-radius: 10px;
+	}
+
+	.timerText {
+		span:nth-of-type(1) {
+			font-size: 1.2rem;
+			color: rgb(249 115 22);
+			font-weight: bold;
+		}
+
+		span:nth-of-type(2) {
+			margin-left: 0.2rem;
+			padding: 0.2rem 1.25rem;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 0.85rem;
+			border-radius: 15px;
+			color: $gen-color-a;
+			background: rgb(209, 250, 229);
+		}
+
+		p {
+			margin-top: 0.25rem;
+			font-weight: bold;
+			text-transform: capitalize;
+		}
+	}
+
+	.timerNum {
+		font-weight: bold;
+		margin-top: -0.5rem;
+
+		span {
+			font-weight: 500;
+			font-size: 0.9rem;
+			background: $gen-color-a;
+			color: white;
+			padding: 0.2rem 0.25rem;
+			border-radius: 3px;
+			display: inline-block;
+			margin-top: 0.25rem;
+		}
+	}
+
+	.timerDetails {
+		h6 {
+			border: 1px dashed $gen-color-a;
+			padding: 0.5rem 0;
+			border-radius: 5px;
+			font-size: 0.9rem;
+			text-align: center;
+			color: $gen-color-a;
+			background: rgb(209, 250, 229);
+			cursor: pointer;
+		}
+
+		p {
+			font-size: 0.8rem;
+		}
+	}
 }

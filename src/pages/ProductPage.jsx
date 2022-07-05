@@ -51,7 +51,7 @@ const ProductPage = ({
               <div className="myContainer">
                 <BreadCrumb category={singleProduct.subcategory} text={text} />
                 <div className="singlePageProductDisplay myContainer pb-3 p-xl-5">
-                  <SingleProductPage {...singleProduct} count={1} />
+                  <SingleProductPage {...singleProduct} />
                 </div>
                 <div className="relatedProducts mt-5">
                   <h5>related products</h5>

@@ -98,7 +98,6 @@ const SearchPage = ({
               <div className="pt-3 pb-5">
                 <div className="categoryProductDisplay">
                   {slicedSearchProducts?.map((product) => {
-                    product.count = 1;
                     return <Product key={product.id} {...product} />;
                   })}
                 </div>

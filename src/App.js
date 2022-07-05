@@ -15,6 +15,7 @@ import Contact from './pages/Contact';
 import FAskedQuestion from './pages/FAskedQuestion';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import NotFound from './pages/NotFound';
+import Offer from './pages/Offer';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
@@ -46,6 +47,7 @@ function App() {
         <Route path="/sub-category/:category" element={<SubCategory />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
+        <Route path="/offer" element={<Offer />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/product/:product" element={<ProductPage />} />
         <Route path="/order/:order_id" element={<OrderInvoice />} />

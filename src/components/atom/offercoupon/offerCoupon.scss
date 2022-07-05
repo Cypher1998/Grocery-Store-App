@@ -1,0 +1,104 @@
+@import '../../utilities/variables';
+
+.offerCoupon {
+  background: white;
+  border-radius: 5px;
+  display: grid;
+  gap: 1.5rem;
+
+  @media(min-width:768px){
+    grid-template-columns:2fr 1fr;
+  }
+
+  .offerDisplay {
+    display: flex;
+    align-items: center;
+    
+    img {
+      border-radius: 10px;
+      width: 120px;
+      height: 90%;
+      margin-right: 1.5rem;
+    }
+    
+    .text h6{
+      font-weight:bold;
+      letter-spacing:0.5px;
+      font-size:0.95rem;
+      margin-top:1rem;
+      
+      .spanTimer{
+        border-radius:5px;
+        padding:0.35rem;
+        font-family:$roboto-font;
+      }
+
+      .activeDays{
+        background:rgb(209, 250, 229);
+      }
+
+      .inactiveDays{
+        background-color:rgb(254, 226, 226);
+      }
+    }
+
+    p{
+      font-size:1.2rem;
+      text-transform:capitalize;
+      font-weight:500;
+      font-family:$open-sans-font;
+    }
+
+    h3{
+      font-weight:bold;
+      transform:translateY(-0.5rem);
+
+      span:first-of-type{
+        color:rgb(239,68,68);
+        font-size:1.2rem;
+      }
+
+      span:last-of-type{
+        color:$not-found-color-2;
+        font-size:1.35rem;
+      }
+    }
+  }
+  .offerCouponInfo{
+    font-family:$open-sans-font;
+    display:flex;
+    flex-direction:column;
+
+    @media(min-width:768px){
+      border-left:2px dashed rgba(0,0,0,0.4);
+      // padding-left:1rem;
+    }
+
+    p{
+      span{
+        color:rgb(239,68,68);
+      }
+    }
+
+    button{
+      background:$not-found-color;
+      border:1px dashed rgb(110,231,183);
+      padding:0.5rem;
+      border-radius:7px;
+      color:$gen-color-a;
+      font-weight:bold;
+      font-family:$inter-font;
+      font-size:1.05rem;
+      margin:-0.6rem 0 0.5rem;
+    }
+
+    small{
+      font-size:0.8rem;
+      color:$not-found-color-2;
+
+      span{
+        font-weight:bold;
+      }
+    }
+  }
+}

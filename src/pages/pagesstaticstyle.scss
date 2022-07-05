@@ -460,3 +460,22 @@ div {
     }
   }
 }
+
+.offer {
+  margin-top: -1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: $gen-color-c;
+  display: grid;
+  gap: 1.5rem;
+
+  @media (min-width: 992px) {
+    margin-top: -3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  @media (min-width: 1300px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}

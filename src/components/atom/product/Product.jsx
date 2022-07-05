@@ -12,7 +12,6 @@ import {
 
 const Product = ({
   id,
-  count,
   imgUrl,
   price,
   discount,
@@ -49,7 +48,7 @@ const Product = ({
     }
 
     addProductToCart(
-      { id, count, imgUrl, price: discount ? newPrice : price, name },
+      { id, imgUrl, price: discount ? newPrice : price, name },
       numOfItemsPurchased
     );
   };

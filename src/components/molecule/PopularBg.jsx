@@ -37,7 +37,6 @@ const PopularBg = ({ fetchPopularProducts, productResult }) => {
           popularProducts && (
             <div className="productsDisplay">
               {popularProducts.map((product) => {
-                product.count = 1;
                 return <Product key={product.id} {...product} />;
               })}
             </div>

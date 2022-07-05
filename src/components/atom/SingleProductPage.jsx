@@ -15,7 +15,6 @@ const SingleProductPage = ({
   description,
   subcategory,
   details,
-  count,
   addProductToCart,
 }) => {
   const discountedPrice = (discount / 100) * price;
@@ -37,7 +36,7 @@ const SingleProductPage = ({
       return;
     }
     addProductToCart(
-      { id, count, imgUrl, price: discount ? newPrice : price, name },
+      { id, imgUrl, price: discount ? newPrice : price, name },
       numOfItemsPurchased
     );
 

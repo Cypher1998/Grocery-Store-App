@@ -6,17 +6,17 @@ import thunk from 'redux-thunk';
 import rootReducer from './rootreducers';
 
 const persistConfig = {
-  key: 'persist-key',
-  storage,
-  whitelist: ['cartProducts'],
+	key: 'grocery-cart',
+	storage,
+	whitelist: ['cartProducts'],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = createStore(
-  persistedReducer,
-  {},
-  composeWithDevTools(applyMiddleware(thunk))
+	persistedReducer,
+	{},
+	composeWithDevTools(applyMiddleware(thunk))
 );
 
 export const persistedStore = persistStore(store);

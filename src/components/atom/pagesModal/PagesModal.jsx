@@ -14,7 +14,7 @@ const PagesModal = ({ toggleDesktopPageModal }) => {
   return (
     <div className="px-4 py-3">
       <div className="textIconDiv" onClick={toggleDesktopPageModal}>
-        <Link to="/">
+        <Link to="/offer">
           <BsGift />
           <span>Offer</span>
         </Link>

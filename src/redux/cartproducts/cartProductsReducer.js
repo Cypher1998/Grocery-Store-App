@@ -35,6 +35,7 @@ export const cartProductsReducer = (state = initialState, action) => {
         ...action.payload.item,
         count: action.payload.numOfItemPurchased,
       };
+
       return {
         cart: [...state.cart, newItem],
       };
