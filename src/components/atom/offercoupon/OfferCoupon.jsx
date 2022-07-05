@@ -83,7 +83,12 @@ const OfferCoupon = ({
 
 			<div className="offerCouponInfo ps-md-3">
 				<p>
-					Coupon <span>{isActive}</span>
+					Coupon{' '}
+					<span
+						className={isActive === 'Active' ? 'text-success' : 'text-danger'}
+					>
+						{isActive}
+					</span>
 				</p>
 				<button onClick={clickCoupon}>
 					{showCopiedtext ? 'COPIED!' : couponCode}
