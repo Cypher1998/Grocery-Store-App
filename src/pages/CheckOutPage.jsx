@@ -243,7 +243,6 @@ const CheckOutPage = ({ user, getAuthUser }) => {
 
 	const handlePaystackCloseAction = () => {
 		toast.error('Payment gateway has been closed by you.');
-		setDeliveryForm({ ...deliveryForm, payment_option: '' });
 		setDeliveryForm((prev) => ({ ...prev, payment_option: '' }));
 	};
 
@@ -252,14 +251,21 @@ const CheckOutPage = ({ user, getAuthUser }) => {
 	//on paystack select, open payment gateway
 	useEffect(() => {
 		if (payment_option === 'Agent') {
-			initializePayment(handlePaystackSuccessAction, handlePaystackCloseAction);
+			if (totalPriceInCart < +minLimitFreeDelivery && shipping_cost === '') {
+				toast.error('Please select a shipping type before payment');
+				setDeliveryForm((prev) => ({ ...prev, payment_option: '' }));
+				return;
+			} else {
+				initializePayment(
+					handlePaystackSuccessAction,
+					handlePaystackCloseAction
+				);
+			}
 		}
 	}, [payment_option]);
 
 	useEffect(() => {
-		console.log(totalPriceInCart, offerCoupon);
 		if (totalPriceInCart < offerCoupon?.minPriceValid) {
-			console.log('yes');
 			setDiscountPrice('0.00');
 		} else {
 			return;
