@@ -46,19 +46,30 @@ const OrderInfoCheckOut = ({
 			<div className="orderPriceDiv">
 				<h3>
 					<span>subtotal</span>
-					<span>${totalPriceInCart.toFixed(2)}</span>
+					<span>
+						&#8358;
+						{totalPriceInCart.toLocaleString('en-US', {
+							minimumFractionDigits: 2,
+						})}
+					</span>
 				</h3>
 				<h3>
 					<span>shipping cost</span>
-					<span>${shipping_cost || zero_value.toFixed(2)}</span>
+					<span>&#8358;{shipping_cost || zero_value.toFixed(2)}</span>
 				</h3>
 				<h3>
 					<span>discount</span>
-					<span>${discountPrice}</span>
+					<span>&#8358;{discountPrice}</span>
 				</h3>
 			</div>
 			<div className="totalPriceDiv d-flex justify-content-between align-items-end my-2 mt-3">
-				<span>total cost</span> <span>${totalPriceToPay.toFixed(2)}</span>
+				<span>total cost</span>{' '}
+				<span>
+					&#8358;
+					{totalPriceToPay.toLocaleString('en-US', {
+						minimumFractionDigits: 2,
+					})}
+				</span>
 			</div>
 		</div>
 	);

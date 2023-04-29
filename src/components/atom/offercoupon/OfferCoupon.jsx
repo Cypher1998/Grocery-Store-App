@@ -94,7 +94,7 @@ const OfferCoupon = ({
 					{showCopiedtext ? 'COPIED!' : couponCode}
 				</button>
 				<small>
-					* {description} <span>${minPriceValid}</span>
+					* {description} <span>&#8358;{minPriceValid.toLocaleString()}</span>
 				</small>
 			</div>
 		</div>

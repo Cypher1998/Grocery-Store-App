@@ -7,7 +7,7 @@ import { MdArrowBack, MdArrowForward } from 'react-icons/md';
 import { FaShuttleVan, FaWallet } from 'react-icons/fa';
 import OrderInfoCheckOut from '../components/atom/OrderInfoCheckOut';
 import OfflineInfo from '../components/atom/offlinepage/OfflineInfo';
-import { coupons } from '../assets/coupon';
+import { coupons, minLimitFreeDelivery } from '../assets/coupon';
 import { getAuth } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 import { db } from '../firebase.config';
@@ -15,6 +15,8 @@ import { v4 as uuidv4 } from 'uuid';
 import { toast } from 'react-toastify';
 import { connect } from 'react-redux';
 import { getAuthUser } from '../redux/getauthuser/getAuthUserAction';
+import { usePaystackPayment } from 'react-paystack';
+import { ImSpinner3 } from 'react-icons/im';
 
 const CheckOutPage = ({ user, getAuthUser }) => {
 	const auth = getAuth();
@@ -28,8 +30,9 @@ const CheckOutPage = ({ user, getAuthUser }) => {
 
 	const emptyValueRef = useRef([]);
 	const divWrap = useRef();
+	const [offerCoupon, setOfferCoupon] = useState(null);
 	const [couponText, setCouponText] = useState('');
-	const [showCardInfoDiv, setShowCardInfoDiv] = useState(false);
+	const [paymentSuccess, setPaymentSuccess] = useState(null);
 	const [discountPrice, setDiscountPrice] = useState('0.00');
 	const [deliveryForm, setDeliveryForm] = useState({
 		firstName: '',
@@ -71,18 +74,22 @@ const CheckOutPage = ({ user, getAuthUser }) => {
 		);
 	};
 
+	const order_id = uuidv4();
+
 	const onApplyCouponText = () => {
 		if (couponText === '') {
 			toast.error('Coupon field is empty!');
 		} else {
+			console.log('ran1');
 			const coupon = findCoupon(couponText);
 			if (coupon === undefined) {
 				toast.error('Coupon is either invalid or inactive!');
 				return;
 			} else {
+				setOfferCoupon(coupon);
 				if (coupon.minPriceValid > totalPriceInCart) {
 					toast.error(
-						`Applicable when total price is more than $${coupon.minPriceValid}`
+						`Applicable when total price is more than N${coupon.minPriceValid}`
 					);
 					return;
 				} else {
@@ -106,12 +113,6 @@ const CheckOutPage = ({ user, getAuthUser }) => {
 	const onChange = (e) => {
 		setDeliveryForm({ ...deliveryForm, [e.target.name]: e.target.value });
 
-		if (e.target.value === 'Card') {
-			setShowCardInfoDiv(true);
-		} else {
-			setShowCardInfoDiv(false);
-		}
-
 		if (e.target.value === '') {
 			emptyValueRef.current[`${e.target.name}`].style.display = 'block';
 		} else {
@@ -119,17 +120,18 @@ const CheckOutPage = ({ user, getAuthUser }) => {
 		}
 	};
 
+	// checkout loading
+	const [loading, setLoading] = useState(false);
+
 	const onOrderSubmit = async (e) => {
 		e.preventDefault();
 
 		try {
 			if (cart.length < 1) {
+				toast.error('No item has been added to cart yet!');
 				return;
 			}
 
-			if (payment_option === 'Card') {
-				toast.error('Card Payment is unavailable!');
-			}
 			if (firstName === '') {
 				emptyValueRef.current['firstName'].style.display = 'block';
 			}
@@ -172,8 +174,8 @@ const CheckOutPage = ({ user, getAuthUser }) => {
 			) {
 				divWrap.current.scrollIntoView();
 			} else {
+				setLoading(true);
 				const invoice = Math.floor(Math.random() * (99999 - 10000 + 1) + 10000);
-				const order_id = uuidv4();
 				const userUid = auth.currentUser.uid;
 				const invoice_form = {
 					senderName: user?.name,
@@ -195,12 +197,13 @@ const CheckOutPage = ({ user, getAuthUser }) => {
 					order_id,
 					status: 'pending',
 					created_at: new Date().getTime(),
+					reference: paymentSuccess?.reference || 'N/A',
 				};
 
 				await setDoc(doc(db, 'orders', order_id), invoice_form);
 
 				toast.success('Your order has been confirmed!');
-
+				setLoading(false);
 				setTimeout(() => {
 					dispatch({ type: 'EMPTY_CART_CONTENT' });
 				}, 1500);
@@ -210,9 +213,65 @@ const CheckOutPage = ({ user, getAuthUser }) => {
 				}, 2000);
 			}
 		} catch (error) {
-			toast.error('failed to checkout orsers!');
+			toast.error('failed to checkout orders!');
+			setLoading(false);
 		}
 	};
+
+	const config = {
+		email: auth.currentUser.email,
+		amount: totalPriceToPay * 100,
+		publicKey: process.env.REACT_APP_PAYSTACK_TOKEN,
+		channels: ['card', 'bank', 'bank_transfer'],
+		metadata: {
+			name: user?.name,
+			phone: user?.number,
+			custom_fields: [
+				{
+					display_name: 'Order ID',
+					variable_name: 'Order ID',
+					value: order_id,
+				},
+			],
+		},
+	};
+
+	const handlePaystackSuccessAction = (reference) => {
+		setPaymentSuccess(reference);
+		toast.success('Payment successful. You can now checkout your cart!');
+	};
+
+	const handlePaystackCloseAction = () => {
+		toast.error('Payment gateway has been closed by you.');
+		setDeliveryForm({ ...deliveryForm, payment_option: '' });
+		setDeliveryForm((prev) => ({ ...prev, payment_option: '' }));
+	};
+
+	const initializePayment = usePaystackPayment(config);
+
+	//on paystack select, open payment gateway
+	useEffect(() => {
+		if (payment_option === 'Agent') {
+			initializePayment(handlePaystackSuccessAction, handlePaystackCloseAction);
+		}
+	}, [payment_option]);
+
+	useEffect(() => {
+		console.log(totalPriceInCart, offerCoupon);
+		if (totalPriceInCart < offerCoupon?.minPriceValid) {
+			console.log('yes');
+			setDiscountPrice('0.00');
+		} else {
+			return;
+		}
+	}, [totalPriceInCart]);
+
+	useEffect(() => {
+		// console.log(typeof +minLimitFreeDelivery);
+		if (totalPriceInCart >= +minLimitFreeDelivery) {
+			setDeliveryForm((prev) => ({ ...prev, shipping_cost: '' }));
+		}
+	}, [totalPriceInCart]);
 
 	return (
 		<>
@@ -339,56 +398,63 @@ const CheckOutPage = ({ user, getAuthUser }) => {
 								</div>
 							</div>
 							<label htmlFor="shipping">shipping cost</label>
-							<div className="shippingDiv mt-2 mb-5">
-								<div className="shipping">
-									<div className="text">
-										<p className="icon">
-											<FaShuttleVan />
-										</p>
-										<div>
-											<h6>FedEx</h6>
-											<p className="info">Delivery: 3 Days Cost : $5.00</p>
+							{totalPriceInCart < 5000 ? (
+								<div className="shippingDiv mt-2 mb-5">
+									<div className="shipping">
+										<div className="text">
+											<p className="icon">
+												<FaShuttleVan />
+											</p>
+											<div>
+												<h6>FedEx</h6>
+												<p className="info">
+													Delivery: 3 Days Cost : &#8358;245.50
+												</p>
+											</div>
 										</div>
+										<input
+											type="radio"
+											name="shipping_cost"
+											value="245.50"
+											checked={shipping_cost === '245.50'}
+											onChange={onChange}
+										/>
 									</div>
-									<input
-										type="radio"
-										name="shipping_cost"
-										value="5.00"
-										checked={shipping_cost === '5.00'}
-										onChange={onChange}
-									/>
-								</div>
-								<div className="shipping">
-									<div className="text">
-										<p className="icon">
-											<FaShuttleVan />
-										</p>
-										<div>
-											<h6>UPS</h6>
-											<p className="info">Delivery: 7 Days Cost : $2.50</p>
+									<div className="shipping">
+										<div className="text">
+											<p className="icon">
+												<FaShuttleVan />
+											</p>
+											<div>
+												<h6>UPS</h6>
+												<p className="info">
+													Delivery: 7 Days Cost : &#8358;145.50
+												</p>
+											</div>
 										</div>
+										<input
+											type="radio"
+											name="shipping_cost"
+											value="145.50"
+											checked={shipping_cost === '145.50'}
+											onChange={onChange}
+										/>
 									</div>
-									<input
-										type="radio"
-										name="shipping_cost"
-										value="2.50"
-										checked={shipping_cost === '2.50'}
-										onChange={onChange}
-									/>
+									<span
+										ref={(el) => (emptyValueRef.current['shipping_cost'] = el)}
+									>
+										Shipping Option is required!
+									</span>
 								</div>
-								<span
-									ref={(el) => (emptyValueRef.current['shipping_cost'] = el)}
-								>
-									Shipping Option is required!
-								</span>
-							</div>
+							) : (
+								<p>
+									Free shipping for orders more than &#8358;
+									{minLimitFreeDelivery}
+								</p>
+							)}
+
 							<h3>03. Payment Details</h3>
 							<div className="paymentDiv">
-								{showCardInfoDiv && (
-									<div className="cardDetails">
-										Card payment temporarily unavailable
-									</div>
-								)}
 								<div className="payment">
 									<div className="text">
 										<p className="icon">
@@ -404,6 +470,7 @@ const CheckOutPage = ({ user, getAuthUser }) => {
 										value="COD"
 										checked={payment_option === 'COD'}
 										onChange={onChange}
+										disabled={!!paymentSuccess}
 									/>
 								</div>
 								<div className="payment">
@@ -412,14 +479,15 @@ const CheckOutPage = ({ user, getAuthUser }) => {
 											<BsCreditCard />
 										</p>
 										<div>
-											<h6>Credit Card</h6>
+											<h6>Pay via Paystack</h6>
+											{/* <h6>Credit Card</h6> */}
 										</div>
 									</div>
 									<input
 										type="radio"
 										name="payment_option"
-										value="Card"
-										checked={payment_option === 'Card'}
+										value="Agent"
+										checked={payment_option === 'Agent'}
 										onChange={onChange}
 									/>
 								</div>
@@ -436,11 +504,17 @@ const CheckOutPage = ({ user, getAuthUser }) => {
 									</span>
 									continue shopping
 								</Link>
-								<button type="submit">
-									confirm order
-									<span>
-										<MdArrowForward />
-									</span>
+								<button type="submit" disabled={loading}>
+									{loading ? (
+										<ImSpinner3 size={20} />
+									) : (
+										<>
+											confirm order
+											<span>
+												<MdArrowForward />
+											</span>
+										</>
+									)}
 								</button>
 							</div>
 						</form>

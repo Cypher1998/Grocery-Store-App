@@ -17,6 +17,7 @@ const OrderInvoiceForm = ({
 	totalPriceInCart,
 	totalPriceToPay,
 	created_at,
+	status,
 }) => {
 	const dateOne = new Date(created_at);
 	const newCreatedAt = String(dateOne).slice(0, 16);
@@ -25,7 +26,7 @@ const OrderInvoiceForm = ({
 		<>
 			<p className="greetings">
 				Thank you <span>{senderName ? senderName : oldSenderName},</span> Your
-				order has been received!
+				order has been {status !== 'completed' ? 'received' : 'completed'}.
 			</p>
 			<div className="invoice px-4">
 				<div className="firstDiv d-md-flex justify-content-between py-4">
@@ -83,8 +84,8 @@ const OrderInvoiceForm = ({
 										<td className="count"></td>
 										<td>{name}</td>
 										<td>{count}</td>
-										<td>${Number(price).toFixed(2)}</td>
-										<td>${realPrice.toFixed(2)}</td>
+										<td>&#8358;{Number(price).toFixed(2)}</td>
+										<td>&#8358;{realPrice.toFixed(2)}</td>
 									</tr>
 								</tbody>
 							);
@@ -100,19 +101,19 @@ const OrderInvoiceForm = ({
 					</div>
 					<div className="mb-3 mb-md-0">
 						<h6>shipping cost</h6>
-						<p>${shipping_cost}</p>
+						<p>&#8358;{shipping_cost}</p>
 					</div>
 					<div className="mb-3 mb-md-0">
 						<h6>discount</h6>
-						<p>${discountPrice}</p>
+						<p>&#8358;{discountPrice}</p>
 					</div>
 					<div className="priceOne mb-3 mb-md-0">
 						<h6>total item price</h6>
-						<p>${totalPriceInCart.toFixed(2)}</p>
+						<p>&#8358;{totalPriceInCart.toFixed(2)}</p>
 					</div>
 					<div className="priceTwo mb-0 mb-md-0">
 						<h6>total amount</h6>
-						<p>${totalPriceToPay.toFixed(2)}</p>
+						<p>&#8358;{totalPriceToPay.toFixed(2)}</p>
 					</div>
 				</div>
 			</div>
