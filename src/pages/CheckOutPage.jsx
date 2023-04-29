@@ -502,6 +502,9 @@ const CheckOutPage = ({ user, getAuthUser }) => {
 								>
 									Payment Method is required!
 								</span>
+								<small>
+									NB: Do not close or refresh page after successful payment.
+								</small>
 							</div>
 							<div className="submitBtn">
 								<Link to="/">
