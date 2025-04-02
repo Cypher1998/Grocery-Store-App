@@ -1,11 +1,11 @@
-const endDateOne = new Date('Sept 25 2023 20:00:00').getTime(),
-	endDateTwo = new Date('June 25 2023').getTime(),
-	endDateThree = new Date('Jan 25 2023').getTime();
+const endDateOne = new Date('Sept 25 2025 20:00:00').getTime(),
+	endDateTwo = new Date('Oct 25 2025').getTime(),
+	endDateThree = new Date('Nov 20 2025').getTime();
 
 export const coupons = [
 	{
 		id: 1,
-		couponCode: 'CYPHER23',
+		couponCode: 'CYPHER25',
 		couponName: 'cypher gift voucher',
 		percentageOff: 8,
 		endDate: endDateOne,
@@ -17,7 +17,7 @@ export const coupons = [
 	},
 	{
 		id: 2,
-		couponCode: 'SUMMER23',
+		couponCode: 'SUMMER25',
 		couponName: 'summer gift voucher',
 		percentageOff: 10,
 		endDate: endDateTwo,
@@ -29,7 +29,7 @@ export const coupons = [
 	},
 	{
 		id: 3,
-		couponCode: 'WINTER23',
+		couponCode: 'WINTER25',
 		couponName: 'winter gift voucher',
 		percentageOff: 10,
 		endDate: endDateThree,
